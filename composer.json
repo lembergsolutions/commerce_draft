@@ -1,0 +1,91 @@
+{
+    "name": "lemberg/draft-template",
+    "description": "Project template for Drupal 8 sites built with the Draft distribution.",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "drupal/coder": "^8.2",
+        "drupal/console": "^1.2.0",
+        "drupal/devel": "^1.2",
+        "drupal/reroute_email": "^1.0",
+        "drupal/stage_file_proxy": "^1.0",
+        "drush/drush": "^8.1.15",
+        "lemberg/draft-environment": "^2.5.0"
+    },
+    "require": {
+        "composer/installers": "^1.3",
+        "cweagans/composer-patches": "^1.6",
+        "drupal-composer/drupal-scaffold": "^2.5",
+        "drupal/core": "^8.6.0",
+        "lemberg/draft": "^1.2.1",
+        "symfony/filesystem": "^3.4",
+        "symfony/yaml": "^3.4",
+        "wikimedia/composer-merge-plugin": "^1.4"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "scripts": {
+        "post-root-package-install": [
+            "Lemberg\\Draft\\Template\\DrupalProject::configureIntegrations",
+            "Lemberg\\Draft\\Template\\Cleaner::cleanUp"
+        ],
+        "post-install-cmd": [
+            "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+            "Lemberg\\Draft\\Environment\\Configurer::setUp",
+            "Lemberg\\Draft\\Template\\DrupalProject::createRequiredFiles",
+            "Lemberg\\Draft\\Template\\DrupalProject::localSetup"
+        ],
+        "post-update-cmd": [
+            "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+            "Lemberg\\Draft\\Environment\\Configurer::setUp",
+            "Lemberg\\Draft\\Template\\DrupalProject::localSetup"
+        ]
+    },
+    "config": {
+        "bin-dir": "bin",
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Lemberg\\Draft\\Template\\": "src/"
+        }
+    },
+    "extra": {
+        "installer-paths": {
+            "docroot/core": [
+                "type:drupal-core"
+            ],
+            "docroot/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "docroot/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "docroot/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/contrib/{$name}": [
+                "type:drupal-drush"
+            ]
+        },
+        "merge-plugin": {
+            "include": [
+                "docroot/modules/custom/*/composer.json",
+                "docroot/profiles/custom/*/composer.json",
+                "docroot/themes/custom/*/composer.json"
+            ]
+        },
+        "patches": {
+            "drupal/core": {
+                "Installation profiles do not support project:module format for dependencies": "https://www.drupal.org/files/issues/2018-09-10/drupal-support_project_module_format_dependencies-2855026-49.patch"
+            }
+        },
+        "enable-patching": true
+    }
+}

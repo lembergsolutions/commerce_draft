@@ -1,0 +1,45 @@
+# Ignore binaries.
+/bin
+
+# Ignore non-custom parts of Drupal.
+/docroot/core
+/docroot/modules/contrib
+/docroot/profiles/contrib
+/docroot/themes/contrib
+/docroot/sites/default/files
+/docroot/sites/simpletest
+
+# Ignore Drupal scaffold.
+/docroot/.csslintrc
+/docroot/.editorconfig
+/docroot/.eslintignore
+/docroot/.eslintrc.json
+/docroot/.gitattributes
+/docroot/.htaccess
+/docroot/.ht.router.php
+/docroot/autoload.php
+/docroot/index.php
+/docroot/robots.txt
+/docroot/update.php
+/docroot/web.config
+/docroot/sites/development.services.yml
+/docroot/sites/example.settings.local.php
+/docroot/sites/example.sites.php
+/docroot/sites/default/default.services.yml
+/docroot/sites/default/default.settings.php
+
+# Ignore local setup.
+/docroot/sites/default/development.services.yml
+/docroot/sites/default/settings.local.php
+
+# Ignore Composer-managed dependencies.
+/vendor
+
+# Ignore Vagrant virtual machine data.
+/.vagrant
+
+# Ignore local VM settings overrides.
+/vm-settings.local.yml
+
+# Ignore PHPStorm folder
+/.idea

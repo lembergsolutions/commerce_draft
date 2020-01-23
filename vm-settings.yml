@@ -1,0 +1,22 @@
+vagrant:
+  box: ubuntu/xenial64
+  box_version: '>= 0'
+  hostname: commerce-draft
+  host_aliases: {  }
+  base_directory: /var/www/draft
+  synced_folder_options:
+    type: nfs
+    create: true
+virtualbox:
+  name: ''
+  cpus: 2
+  memory: 1024
+  cpuexecutioncap: 100
+draft_features:
+  - swapfile
+  - mailhog
+  - git_config
+  - apache2
+  - mysql
+  - php
+  - composer
