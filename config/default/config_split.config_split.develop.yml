@@ -1,0 +1,17 @@
+uuid: 68bf7d4c-64c9-4605-882e-90d037515004
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 0ldk7pql2cgIPGJNcdPkkV7OQ3RbS0okRw9CHKULFT0
+id: develop
+label: Develop
+description: ''
+folder: ../config/develop
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

@@ -1,0 +1,14 @@
+uuid: 902d1300-7276-46f1-8608-7fc30b57e39a
+name: 'Commerce Draft'
+mail: commerce.draft@lemberg.co.uk
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /user/login
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

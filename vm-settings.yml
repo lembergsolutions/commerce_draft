@@ -227,11 +227,7 @@ mysql_replication_role: ''
 mysql_replication_master: ''
 # Same keys as `mysql_users` above.
 mysql_replication_user: []
-
-# Role: T2L.php @ 1.2.1
-
-# PHP version to install. Possible values: 7.2, 7.3 and 7.4
-php_version: '7.3'
+php_version: '7.2'
 
 # Configure PHP.
 php_configuration:
@@ -263,6 +259,7 @@ php_extensions:
   - xdebug
   - xml
   - zip
+  - bcmath
 
 # Configure PHP extensions.
 php_extensions_configuration:

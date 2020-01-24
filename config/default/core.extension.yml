@@ -1,0 +1,41 @@
+module:
+  address: 0
+  admin_links_access_filter: 0
+  admin_toolbar: 0
+  adminimal_admin_toolbar: 0
+  block: 0
+  breakpoint: 0
+  commerce: 0
+  commerce_price: 0
+  commerce_product: 0
+  commerce_store: 0
+  config: 0
+  config_filter: 0
+  config_split: 0
+  datetime: 0
+  dynamic_page_cache: 0
+  entity: 0
+  field: 0
+  file: 0
+  filter: 0
+  inline_entity_form: 0
+  options: 0
+  page_cache: 0
+  path: 0
+  path_alias: 0
+  system: 0
+  text: 0
+  token: 0
+  toolbar: 0
+  update: 0
+  user: 0
+  views: 10
+  draft: 1000
+theme:
+  stable: 0
+  classy: 0
+  seven: 0
+  adminimal_theme: 0
+profile: draft
+_core:
+  default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
