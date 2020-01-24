@@ -18,6 +18,8 @@
         "composer/installers": "^1.3",
         "cweagans/composer-patches": "^1.6",
         "drupal-composer/drupal-scaffold": "^2.5",
+        "drupal/commerce": "^2.16",
+        "drupal/commerce_product_tax": "^1.0@RC",
         "drupal/core": "^8.7.11",
         "lemberg/draft": "^1.2.1",
         "symfony/filesystem": "^3.4",
