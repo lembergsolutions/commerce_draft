@@ -1,22 +1,350 @@
+# This file contains Vagrant and VirtualBox configuration.
+#
+# Settings in this file are project specific, not a local machine specific.
+#
+# If there is a need to override any value, create file vm-settings.local.yml
+# and put it there. Local settings should not be committed to the repository.
+
+# Vagrant configuration.
 vagrant:
+  # Box to use. At the moment Debian-based distributions are supported only.
+  # Do not change this value, unless absolutely necessary. Valid use case is
+  # 32-bit host machine and no support for virtualization of 64-bit guest
+  # machine.
+  # Defaults to 'Official Ubuntu Server 16.04 LTS (Xenial Xerus)'.
+  # Change this parameter in the local settings file.
   box: ubuntu/xenial64
+  # Box version.
   box_version: '>= 0'
   hostname: commerce-draft
-  host_aliases: {  }
+  # Host aliases. Will be added to hosts file alongside <hostname>.test.
+  host_aliases: []
+  # Base directory. No trailing slash!
   base_directory: /var/www/draft
+  # Synced folder options. Refer to https://www.vagrantup.com/docs/synced-folders/
+  # for possible options and their values. Please note that each synced fodler
+  # type could have extra options, look at NFS or RSync for examples.
   synced_folder_options:
     type: nfs
     create: true
+
+# VirtualBox configuration.
+#
+# Virtual machine specification is quite machine-specific. This file provides
+# default settings that should work just fine for a common 2015-2016 machine:
+#   - quad core CPU
+#   - hardware virtualization support
+#   - 8+Gb of RAM
+#   - SSD
+#
+# Sometimes VirtualBox will fail to start with provided settings. For example:
+#   - single core CPU
+#   - no hardware virtualization support
+#   - low amount of RAM
+#
+# In that case virtual machine specification must be overridden. Do not edit
+# this file directly. This file contains global poroject-wide settings, i.e.
+# these settings are shared between all project members. Local settings file is
+# the right place to do it.
 virtualbox:
+  # Machine name. Optional, defaults to Vagrant host name.
   name: ''
+  # Number of CPUs. Lower this value if host machine has single/dual core CPU
+  # and/or no hardware virtualization support.
   cpus: 2
+  # Memory limit (in MB). Small projects may work with less amount of RAM
+  # available. However, machine provisioning usually requires more memory than
+  # normal run. If the host machine has limited RAM available, lower memory
+  # limit after virtual machine provisioning.
   memory: 1024
+  # CPU execution cap (in %). Lower this value if host machine has single core
+  # CPU.
   cpuexecutioncap: 100
+
+# Ansible local configuration.
+ansible:
+  # Ansible version to use for the provisioning. Supported version formats:
+  #   - exact version constraint, like 2.6.16, 2.9.0rc2 etc
+  #   - wildcard version range (.*): you can specify a pattern with a * wildcard.
+  #     For example 2.6.* is the equivalent of >=2.6.0 <2.7.0. This option
+  #     installs the latest available Ansible version within the given range
+  #     constraint. This is the default option.
+  #
+  # This project has been successfully tested with Ansible 2.9.
+  version: '2.9.*'
+
+# List of features to install. Some roles depend on each other, be careful.
 draft_features:
+  # Configure Swap file (sort of required by Composer)
   - swapfile
   - mailhog
+  # Copy host machine GIT credentilas to the VM
   - git_config
   - apache2
   - mysql
   - php
+  # Composer (PHP dependency manager), requires PHP
   - composer
+#  - java
+  # Apache Solr, requires Java
+#  - solr
+
+# Provisioner (Ansible) configuration.
+
+# Role: draft (internal) @ self
+
+ssh_default_directory: '{{ vagrant.base_directory }}'
+
+# Role: oefenweb.swapfile @ v2.0.24
+
+# Set swap file size.
+swapfile_size: 2GB
+
+# Role: geerlingguy.mailhog @ 2.2.0
+
+mailhog_install_dir: /opt/mailhog
+mailhog_version: 1.0.0
+mailhog_binary_url: 'https://github.com/mailhog/MailHog/releases/download/v{{ mailhog_version }}/MailHog_linux_amd64'
+mhsendmail_version: 0.2.0
+mhsendmail_binary_url: 'https://github.com/mailhog/mhsendmail/releases/download/v{{ mhsendmail_version }}/mhsendmail_linux_amd64'
+
+# Path to daemonize, which is used to launch MailHog via init script.
+mailhog_daemonize_bin_path: /usr/sbin/daemonize
+
+# Role: apache2 (internal) @ self
+
+# Web server document root directory
+apache2_document_root: docroot
+
+# Log level to use
+apache2_log_level: error
+
+# Role: geerlingguy.mysql @ 2.9.5
+
+# Set this to the user ansible is logging in as - should have root
+# or sudo access
+mysql_user_home: /root
+mysql_user_name: root
+mysql_user_password: root
+
+# The default root user installed by mysql - almost always root
+mysql_root_home: /root
+mysql_root_username: root
+mysql_root_password: root
+
+# Set this to `true` to forcibly update the root password.
+mysql_root_password_update: false
+mysql_user_password_update: false
+
+mysql_enabled_on_startup: true
+
+# Whether my.cnf should be updated on every run.
+overwrite_global_mycnf: true
+
+# The following variables have a default value depending on operating system.
+mysql_config_file: /etc/mysql/my.cnf
+mysql_config_include_dir: /etc/mysql/conf.d
+
+# Define mysql daemon.
+mysql_daemon: mysql
+
+# Define a custom list of packages to install.
+mysql_packages:
+  - mysql-common
+  - mysql-server
+mysql_port: '3306'
+mysql_bind_address: 0.0.0.0
+mysql_skip_name_resolve: false
+mysql_datadir: /var/lib/mysql
+mysql_sql_mode: ''
+mysql_pid_file: /var/run/mysqld/mysqld.pid
+mysql_socket: /var/run/mysqld/mysqld.sock
+
+# Log file settings.
+mysql_log_file_group: adm
+
+# Slow query log settings.
+mysql_slow_query_log_enabled: false
+mysql_slow_query_time: '2'
+mysql_slow_query_log_file: /var/log/mysql/mysql-slow.log
+mysql_key_buffer_size: 256M
+mysql_max_allowed_packet: 64M
+mysql_table_open_cache: '256'
+mysql_sort_buffer_size: 1M
+mysql_read_buffer_size: 1M
+mysql_read_rnd_buffer_size: 4M
+mysql_myisam_sort_buffer_size: 64M
+mysql_thread_cache_size: '8'
+mysql_query_cache_type: '0'
+mysql_query_cache_size: 16M
+mysql_query_cache_limit: 1M
+mysql_max_connections: '151'
+mysql_tmp_table_size: 16M
+mysql_max_heap_table_size: 16M
+mysql_group_concat_max_len: '1024'
+mysql_join_buffer_size: '262144'
+mysql_lower_case_table_names: '0'
+mysql_wait_timeout: '28800'
+mysql_event_scheduler_state: 'OFF'
+mysql_innodb_file_per_table: '1'
+mysql_innodb_buffer_pool_size: 256M
+mysql_innodb_log_file_size: 64M
+mysql_innodb_log_buffer_size: 8M
+mysql_innodb_flush_log_at_trx_commit: '1'
+mysql_innodb_lock_wait_timeout: '50'
+
+# These settings require MySQL > 5.5.
+mysql_supports_innodb_large_prefix: true
+mysql_innodb_large_prefix: '1'
+mysql_innodb_file_format: barracuda
+mysql_mysqldump_max_allowed_packet: 64M
+mysql_log: ''
+mysql_log_error: /var/log/mysql/mysql.err
+mysql_syslog_tag: mysql
+
+mysql_config_include_files: []
+#  - src: path/relative/to/playbook/file.cnf
+#  - { src: path/relative/to/playbook/anotherfile.cnf, force: yes }
+
+# Databases.
+mysql_databases:
+  -
+    name: drupal
+    collation: utf8mb4_general_ci
+    encoding: utf8mb4
+
+# Users.
+mysql_users:
+  -
+    name: drupal
+    password: drupal
+    priv: 'drupal.*:ALL'
+mysql_server_id: '1'
+mysql_max_binlog_size: 100M
+mysql_binlog_format: ROW
+mysql_expire_logs_days: '10'
+mysql_replication_role: ''
+mysql_replication_master: ''
+# Same keys as `mysql_users` above.
+mysql_replication_user: []
+
+# Role: T2L.php @ 1.2.1
+
+# PHP version to install. Possible values: 7.2, 7.3 and 7.4
+php_version: '7.3'
+
+# Configure PHP.
+php_configuration:
+  PHP:
+    error_reporting: E_ALL
+    error_log: /var/log/draft/php_error.log
+    display_errors: 'On'
+    display_startup_errors: 'On'
+    memory_limit: 256M
+    output_buffering: 'Off'
+    upload_max_filesize: 64M
+    post_max_size: 512M
+    # Requires MailHog.
+    sendmail_path: '{{ mailhog_install_dir }}/mhsendmail'
+
+# Configure PHP CLI.
+php_cli_configuration:
+  PHP:
+    memory_limit: -1
+
+# PHP extensions to install.
+php_extensions:
+  - curl
+  - gd
+  - json
+  - mbstring
+  - mysql
+  - sqlite3
+  - xdebug
+  - xml
+  - zip
+
+# Configure PHP extensions.
+php_extensions_configuration:
+  opcache:
+    opcache.error_log: /var/log/draft/php_opcache_error.log
+  xdebug:
+    xdebug.remote_enable: 'On'
+    xdebug.remote_connect_back: 'On'
+    xdebug.remote_log: /var/log/draft/php_xdebug_remote.log
+
+# Web server daemon to restart (defaults to Apache 2).
+php_web_server_daemon: apache2
+
+# Boolean indicating whether to restart web server or not.
+php_restart_web_server: true
+
+# Role: T2L.composer @ 2.0.2
+
+# Composer installation directory.
+composer_install_dir: /usr/local/bin
+
+# Composer executable filename.
+composer_filename: composer
+
+# Composer version.
+composer_version: ''
+
+# Keep Composer up-to-date.
+composer_keep_updated: true
+
+# PHP executable name.
+composer_php_executable: php
+
+# Role: T2L.java @ 1.2.0
+
+# Open JDK version(s) and package type (jre or jdk).
+# Currently supported versions are 6-13 (however not every Java version is
+# supported for every Ubuntu version).
+java_openjdk_packages:
+  -
+    version: 8
+    type: jre
+
+# Oracle Java version(s).
+# Currently supported version is 13.
+java_oracle_packages: []
+#  - version: 13
+
+# Java default alternative. Responsible for setting JAVA_HOME as well.
+java_default_alternative:
+  provider: openjdk
+  version: 8
+
+# Role: T2L.solr @ 2.1.0
+
+# Solr user and group. Defaults to solr:solr.
+solr_user: solr
+solr_group: '{{ solr_user }}'
+
+# Solr version to install. Minimum supported version is 5.0.0.
+solr_version: 7.7.2
+
+# Port Solr should bind to.
+solr_port: 8983
+
+# Download Solr here.
+solr_download_dir: /tmp
+
+# Solr install directory.
+solr_install_dir: /opt
+
+# Solr data directory.
+solr_data_dir: /var/solr
+
+# Remove downloaded archive and extracted files.
+solr_cleanup_downloads: true
+
+# Remove downloaded GPG keys file and .asc signature file.
+solr_cleanup_gpg: true
+
+# Solr cores to configure.
+solr_cores:
+  -
+    name: drupal
+#    conf_path: /var/www/project/config/solr
