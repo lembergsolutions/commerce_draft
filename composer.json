@@ -21,6 +21,8 @@
         "drupal/commerce": "^2.16",
         "drupal/commerce_product_tax": "^1.0@RC",
         "drupal/core": "^8.7.11",
+        "drupal/layout_builder_restrictions": "^2.5",
+        "drupal/single_row_layouts": "1.x-dev",
         "lemberg/draft": "^1.2.1",
         "symfony/filesystem": "^3.4",
         "symfony/yaml": "^3.4",

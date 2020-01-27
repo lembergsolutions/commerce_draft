@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a0d117a910fa233a13b7dc07376452e1",
+    "content-hash": "384e53d0a43e485b71f769e6be2b7d69",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2379,6 +2379,66 @@
             }
         },
         {
+            "name": "drupal/layout_builder_restrictions",
+            "version": "2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/layout_builder_restrictions.git",
+                "reference": "8.x-2.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/layout_builder_restrictions-8.x-2.5.zip",
+                "reference": "8.x-2.5",
+                "shasum": "7f5e70e70011769c19989ff099ab0b09870bc27e"
+            },
+            "require": {
+                "drupal/core": "^8.6.0 || ^9"
+            },
+            "require-dev": {
+                "drupal/dashboards": "*",
+                "drupal/layout_library": "*",
+                "drupal/mini_layouts": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.5",
+                    "datestamp": "1578955383",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "eiriksm",
+                    "homepage": "https://www.drupal.org/user/1014468"
+                },
+                {
+                    "name": "mark_fullmer",
+                    "homepage": "https://www.drupal.org/user/2612816"
+                },
+                {
+                    "name": "twfahey",
+                    "homepage": "https://www.drupal.org/user/3403722"
+                }
+            ],
+            "description": "Manage which fields & layouts are available in Layout Builder",
+            "homepage": "https://www.drupal.org/project/layout_builder_restrictions",
+            "support": {
+                "source": "https://git.drupalcode.org/project/layout_builder_restrictions"
+            }
+        },
+        {
             "name": "drupal/profile",
             "version": "1.0.0",
             "source": {
@@ -2448,6 +2508,48 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/profile"
             }
+        },
+        {
+            "name": "drupal/single_row_layouts",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/single_row_layouts.git",
+                "reference": "91d1f5c03c3eed13738b131b509c20957d34f47f"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1520254685",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "eiriksm",
+                    "homepage": "https://www.drupal.org/user/1014468"
+                }
+            ],
+            "description": "Provides a couple of new layouts for layout builder.",
+            "homepage": "https://www.drupal.org/project/single_row_layouts",
+            "support": {
+                "source": "https://git.drupalcode.org/project/single_row_layouts"
+            },
+            "time": "2018-03-05T12:08:29+00:00"
         },
         {
             "name": "drupal/state_machine",
@@ -8399,7 +8501,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/commerce_product_tax": 5
+        "drupal/commerce_product_tax": 5,
+        "drupal/single_row_layouts": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

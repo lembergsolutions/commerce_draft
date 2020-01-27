@@ -12,17 +12,23 @@ module:
   config: 0
   config_filter: 0
   config_split: 0
+  contextual: 0
   datetime: 0
   dynamic_page_cache: 0
   entity: 0
   field: 0
+  field_ui: 0
   file: 0
   filter: 0
   inline_entity_form: 0
+  layout_builder: 0
+  layout_builder_restrictions: 0
+  layout_discovery: 0
   options: 0
   page_cache: 0
   path: 0
   path_alias: 0
+  single_row_layouts: 0
   system: 0
   text: 0
   token: 0
