@@ -2,39 +2,64 @@ module:
   address: 0
   admin_links_access_filter: 0
   admin_toolbar: 0
+  admin_toolbar_tools: 0
   adminimal_admin_toolbar: 0
   block: 0
+  block_content: 0
   breakpoint: 0
+  ckeditor: 0
   commerce: 0
+  commerce_cart: 0
+  commerce_checkout: 0
+  commerce_number_pattern: 0
+  commerce_order: 0
+  commerce_payment: 0
   commerce_price: 0
   commerce_product: 0
+  commerce_product_tax: 0
+  commerce_promotion: 0
   commerce_store: 0
+  commerce_tax: 0
   config: 0
   config_filter: 0
   config_split: 0
   contextual: 0
   datetime: 0
+  datetime_range: 0
   dynamic_page_cache: 0
+  editor: 0
   entity: 0
+  entity_reference_revisions: 0
   field: 0
   field_ui: 0
   file: 0
   filter: 0
+  image: 0
   inline_entity_form: 0
+  inline_form_errors: 0
   layout_builder: 0
   layout_builder_restrictions: 0
   layout_discovery: 0
+  link: 0
+  menu_ui: 0
+  node: 0
   options: 0
   page_cache: 0
   path: 0
   path_alias: 0
+  profile: 0
   single_row_layouts: 0
+  state_machine: 0
   system: 0
+  taxonomy: 0
+  telephone: 0
   text: 0
   token: 0
   toolbar: 0
   update: 0
   user: 0
+  views_ui: 0
+  menu_link_content: 1
   views: 10
   draft: 1000
 theme:
@@ -42,6 +67,7 @@ theme:
   classy: 0
   seven: 0
   adminimal_theme: 0
+  claro: 0
 profile: draft
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
