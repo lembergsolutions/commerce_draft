@@ -26,5 +26,7 @@ hidden:
   is_default: true
   mail: true
   name: true
+  prices_include_tax: true
+  tax_registrations: true
   timezone: true
   uid: true
