@@ -41,6 +41,8 @@ module:
   layout_builder_restrictions: 0
   layout_discovery: 0
   link: 0
+  media: 0
+  media_library: 0
   menu_ui: 0
   node: 0
   options: 0

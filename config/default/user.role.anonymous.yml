@@ -12,3 +12,4 @@ permissions:
   - 'access checkout'
   - 'access content'
   - 'view commerce_product'
+  - 'view media'

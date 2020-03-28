@@ -13,4 +13,5 @@ permissions:
   - 'access content'
   - 'manage own commerce_payment_method'
   - 'view commerce_product'
+  - 'view media'
   - 'view own commerce_order'
