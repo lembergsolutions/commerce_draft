@@ -50,7 +50,8 @@
 
             "Lemberg\\Draft\\Template\\DrupalProject::localSetup"
         ],
-        "si": [
+        "build": [
+            "composer install --dev",
             "drush si -y",
             "drush config-set \"system.site\" uuid 902d1300-7276-46f1-8608-7fc30b57e39a",
             "drush cim -y",
