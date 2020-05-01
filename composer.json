@@ -28,7 +28,6 @@
         "symfony/filesystem": "~3.4.0",
         "symfony/finder": "~3.4.0",
         "symfony/lock": "~3.4.0"
-
     },
     "require": {
         "composer/installers": "^1.3",
@@ -58,13 +57,11 @@
         ],
         "post-install-cmd": [
             "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-
             "Lemberg\\Draft\\Template\\DrupalProject::createRequiredFiles",
             "Lemberg\\Draft\\Template\\DrupalProject::localSetup"
         ],
         "post-update-cmd": [
             "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-
             "Lemberg\\Draft\\Template\\DrupalProject::localSetup"
         ],
         "build": [
@@ -109,8 +106,7 @@
                 "docroot/themes/custom/*/composer.json"
             ]
         },
-        "patches": {
-        },
+        "patches": {},
         "enable-patching": true
     }
 }

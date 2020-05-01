@@ -8554,10 +8554,7 @@
             },
             "type": "composer-plugin",
             "extra": {
-                "class": "Lemberg\\Draft\\Environment\\Composer\\Plugin",
-                "draft-environment": {
-                    "last-update-weight": 2
-                }
+                "class": "Lemberg\\Draft\\Environment\\Composer\\Plugin"
             },
             "autoload": {
                 "psr-4": {
