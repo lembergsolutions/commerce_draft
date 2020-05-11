@@ -1,0 +1,8 @@
+name: Draft commerce content
+type: module
+description: 'Creates demo content'
+core_version_requirement: ^8 || ^9
+dependencies:
+  - commerce:commerce_store
+  - commerce:commerce_product
+  - drupal:node

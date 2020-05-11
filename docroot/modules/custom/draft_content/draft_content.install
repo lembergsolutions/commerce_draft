@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Install and updates hooks.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function draft_content_install() {
+  $store_values = [
+    'type' => 'online',
+    'uid' => 1,
+    'name' => 'Online store',
+    'mail' => 'draft@draft.com',
+    'default_currency' => 'USD',
+    'timezone' => 'UTC',
+    'address' => [
+      'country_code' => 'US',
+      'locality' => 'Seattle',
+      'administrative_area' => 'WA',
+      'postal_code' => '98114',
+      'address_line1' => 'Main street',
+    ],
+  ];
+  $default_store = Drupal::entityTypeManager()
+    ->getStorage('commerce_store')
+    ->create($store_values);
+  $default_store->save();
+
+  $node_storage = Drupal::entityTypeManager()->getStorage('node');
+  $page = $node_storage->create(['title' => 'Lorem page', 'type' => 'static_page', 'body' => 'Commerce draft is used for the demonstration of Commerce power']);
+  $page->save();
+}
