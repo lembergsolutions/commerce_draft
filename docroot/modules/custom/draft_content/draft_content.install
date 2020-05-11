@@ -30,6 +30,6 @@ function draft_content_install() {
   $default_store->save();
 
   $node_storage = Drupal::entityTypeManager()->getStorage('node');
-  $page = $node_storage->create(['title' => 'Lorem page', 'type' => 'static_page', 'body' => 'Commerce draft is used for the demonstration of Commerce power']);
+  $page = $node_storage->create(['title' => 'Lorem page', 'type' => 'static_page', 'body' => ['value' => 'Commerce draft is used for the demonstration of Commerce power']]);
   $page->save();
 }
