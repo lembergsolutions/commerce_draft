@@ -1,0 +1,21 @@
+uuid: 805b1f7c-9924-4ad6-a427-6332f99c68e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_cart
+  theme:
+    - claro
+id: cart
+theme: claro
+region: header
+weight: -4
+provider: null
+plugin: commerce_cart
+settings:
+  id: commerce_cart
+  label: Cart
+  provider: commerce_cart
+  label_display: '0'
+  dropdown: true
+visibility: {  }

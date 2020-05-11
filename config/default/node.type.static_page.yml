@@ -14,5 +14,5 @@ type: static_page
 description: ''
 help: ''
 new_revision: false
-preview_mode: 1
-display_submitted: true
+preview_mode: 0
+display_submitted: false
