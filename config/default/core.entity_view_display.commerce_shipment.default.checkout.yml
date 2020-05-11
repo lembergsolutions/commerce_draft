@@ -1,0 +1,33 @@
+uuid: 9f94eebd-f484-4116-a8be-3fdd493e2b4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_shipping.commerce_shipment_type.default
+    - core.entity_view_mode.commerce_shipment.checkout
+  module:
+    - commerce_shipping
+_core:
+  default_config_hash: xaIWWorjx9xEK7-GoYQh1SnGAbsWIJakb3ALxALTp9U
+id: commerce_shipment.default.checkout
+targetEntityType: commerce_shipment
+bundle: default
+mode: checkout
+content:
+  shipping_method:
+    label: above
+    type: commerce_shipping_method
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  amount: true
+  items: true
+  original_amount: true
+  package_type: true
+  shipping_profile: true
+  state: true
+  title: true
+  tracking_code: true
+  weight: true

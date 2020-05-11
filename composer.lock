@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "90e34958ac6e3714c4b6ce86cf5862ae",
+    "content-hash": "00ab229187e3cd9bdc129b4ed6d4821a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1125,9 +1125,6 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
                     "version": "8.x-1.8",
                     "datestamp": "1583988119",
@@ -1408,22 +1405,22 @@
         },
         {
             "name": "drupal/commerce",
-            "version": "2.16.0",
+            "version": "2.17.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/commerce.git",
-                "reference": "8.x-2.16"
+                "reference": "8.x-2.17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/commerce-8.x-2.16.zip",
-                "reference": "8.x-2.16",
-                "shasum": "9c3297f4f18d1276bd76d2129aac3b4476dc5db5"
+                "url": "https://ftp.drupal.org/files/projects/commerce-8.x-2.17.zip",
+                "reference": "8.x-2.17",
+                "shasum": "b2f5014092a58f9384d3d13e1c059d13f0c1cbbf"
             },
             "require": {
                 "commerceguys/intl": "^1.0.0",
                 "drupal/address": "^1.7",
-                "drupal/core": "^8.7",
+                "drupal/core": "^8.7.7 || ^9",
                 "drupal/entity": "^1.0-rc2",
                 "drupal/entity_reference_revisions": "~1.0",
                 "drupal/inline_entity_form": "^1.0-rc1",
@@ -1448,12 +1445,9 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-2.16",
-                    "datestamp": "1576076720",
+                    "version": "8.x-2.17",
+                    "datestamp": "1582923518",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1490,20 +1484,17 @@
         },
         {
             "name": "drupal/commerce_number_pattern",
-            "version": "2.16.0",
+            "version": "2.17.0",
             "require": {
                 "drupal/commerce": "self.version",
                 "drupal/commerce_store": "*",
-                "drupal/core": "~8.0"
+                "drupal/core": "^8.7.7 || ^9"
             },
             "type": "metapackage",
             "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-2.16",
-                    "datestamp": "1576076720",
+                    "version": "8.x-2.17",
+                    "datestamp": "1582923518",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1540,25 +1531,22 @@
         },
         {
             "name": "drupal/commerce_order",
-            "version": "2.16.0",
+            "version": "2.17.0",
             "require": {
                 "drupal/commerce": "self.version",
                 "drupal/commerce_number_pattern": "*",
                 "drupal/commerce_price": "*",
                 "drupal/commerce_store": "*",
-                "drupal/core": "*",
+                "drupal/core": "^8.7.7 || ^9",
                 "drupal/entity_reference_revisions": "*",
                 "drupal/profile": "*",
                 "drupal/state_machine": "*"
             },
             "type": "metapackage",
             "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-2.16",
-                    "datestamp": "1576076720",
+                    "version": "8.x-2.17",
+                    "datestamp": "1582923518",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1595,19 +1583,16 @@
         },
         {
             "name": "drupal/commerce_price",
-            "version": "2.16.0",
+            "version": "2.17.0",
             "require": {
                 "drupal/commerce": "self.version",
-                "drupal/core": "~8.0"
+                "drupal/core": "^8.7.7 || ^9"
             },
             "type": "metapackage",
             "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-2.16",
-                    "datestamp": "1576076720",
+                    "version": "8.x-2.17",
+                    "datestamp": "1582923518",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1696,21 +1681,85 @@
             }
         },
         {
-            "name": "drupal/commerce_store",
-            "version": "2.16.0",
-            "require": {
-                "drupal/commerce": "self.version",
-                "drupal/commerce_price": "*",
-                "drupal/core": "*"
+            "name": "drupal/commerce_shipping",
+            "version": "2.0.0-rc1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/commerce_shipping.git",
+                "reference": "8.x-2.0-rc1"
             },
-            "type": "metapackage",
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/commerce_shipping-8.x-2.0-rc1.zip",
+                "reference": "8.x-2.0-rc1",
+                "shasum": "7cca5ef9f8ca3e7641db24d726af44d023f2b523"
+            },
+            "require": {
+                "drupal/commerce": "^2.17",
+                "drupal/commerce_order": "*",
+                "drupal/commerce_price": "*",
+                "drupal/core": "^8.7.7 || ^9",
+                "drupal/physical": "^1.0"
+            },
+            "type": "drupal-module",
             "extra": {
                 "branch-alias": {
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.16",
-                    "datestamp": "1576076720",
+                    "version": "8.x-2.0-rc1",
+                    "datestamp": "1583429595",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "googletorp",
+                    "homepage": "https://www.drupal.org/user/386230"
+                },
+                {
+                    "name": "jsacksick",
+                    "homepage": "https://www.drupal.org/user/972218"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "rszrama",
+                    "homepage": "https://www.drupal.org/user/49344"
+                }
+            ],
+            "description": "Provides shipping functionality for Commerce.",
+            "homepage": "http://drupal.org/project/commerce_shipping",
+            "support": {
+                "source": "https://git.drupalcode.org/project/commerce_shipping"
+            }
+        },
+        {
+            "name": "drupal/commerce_store",
+            "version": "2.17.0",
+            "require": {
+                "drupal/commerce": "self.version",
+                "drupal/commerce_price": "*",
+                "drupal/core": "^8.7.7 || ^9"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.17",
+                    "datestamp": "1582923518",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1747,21 +1796,18 @@
         },
         {
             "name": "drupal/commerce_tax",
-            "version": "2.16.0",
+            "version": "2.17.0",
             "require": {
                 "drupal/commerce": "self.version",
                 "drupal/commerce_order": "*",
                 "drupal/commerce_price": "*",
-                "drupal/core": "~8.0"
+                "drupal/core": "^8.7.7 || ^9"
             },
             "type": "metapackage",
             "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-2.16",
-                    "datestamp": "1576076720",
+                    "version": "8.x-2.17",
+                    "datestamp": "1582923518",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -10914,6 +10960,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/commerce_product_tax": 5,
+        "drupal/commerce_shipping": 5,
         "drupal/single_row_layouts": 20,
         "behat/mink": 20,
         "behat/mink-selenium2-driver": 20,

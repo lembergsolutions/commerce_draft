@@ -18,6 +18,7 @@ module:
   commerce_product: 0
   commerce_product_tax: 0
   commerce_promotion: 0
+  commerce_shipping: 0
   commerce_store: 0
   commerce_tax: 0
   config: 0
@@ -50,6 +51,7 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  physical: 0
   profile: 0
   single_row_layouts: 0
   state_machine: 0
