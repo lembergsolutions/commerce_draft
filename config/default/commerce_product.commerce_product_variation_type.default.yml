@@ -8,5 +8,6 @@ id: default
 label: Default
 orderItemType: default
 generateTitle: true
-traits: {  }
+traits:
+  - purchasable_entity_shippable
 locked: false

@@ -5,6 +5,7 @@ dependencies:
   config:
     - commerce_product.commerce_product_variation_type.default
     - core.entity_view_mode.commerce_product_variation.summary
+    - field.field.commerce_product_variation.default.weight
   enforced:
     module:
       - commerce_checkout
@@ -45,3 +46,4 @@ content:
 hidden:
   price: true
   sku: true
+  weight: true

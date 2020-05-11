@@ -1,0 +1,19 @@
+uuid: be8f7eff-f650-4d11-98d9-33c81e6a6f84
+langcode: en
+status: true
+dependencies: {  }
+id: manual_2
+label: 'Manual 2'
+weight: null
+plugin: manual
+configuration:
+  instructions:
+    value: ''
+    format: plain_text
+  display_label: 'Manual 2'
+  mode: n/a
+  payment_method_types:
+    - credit_card
+  collect_billing_information: true
+conditions: {  }
+conditionOperator: AND

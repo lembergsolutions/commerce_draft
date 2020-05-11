@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - commerce_order.commerce_order_type.default
+    - field.field.commerce_order.default.shipments
   module:
     - commerce_order
+    - entity_reference_revisions
     - inline_entity_form
 _core:
   default_config_hash: 7hXqpb7yxuHJYNjyPmN_vQll6jq_fl7N09Tj-PFcESU
@@ -16,26 +18,30 @@ mode: default
 content:
   adjustments:
     type: commerce_adjustment_default
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     region: content
   billing_profile:
-    type: commerce_billing_profile
+    type: entity_reference_revisions_autocomplete
     weight: 0
-    settings: {  }
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
     region: content
   cart:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 20
+    weight: 4
     region: content
     third_party_settings: {  }
   order_items:
     type: inline_entity_form_complex
-    weight: 1
+    weight: 2
     settings:
       override_labels: true
       label_singular: 'order item'
@@ -44,8 +50,18 @@ content:
       match_operator: CONTAINS
       allow_existing: false
       form_mode: default
+      revision: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
     third_party_settings: {  }
     region: content
+  shipments:
+    type: options_buttons
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   ip_address: true

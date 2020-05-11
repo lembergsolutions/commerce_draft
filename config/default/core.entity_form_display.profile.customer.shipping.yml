@@ -1,8 +1,9 @@
-uuid: f9bfde8d-76af-462e-aa6a-18fc77b302c5
+uuid: d7b0f5d6-ab8b-47c3-858f-2b66f2dc56e6
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.profile.shipping
     - field.field.profile.customer.address
     - field.field.profile.customer.tax_number
     - profile.type.customer
@@ -13,17 +14,17 @@ dependencies:
     - address
 _core:
   default_config_hash: 3LyHGK7R4HxqejbxONet1S9j9ekqLJuFpwT-MNJygvo
-id: profile.customer.default
+id: profile.customer.shipping
 targetEntityType: profile
 bundle: customer
-mode: default
+mode: shipping
 content:
   address:
     type: address_default
     weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden:
   is_default: true
   tax_number: true
