@@ -1,17 +1,19 @@
-uuid: 3218e4ec-4c33-401f-aac9-37c1c07914e0
+uuid: ae8f9343-bb14-4a4a-9fb5-bf8a54c746e0
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+  default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
 id: authenticated
 label: 'Authenticated user'
 weight: 1
 is_admin: false
 permissions:
-  - 'access checkout'
+  - 'access comments'
   - 'access content'
-  - 'manage own commerce_payment_method'
-  - 'view commerce_product'
-  - 'view media'
-  - 'view own commerce_order'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use text format basic_html'

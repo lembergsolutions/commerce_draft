@@ -3,7 +3,7 @@
 require_once 'default.settings.php';
 
 // This is defined inside the read-only "config" directory, deployed via Git.
-$config_directories[CONFIG_SYNC_DIRECTORY] = $app_root . '/../config/' . basename($site_path);
+$settings['config_sync_directory'] = $app_root . '/../config/default';
 
 // Installation profile.
 $settings['install_profile'] = 'draft';
