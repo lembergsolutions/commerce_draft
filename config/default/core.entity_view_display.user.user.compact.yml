@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
+    - field.field.user.user.commerce_remote_id
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -26,4 +27,6 @@ content:
     third_party_settings: {  }
     label: hidden
 hidden:
+  commerce_remote_id: true
+  customer_profiles: true
   member_for: true
