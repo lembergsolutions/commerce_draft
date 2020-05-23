@@ -61,7 +61,9 @@
             "drush si -y",
             "drush config-set \"system.site\" uuid 902d1300-7276-46f1-8608-7fc30b57e39a",
             "drush entity:delete shortcut_set",
+            "drush cr",
             "drush cim -y",
+            "drush cr",
             "drush upwd admin admin"
         ]
     },
