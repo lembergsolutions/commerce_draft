@@ -29,10 +29,9 @@
     "require": {
         "composer/installers": "^1.3",
         "cweagans/composer-patches": "^1.6",
-        "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/admin_toolbar": "^2.2",
         "drupal/commerce": "^2.17",
-        "drupal/core": "^9.0.0",
+        "drupal/core-recommended": "^9.0.0",
         "drush/drush": "^10.2",
         "wikimedia/composer-merge-plugin": "^1.4"
     },
@@ -77,6 +76,17 @@
         }
     },
     "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "docroot/"
+            },
+            "file-mapping": {
+                "[web-root]/robots.txt": false
+            },
+            "allowed-packages": [
+                "drupal/core"
+            ]
+        },
         "installer-paths": {
             "docroot/core": [
                 "type:drupal-core"
