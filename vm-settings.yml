@@ -16,6 +16,7 @@ vagrant:
   box: ubuntu/xenial64
   # Box version.
   box_version: '>= 0'
+  # Host name. This setting is required. Usually host name matches project name.
   hostname: commerce-draft
   # Host aliases. Will be added to hosts file alongside <hostname>.test.
   host_aliases: []
@@ -252,6 +253,10 @@ mysql_replication_role: ''
 mysql_replication_master: ''
 # Same keys as `mysql_users` above.
 mysql_replication_user: []
+
+# Role: T2L.php @ 1.2.0
+
+# PHP version to install. Possible values: 7.2, 7.3 and 7.4
 php_version: '7.4'
 
 # Configure PHP.
@@ -343,6 +348,8 @@ java_default_alternative:
 # Solr user and group. Defaults to solr:solr.
 solr_user: solr
 solr_group: '{{ solr_user }}'
+
+# Solr version to install. Minimum supported version is 5.0.0.
 solr_version: 7.7.2
 
 # Port Solr should bind to.
