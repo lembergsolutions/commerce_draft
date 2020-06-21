@@ -1,5 +1,5 @@
 {
-    "name": "lemberg/draft-template",
+    "name": "commerce_draft",
     "description": "Project template for Drupal 8 sites built with the Draft distribution.",
     "type": "project",
     "license": "GPL-2.0-or-later",

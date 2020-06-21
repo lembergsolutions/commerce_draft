@@ -43,3 +43,4 @@
 
 # Ignore PHPStorm folder
 /.idea
+*.DS_Store
