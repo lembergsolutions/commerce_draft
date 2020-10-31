@@ -1,7 +1,7 @@
 uuid: 902d1300-7276-46f1-8608-7fc30b57e39a
-name: 'Drush Site-Install'
+name: 'Drupal 9.1'
 mail: admin@example.com
-slogan: ''
+slogan: Commerce
 page:
   403: ''
   404: ''

@@ -31,7 +31,8 @@
         "cweagans/composer-patches": "^1.6",
         "drupal/admin_toolbar": "^2.2",
         "drupal/commerce": "^2.17",
-        "drupal/core-recommended": "^9.0.0",
+        "drupal/commerce_product_tax": "^1.0@RC",
+        "drupal/core-recommended": "^9.1.0",
         "drush/drush": "^10.2",
         "wikimedia/composer-merge-plugin": "^1.4"
     },
