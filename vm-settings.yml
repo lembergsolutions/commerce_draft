@@ -20,17 +20,20 @@ vagrant:
   hostname: commerce-draft
   # Host aliases. Will be added to hosts file alongside <hostname>.test.
   host_aliases: []
-  # Base directory. No trailing slash!
-  base_directory: /var/www/draft
   # Synced folder options. Refer to https://www.vagrantup.com/docs/synced-folders/
   # for possible options and their values. Please note that each synced fodler
   # type could have extra options, look at NFS or RSync for examples.
   synced_folder_options:
     type: nfs
     create: true
+    id: default
   # Disable automatic update checking be setting this option to false.
   # See https://www.vagrantup.com/docs/boxes/versioning.html#automatic-update-checking
   box_check_update: false
+  # Source directory. No trailing slash!
+  source_directory: .
+  # Destination directory. No trailing slash!
+  destination_directory: /var/www/draft
 
 # VirtualBox configuration.
 #
@@ -100,9 +103,9 @@ draft_features:
 
 # Role: draft (internal) @ self
 
-ssh_default_directory: '{{ vagrant.base_directory }}'
+ssh_default_directory: '{{ vagrant.destination_directory }}'
 
-# Role: oefenweb.swapfile @ v2.0.26
+# Role: oefenweb.swapfile @ v2.0.28
 
 # Set swap file size.
 swapfile_size: 2GB
@@ -126,7 +129,7 @@ apache2_document_root: docroot
 # Log level to use
 apache2_log_level: error
 
-# Role: geerlingguy.mysql @ 3.1.0
+# Role: geerlingguy.mysql @ 3.3.0
 
 # Set this to the user ansible is logging in as - should have root
 # or sudo access
@@ -243,6 +246,7 @@ mysql_users:
     name: drupal
     password: drupal
     priv: 'drupal.*:ALL'
+    host: '%'
 
 # Replication settings (replication is only enabled if master/user have values).
 mysql_server_id: '1'
@@ -254,7 +258,7 @@ mysql_replication_master: ''
 # Same keys as `mysql_users` above.
 mysql_replication_user: []
 
-# Role: T2L.php @ 1.2.0
+# Role: T2L.php @ 1.3.1
 
 # PHP version to install. Possible values: 7.2, 7.3 and 7.4
 php_version: '7.4'
@@ -272,11 +276,18 @@ php_configuration:
     post_max_size: 512M
     # Requires MailHog.
     sendmail_path: '{{ mailhog_install_dir }}/mhsendmail'
+    max_execution_time: 300
 
 # Configure PHP CLI.
 php_cli_configuration:
   PHP:
     memory_limit: -1
+    error_reporting: E_ALL
+    error_log: /var/log/draft/php_error.log
+    max_execution_time: 0
+    output_buffering: 'Off'
+    # Requires MailHog.
+    sendmail_path: '{{ mailhog_install_dir }}/mhsendmail'
 
 # PHP extensions to install.
 php_extensions:
@@ -323,7 +334,7 @@ composer_keep_updated: true
 # PHP executable name.
 composer_php_executable: php
 
-# Role: T2L.java @ 1.3.0
+# Role: T2L.java @ 1.3.1
 
 # Open JDK version(s) and package type (jre or jdk).
 # Currently supported versions are 6-13 (however not every Java version is
@@ -343,7 +354,7 @@ java_default_alternative:
   provider: openjdk
   version: 8
 
-# Role: T2L.solr @ 2.2.0
+# Role: T2L.solr @ 2.2.1
 
 # Solr user and group. Defaults to solr:solr.
 solr_user: solr
