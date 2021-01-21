@@ -6,8 +6,10 @@ dependencies:
     - commerce_product.commerce_product_type.default
     - field.field.commerce_product.default.body
     - field.field.commerce_product.default.field_image
+    - image.style.medium
   module:
     - commerce_product
+    - media
     - text
 _core:
   default_config_hash: 10qgl6V_HwkrJufzsNCV75OpqOeMzzKDJb3BhaogmzQ
@@ -24,12 +26,12 @@ content:
     third_party_settings: {  }
     region: content
   field_image:
-    type: entity_reference_entity_view
+    type: media_thumbnail
     weight: 0
     label: hidden
     settings:
-      view_mode: default
-      link: false
+      image_style: medium
+      image_link: ''
     third_party_settings: {  }
     region: content
   title:
