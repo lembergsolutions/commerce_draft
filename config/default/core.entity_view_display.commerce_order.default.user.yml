@@ -82,6 +82,7 @@ content:
     label: hidden
     region: content
 hidden:
+  balance: true
   changed: true
   ip_address: true
   store_id: true

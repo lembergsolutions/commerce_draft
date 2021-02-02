@@ -52,5 +52,6 @@ content:
     region: content
 hidden:
   created: true
+  langcode: true
   stores: true
   uid: true
