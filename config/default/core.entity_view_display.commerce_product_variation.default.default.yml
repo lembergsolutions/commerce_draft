@@ -35,6 +35,7 @@ content:
       strip_trailing_zeroes: false
     third_party_settings: {  }
 hidden:
+  langcode: true
   product_id: true
   sku: true
   title: true

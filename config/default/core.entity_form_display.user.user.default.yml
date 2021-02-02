@@ -39,3 +39,4 @@ content:
 hidden:
   commerce_remote_id: true
   customer_profiles: true
+  langcode: true
