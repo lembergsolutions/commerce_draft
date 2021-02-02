@@ -5,14 +5,10 @@ dependencies:
   config:
     - commerce_product.commerce_product_type.default
     - field.field.commerce_product.default.body
-    - field.field.commerce_product.default.field_image
   module:
     - commerce
-    - media_library
     - path
     - text
-_core:
-  default_config_hash: bVqhDE0CBvUi4RPHqKu4sBhUOUwOTgcHVhn5PkfngLU
 id: commerce_product.default.default
 targetEntityType: commerce_product
 bundle: default
@@ -20,25 +16,17 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 3
+    weight: 2
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
-      show_summary: false
     third_party_settings: {  }
     region: content
   created:
     type: datetime_timestamp
     weight: 5
     settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_image:
-    type: media_library_widget
-    weight: 2
-    settings:
-      media_types: {  }
     third_party_settings: {  }
     region: content
   langcode:
@@ -50,13 +38,13 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 6
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     region: content
   status:
     type: boolean_checkbox
-    weight: 7
+    weight: 8
     region: content
     settings:
       display_label: true
@@ -90,4 +78,5 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_image: true
   variations: true

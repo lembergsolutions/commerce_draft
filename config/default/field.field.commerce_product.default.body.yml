@@ -7,8 +7,6 @@ dependencies:
     - field.storage.commerce_product.body
   module:
     - text
-_core:
-  default_config_hash: ObNdu_OSuSmozy8UUi9cKY41dPs7s1ZOuWhG6Q5KdR8
 id: commerce_product.default.body
 field_name: body
 entity_type: commerce_product
