@@ -95,9 +95,9 @@ draft_features:
   - php
   # Composer (PHP dependency manager), requires PHP
   - composer
-#  - java
+  #  - java
   # Apache Solr, requires Java
-#  - solr
+  #  - solr
 
 # Provisioner (Ansible) configuration.
 
@@ -163,7 +163,9 @@ mysql_packages:
   - mysql-common
   - mysql-server
 
-# If you need to explicitly set the MySQL Python package, you can set it here. If not set, it will default to `python-mysqldb` for Python 2 and `python3-mysqldb` for Python 3.
+# If you need to explicitly set the MySQL Python package, you can set it here.
+# If not set, it will default to `python-mysqldb` for Python 2 and `python3-mysqldb` for Python 3.
+#
 # mysql_python_package_debian: ''
 
 # MySQL connection settings.
@@ -258,9 +260,9 @@ mysql_replication_master: ''
 # Same keys as `mysql_users` above.
 mysql_replication_user: []
 
-# Role: T2L.php @ 1.3.1
+# Role: t2l.php @ 1.4.0
 
-# PHP version to install. Possible values: 7.2, 7.3 and 7.4
+# PHP version to install. Possible values: 5.6, 7.0 - 7.4, and 8.0
 php_version: '7.4'
 
 # Configure PHP.
@@ -307,8 +309,8 @@ php_extensions_configuration:
   opcache:
     opcache.error_log: /var/log/draft/php_opcache_error.log
   xdebug:
-    xdebug.remote_enable: 'On'
-    xdebug.remote_connect_back: 'On'
+    xdebug.mode: 'off'
+    xdebug.discover_client_host: false
     xdebug.remote_log: /var/log/draft/php_xdebug_remote.log
 
 # Web server daemon to restart (defaults to Apache 2).
@@ -317,7 +319,7 @@ php_web_server_daemon: apache2
 # Boolean indicating whether to restart web server or not.
 php_restart_web_server: true
 
-# Role: T2L.composer @ 2.0.2
+# Role: t2l.composer @ 2.0.3
 
 # Composer installation directory.
 composer_install_dir: /usr/local/bin
@@ -334,7 +336,7 @@ composer_keep_updated: true
 # PHP executable name.
 composer_php_executable: php
 
-# Role: T2L.java @ 1.3.1
+# Role: t2l.java @ 1.3.2
 
 # Open JDK version(s) and package type (jre or jdk).
 # Currently supported versions are 6-13 (however not every Java version is
@@ -354,7 +356,7 @@ java_default_alternative:
   provider: openjdk
   version: 8
 
-# Role: T2L.solr @ 2.2.1
+# Role: t2l.solr @ 2.2.2
 
 # Solr user and group. Defaults to solr:solr.
 solr_user: solr
