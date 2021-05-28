@@ -65,7 +65,10 @@
     "config": {
         "bin-dir": "bin",
         "sort-packages": true,
-        "discard-changes": true
+        "discard-changes": true,
+        "platform": {
+            "php": "7.4"
+        }
     },
     "autoload": {
         "psr-4": {
