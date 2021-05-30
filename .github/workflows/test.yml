@@ -57,7 +57,7 @@ jobs:
         run: composer update --no-progress --prefer-dist --optimize-autoloader ${{ matrix.prefer-lowest }}
 
       - name: Coding standards
-        run: vendor/bin/phpcs -np
+        run: vendor/bin/phpcs --standard="Drupal,DrupalPractice" -np
 
       - name: Static Code Analysis
         run: vendor/bin/phpstan analyse
