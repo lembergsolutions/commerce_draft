@@ -1,0 +1,67 @@
+
+name: Test
+
+on:
+  pull_request:
+  push:
+    branches:
+      - 9.x
+    tags:
+  # Run every night at 05:15.
+  schedule:
+    - cron: '15 5 * * *'
+
+jobs:
+  php:
+    name: PHP ${{ matrix.php-version }} / Composer ${{ matrix.composer-version }}
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        php-version:
+          - '7.4'
+          - '8.0'
+        composer-version:
+          - 1
+        include:
+          - php-version: '7.4'
+            prefer-lowest: --prefer-lowest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # Some tests run Composer via command line. It's not possible to require
+      # a package in the detached state. Checkout to a branch to workaround
+      # this.
+      - name: Checkout to a branch
+        run: git checkout -b test
+
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          coverage: none
+          php-version: ${{ matrix.php-version }}
+          tools: composer:v${{ matrix.composer-version }}
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.composer/cache
+          key: php-${{ matrix.php-version }}-${{ matrix.composer-version }}-${{ hashFiles('composer.lock') }}
+          restore-keys: php-${{ matrix.php-version }}-${{ matrix.composer-version }}-
+
+      - name: Install Composer dependencies
+        run: composer update --no-progress --prefer-dist --optimize-autoloader ${{ matrix.prefer-lowest }}
+
+      - name: Coding standards
+        run: vendor/bin/phpcs -np
+
+      - name: Static Code Analysis
+        run: vendor/bin/phpstan analyse
+
+      - name: Tests
+        run: vendor/bin/phpunit
+
