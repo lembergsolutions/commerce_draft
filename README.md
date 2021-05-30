@@ -1,4 +1,4 @@
-Vagrant based commerce installer.
+# Drupal 9 Commerce starterkit site.
 
 ## Get Started
 
