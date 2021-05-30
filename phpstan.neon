@@ -1,7 +1,7 @@
 parameters:
     level: 1
     paths:
-            - drupal/modules/custom
+            - docroot/modules/custom
     ignoreErrors:
             # We use this all over the place, which we probably shouldnt, but for now...
             - "#Unsafe usage of new static#"
