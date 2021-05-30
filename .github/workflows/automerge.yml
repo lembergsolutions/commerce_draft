@@ -9,10 +9,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Enable auto-merge for new PRs
-        run: |
-          gh auth status
-          gh pr merge --auto --merge "$PR_URL"
-        env:
-          PR_URL: ${{ github.event.pull_request.html_url }}
-          GITHUB_TOKEN: ${{ secrets.ACTIONS_UPDATE_BRANCH_TOKEN }}
+      - name: Automatically Merge PR
+        uses: plm9606/automerge_actions@1.2.2
+        with:
+          label-name: "automerge"
+          reviewers-number: 1
+          # The merge method ("merge", "squash", "rebase"). Default is "merge"
+          merge-method: "merge"
+          # Let the bot delete the merged branch. true or false.
+          auto-delete: true
+          # GitHub WebHook Secret Token
+          github-token: ${{ secrets.GITHUB_TOKEN }}
