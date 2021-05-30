@@ -2,7 +2,7 @@
 <ruleset name="drupal_commerce">
     <description>The coding standard for Drupal 9 Commerce projects.</description>
     <arg name="extensions" value="inc,install,module,php,profile,test,theme"/>
-
+    <config name="installed_paths" value="./vendor/drupal/coder/coder_sniffer"/>
     <file>./docroot/modules/custom</file>
     <file>./docroot/themes/custom</file>
 
@@ -11,5 +11,6 @@
     <exclude-pattern>./docroot/modules/custom/**/*.txt</exclude-pattern>
     <exclude-pattern>./docroot/modules/custom/**/*.md</exclude-pattern>
 
-    <rule ref="./vendor/drupal/coder/coder_sniffer/Drupal"/>
+    <rule ref="Drupal"/>
+    <rule ref="DrupalPractice"/>
 </ruleset>
