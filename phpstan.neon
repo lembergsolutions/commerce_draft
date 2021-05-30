@@ -1,0 +1,14 @@
+parameters:
+    level: 1
+    paths:
+            - drupal/modules/custom
+    ignoreErrors:
+            # We use this all over the place, which we probably shouldnt, but for now...
+            - "#Unsafe usage of new static#"
+
+    scanFiles:
+           - %currentWorkingDirectory%/drupal/core/tests/Drupal/Tests/PhpunitCompatibilityTrait.php
+includes:
+	- vendor/phpstan/phpstan-phpunit/extension.neon
+	- vendor/mglaman/phpstan-drupal/extension.neon
+	- vendor/phpstan/phpstan-deprecation-rules/rules.neon
