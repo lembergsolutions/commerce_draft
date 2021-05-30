@@ -57,11 +57,13 @@ jobs:
         run: composer update --no-progress --prefer-dist --optimize-autoloader ${{ matrix.prefer-lowest }}
 
       - name: Coding standards
-        run: ./vendor/bin/phpcs --standard="Drupal,DrupalPractice" -np
+        run: |
+        vendor/bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer
+        vendor/bin/phpcs --standard="Drupal,DrupalPractice" -np
 
       - name: Static Code Analysis
-        run: ./vendor/bin/phpstan analyse
+        run: vendor/bin/phpstan analyse
 
       - name: Tests
-        run: ./vendor/bin/phpunit
+        run: vendor/bin/phpunit
 
