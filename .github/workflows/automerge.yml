@@ -19,4 +19,4 @@ jobs:
           # Let the bot delete the merged branch. true or false.
           auto-delete: true
           # GitHub WebHook Secret Token
-          github-token: ${{ secrets.DRUPAL_COMMERCE }}
+          github-token: ${{ secrets.CI_TOKEN }}
