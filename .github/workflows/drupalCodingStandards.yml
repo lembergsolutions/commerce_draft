@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PHP_VERSION: '7.4'
-      COMPOSER_VERSION: 2
+      COMPOSER_VERSION: 1
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -22,15 +22,15 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           coverage: none
-          php-version: ${PHP_VERSION}
-          tools: composer:v${COMPOSER_VERSION}
+          php-version: ${{ PHP_VERSION }}
+          tools: composer:v${{ COMPOSER_VERSION }}
 
       - name: Cache Composer dependencies
         uses: actions/cache@v2
         with:
           path: ~/.composer/cache
-          key: php-${PHP_VERSION}-${COMPOSER_VERSION}-${{ hashFiles('composer.lock') }}
-          restore-keys: php-${PHP_VERSION}-${COMPOSER_VERSION}-
+          key: php-${{ PHP_VERSION }}-${{ COMPOSER_VERSION }}-${{ hashFiles('composer.lock') }}
+          restore-keys: php-${{ PHP_VERSION }}-${COMPOSER_VERSION}-
 
       - name: Install Composer dependencies
         run: composer update --no-progress --prefer-dist --optimize-autoloader
