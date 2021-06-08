@@ -22,15 +22,15 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           coverage: none
-          php-version: ${{ PHP_VERSION }}
-          tools: composer:v${{ COMPOSER_VERSION }}
+          php-version: ${{ env.PHP_VERSION }}
+          tools: composer:v${{ env.COMPOSER_VERSION }}
 
       - name: Cache Composer dependencies
         uses: actions/cache@v2
         with:
           path: ~/.composer/cache
-          key: php-${{ PHP_VERSION }}-${{ COMPOSER_VERSION }}-${{ hashFiles('composer.lock') }}
-          restore-keys: php-${{ PHP_VERSION }}-${COMPOSER_VERSION}-
+          key: php-${{ env.PHP_VERSION }}-${{ env.COMPOSER_VERSION }}-${{ hashFiles('composer.lock') }}
+          restore-keys: php-${{ env.PHP_VERSION }}-${{ env.COMPOSER_VERSION }}-
 
       - name: Install Composer dependencies
         run: composer update --no-progress --prefer-dist --optimize-autoloader
