@@ -12,10 +12,10 @@
   <arg value="s"/>
   <!-- Show progress of the run. -->
   <arg value="p"/>
+  <arg value="n"/>
 
   <!-- Scan custom code only. -->
   <file>./docroot/modules/custom</file>
-  <file>./docroot/profiles/custom</file>
   <file>./docroot/themes/custom</file>
 
   <!--Exclude folders used by common frontend tools. These folders match the file_scan_ignore_directories setting in default.settings.php-->

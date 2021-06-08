@@ -1,23 +1,22 @@
 name: Drupal coding standards
 
 on: [pull_request]
-
 jobs:
-  phpcs:
-    name: PHPCS
+  build:
     runs-on: ubuntu-latest
     steps:
-      # Checks out to current workspace.
       - uses: actions/checkout@v2
-      # Ensures to run composer install, also makes sure we have impact on the version of PHP / composer as we
-      # need to define php version as per https://github.com/actions/virtual-environments/issues/1816
-      # ubuntu-latest uses php 8.0 by default so checks will fail.
-      - uses: php-actions/composer@v4
+      - name: Validate composer.json and composer.lock
+        run: composer validate
+      - name: Install composer dependencies
+        run: composer install --prefer-dist --no-progress -vvv
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install composer dependencies
+        run: composer install --prefer-dist --no-progress -vvv
+      - name: Run PHPCS with DrupalPractice on modules
+        uses: docker://hussainweb/drupalqa:php7.4
         with:
-          php_version: '7.4'
-          composer_version: '2'
-
-      - name: PHPCS check
-        uses: chekalsky/phpcs-action@v1
-        with:
-          phpcs_bin_path: './vendor/bin/phpcs'
+          args: ./vendor/bin/phpcs -np
