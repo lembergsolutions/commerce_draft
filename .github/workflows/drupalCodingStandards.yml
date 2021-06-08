@@ -2,27 +2,44 @@ name: Drupal coding standards
 
 on: [pull_request]
 jobs:
-  build:
+  code-standard:
+    name: Drupal code standards check
     runs-on: ubuntu-latest
+    env:
+      PHP_VERSION: '7.4'
+      COMPOSER_VERSION: 2
     steps:
-      - uses: actions/checkout@v2
-      - uses: nanasess/setup-php@master
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # Some tests run Composer via command line. It's not possible to require
+      # a package in the detached state. Checkout to a branch to workaround
+      # this.
+      - name: Checkout to a branch
+        run: git switch -c test
+
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
         with:
-          php-version: '7.4'
-      - name: Validate composer.json and composer.lock
-        run: composer validate
-      - name: Install composer dependencies
-        run: composer install --prefer-dist --no-progress -vvv
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: nanasess/setup-php@master
+          coverage: none
+          php-version: ${PHP_VERSION}
+          tools: composer:v${COMPOSER_VERSION}
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v2
         with:
-          php-version: '7.4'
-      - name: Install composer dependencies
-        run: composer install --prefer-dist --no-progress -vvv
-      - name: Run PHPCS with DrupalPractice on modules
-        uses: docker://hussainweb/drupalqa:php7.4
-        with:
-          args: ./vendor/bin/phpcs -np
+          path: ~/.composer/cache
+          key: php-${PHP_VERSION}-${COMPOSER_VERSION}-${{ hashFiles('composer.lock') }}
+          restore-keys: php-${PHP_VERSION}-${COMPOSER_VERSION}-
+
+      - name: Install Composer dependencies
+        run: composer update --no-progress --prefer-dist --optimize-autoloader
+
+      - name: Coding standards
+        run: vendor/bin/phpcs
+
+      - name: Static Code Analysis
+        run: vendor/bin/phpstan analyse
+
+      - name: Tests
+        run: vendor/bin/phpunit
