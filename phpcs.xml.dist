@@ -1,16 +1,29 @@
 <?xml version="1.0"?>
-<ruleset name="drupal_commerce">
-    <description>The coding standard for Drupal 9 Commerce projects.</description>
-    <arg name="extensions" value="inc,install,module,php,profile,test,theme"/>
-    <config name="installed_paths" value="./vendor/drupal/coder/coder_sniffer"/>
-    <file>./docroot/modules/custom</file>
-    <file>./docroot/themes/custom</file>
+<!-- See https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-Ruleset -->
+<ruleset name="Drupal">
+  <description>Drupal coding standard</description>
+  <!-- All PHP code files must be UTF-8 encoded and we treat them as such. -->
+  <arg name="encoding" value="utf-8"/>
+  <!-- Look for PHP and YAML files only. -->
+  <arg name="extensions" value="inc,install,module,php,profile,test,theme,yml"/>
+  <!-- Use colors in output. -->
+  <arg name="colors"/>
+  <!-- Show sniff codes in all reports. -->
+  <arg value="s"/>
+  <!-- Show progress of the run. -->
+  <arg value="p"/>
 
-    <exclude-pattern>./docroot/themes/custom/**/*.css</exclude-pattern>
-    <exclude-pattern>./docroot/themes/**/node_modules/**</exclude-pattern>
-    <exclude-pattern>./docroot/modules/custom/**/*.txt</exclude-pattern>
-    <exclude-pattern>./docroot/modules/custom/**/*.md</exclude-pattern>
+  <!-- Scan custom code only. -->
+  <file>./docroot/modules/custom</file>
+  <file>./docroot/profiles/custom</file>
+  <file>./docroot/themes/custom</file>
 
-    <rule ref="Drupal"/>
-    <rule ref="DrupalPractice"/>
+  <!--Exclude folders used by common frontend tools. These folders match the file_scan_ignore_directories setting in default.settings.php-->
+  <exclude-pattern>*/node_modules/*</exclude-pattern>
+  <exclude-pattern>*/bower_components/*</exclude-pattern>
+
+  <!-- Include the whole Drupal and DrupalPractice standards. -->
+  <rule ref="Drupal"></rule>
+  <rule ref="DrupalPractice"></rule>
+
 </ruleset>
