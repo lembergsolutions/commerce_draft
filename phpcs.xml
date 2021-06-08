@@ -23,7 +23,6 @@
   <exclude-pattern>*/bower_components/*</exclude-pattern>
 
   <!-- Include the whole Drupal and DrupalPractice standards. -->
-  <rule ref="Drupal"></rule>
-  <rule ref="DrupalPractice"></rule>
-
+  <rule ref="./vendor/drupal/coder/coder_sniffer/Drupal"/>
+  <rule ref="./vendor/drupal/coder/coder_sniffer/DrupalPractice"/>
 </ruleset>
