@@ -4,3 +4,6 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    target-branch: "9.x"
+    assignees:
+      - "ozin7"
