@@ -1,4 +1,4 @@
-# Drupal 9 Commerce starterkit site.
+# Drupal 9 Commerce starterkit project.
 
 ## Get Started
 
