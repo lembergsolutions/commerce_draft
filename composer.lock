@@ -2561,7 +2561,7 @@
         },
         {
             "name": "drupal/core-project-message",
-            "version": "9.2.0",
+            "version": "9.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-project-message.git",
@@ -11757,6 +11757,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/commerce_paypal": 5,
+        "drupal/commerce_shipping": 5,
         "drupal/stage_file_proxy": 10,
         "eiriksm/site-schema": 20
     },
