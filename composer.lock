@@ -5589,16 +5589,16 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v4.4.20",
+            "version": "v4.4.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "715e7a531bdae109a828f9e91629e5b3b2926beb"
+                "reference": "a501126eb6ec9288a3434af01b3d4499ec1268a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/715e7a531bdae109a828f9e91629e5b3b2926beb",
-                "reference": "715e7a531bdae109a828f9e91629e5b3b2926beb",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/a501126eb6ec9288a3434af01b3d4499ec1268a0",
+                "reference": "a501126eb6ec9288a3434af01b3d4499ec1268a0",
                 "shasum": ""
             },
             "require": {
@@ -5644,7 +5644,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-11T19:34:41+00:00"
+            "time": "2021-06-30T07:12:23+00:00"
         },
         {
             "name": "symfony/finder",
@@ -8863,16 +8863,16 @@
         },
         {
             "name": "lemberg/draft-environment",
-            "version": "3.3.2",
+            "version": "3.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lemberg/draft-environment.git",
-                "reference": "f204c18bc88b4c00f010173c1b7787c24ab25c3e"
+                "reference": "3d7a3e08432034b77ed313b3d0e07a6eae3012bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lemberg/draft-environment/zipball/f204c18bc88b4c00f010173c1b7787c24ab25c3e",
-                "reference": "f204c18bc88b4c00f010173c1b7787c24ab25c3e",
+                "url": "https://api.github.com/repos/lemberg/draft-environment/zipball/3d7a3e08432034b77ed313b3d0e07a6eae3012bc",
+                "reference": "3d7a3e08432034b77ed313b3d0e07a6eae3012bc",
                 "shasum": ""
             },
             "require": {
@@ -8918,7 +8918,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Development environment for Draft Drupal.",
-            "time": "2021-03-12T22:37:18+00:00"
+            "time": "2021-07-12T17:44:33+00:00"
         },
         {
             "name": "mglaman/phpstan-drupal",
