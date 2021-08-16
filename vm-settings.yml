@@ -309,7 +309,7 @@ php_extensions_configuration:
   opcache:
     opcache.error_log: /var/log/draft/php_opcache_error.log
   xdebug:
-    xdebug.mode: 'debug'
+    xdebug.mode: debug
     xdebug.discover_client_host: true
     xdebug.remote_log: /var/log/draft/php_xdebug_remote.log
 
