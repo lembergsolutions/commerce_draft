@@ -9233,16 +9233,16 @@
         },
         {
             "name": "lemberg/draft-environment",
-            "version": "3.3.3",
+            "version": "3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lemberg/draft-environment.git",
-                "reference": "3d7a3e08432034b77ed313b3d0e07a6eae3012bc"
+                "reference": "52f15649093b5db67acc01f07ccdf0de77adfbd5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lemberg/draft-environment/zipball/3d7a3e08432034b77ed313b3d0e07a6eae3012bc",
-                "reference": "3d7a3e08432034b77ed313b3d0e07a6eae3012bc",
+                "url": "https://api.github.com/repos/lemberg/draft-environment/zipball/52f15649093b5db67acc01f07ccdf0de77adfbd5",
+                "reference": "52f15649093b5db67acc01f07ccdf0de77adfbd5",
                 "shasum": ""
             },
             "require": {
@@ -9254,7 +9254,7 @@
                 "t2l/comments": "^1.1.0"
             },
             "require-dev": {
-                "composer/composer": "^1.10 || ^2.0",
+                "composer/composer": "^1.10 || ^2.0.13",
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
                 "dg/bypass-finals": "^1.2.2",
                 "drupal/coder": "^8.3.8",
@@ -9276,11 +9276,7 @@
             },
             "type": "composer-plugin",
             "extra": {
-                "class": "Lemberg\\Draft\\Environment\\Composer\\Plugin",
-                "draft-environment": {
-                    "already-installed": true,
-                    "last-update-weight": 9
-                }
+                "class": "Lemberg\\Draft\\Environment\\Composer\\Plugin"
             },
             "autoload": {
                 "psr-4": {
@@ -9294,9 +9290,9 @@
             "description": "Development environment for Draft Drupal.",
             "support": {
                 "issues": "https://github.com/lemberg/draft-environment/issues",
-                "source": "https://github.com/lemberg/draft-environment/tree/3.3.3"
+                "source": "https://github.com/lemberg/draft-environment/tree/3.4.0"
             },
-            "time": "2021-07-12T17:44:33+00:00"
+            "time": "2021-08-05T11:56:24+00:00"
         },
         {
             "name": "mglaman/phpstan-drupal",
