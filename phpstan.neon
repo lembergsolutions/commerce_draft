@@ -7,6 +7,8 @@ parameters:
    excludePaths:
      - '*.Test.php'
      - '*/TestBase.php'
+	 drupal:
+		 drupal_root: %currentWorkingDirectory%/docroot
 includes:
 	    - vendor/phpstan/phpstan-phpunit/extension.neon
 	    - vendor/mglaman/phpstan-drupal/extension.neon
