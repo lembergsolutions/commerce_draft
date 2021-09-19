@@ -1,9 +1,14 @@
 parameters:
     level: 1
     paths:
-            - docroot/modules/custom
+      - docroot/modules/custom
     scanFiles:
-           - %currentWorkingDirectory%/drupal/core/tests/Drupal/Tests/PhpunitCompatibilityTrait.php
+      - %currentWorkingDirectory%/drupal/core/tests/Drupal/Tests/PhpunitCompatibilityTrait.php
+  	excludePaths:
+  		- *Test.php
+  		- *TestBase.php
+    drupal:
+      drupal_root: docroot
 includes:
 	- vendor/phpstan/phpstan-phpunit/extension.neon
 	- vendor/mglaman/phpstan-drupal/extension.neon
