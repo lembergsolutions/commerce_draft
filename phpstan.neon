@@ -4,11 +4,11 @@ parameters:
         - docroot/modules/custom
    scanFiles:
         - %currentWorkingDirectory%/drupal/core/tests/Drupal/Tests/PhpunitCompatibilityTrait.php
-	excludePaths:
-		- '*.Test.php'
-		- '*/TestBase.php'
-	drupal:
-		drupal_root: docroot
+   excludePaths:
+     - '*.Test.php'
+     - '*/TestBase.php'
+   drupal:
+     drupal_root: docroot
 includes:
 	    - vendor/phpstan/phpstan-phpunit/extension.neon
 	    - vendor/mglaman/phpstan-drupal/extension.neon
