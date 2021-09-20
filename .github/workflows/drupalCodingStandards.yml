@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PHP_VERSION: '7.4'
-      COMPOSER_VERSION: 1
+      COMPOSER_VERSION: 2
     steps:
       - name: Checkout
         uses: actions/checkout@v2

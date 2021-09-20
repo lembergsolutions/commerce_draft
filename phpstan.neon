@@ -10,7 +10,7 @@ parameters:
       - modules/custom
   drupal:
       drupal_root: %currentWorkingDirectory%/docroot
-  excludes_analyse:
+  excludePaths:
     - */GraphQL*
     - */tests/*
   ignoreErrors:
