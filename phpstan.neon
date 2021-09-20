@@ -5,6 +5,8 @@ includes:
 
 parameters:
   level: 5
+  paths:
+      - docroot/modules/custom
   drupal:
       drupal_root: %currentWorkingDirectory%/docroot
   excludePaths:
