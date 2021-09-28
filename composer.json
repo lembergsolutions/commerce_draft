@@ -51,6 +51,13 @@
         ],
         "build": [
             "composer install",
+            "drush updb",
+            "drush cr",
+            "drush cim -y",
+            "drush cr"
+        ],
+        "site-install": [
+            "composer install",
             "drush si -y",
             "drush config-set \"system.site\" uuid 902d1300-7276-46f1-8608-7fc30b57e39a -y",
             "drush entity:delete shortcut_set",
