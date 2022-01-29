@@ -1087,16 +1087,16 @@
         },
         {
             "name": "cweagans/composer-patches",
-            "version": "1.7.1",
+            "version": "1.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cweagans/composer-patches.git",
-                "reference": "9888dcc74993c030b75f3dd548bb5e20cdbd740c"
+                "reference": "e9969cfc0796e6dea9b4e52f77f18e1065212871"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cweagans/composer-patches/zipball/9888dcc74993c030b75f3dd548bb5e20cdbd740c",
-                "reference": "9888dcc74993c030b75f3dd548bb5e20cdbd740c",
+                "url": "https://api.github.com/repos/cweagans/composer-patches/zipball/e9969cfc0796e6dea9b4e52f77f18e1065212871",
+                "reference": "e9969cfc0796e6dea9b4e52f77f18e1065212871",
                 "shasum": ""
             },
             "require": {
@@ -1129,9 +1129,9 @@
             "description": "Provides a way to patch Composer packages.",
             "support": {
                 "issues": "https://github.com/cweagans/composer-patches/issues",
-                "source": "https://github.com/cweagans/composer-patches/tree/1.7.1"
+                "source": "https://github.com/cweagans/composer-patches/tree/1.7.2"
             },
-            "time": "2021-06-08T15:12:46+00:00"
+            "time": "2022-01-25T19:21:20+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -2595,7 +2595,7 @@
         },
         {
             "name": "drupal/core-project-message",
-            "version": "9.2.6",
+            "version": "9.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-project-message.git",
@@ -2630,7 +2630,7 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-project-message/tree/9.2.6"
+                "source": "https://github.com/drupal/core-project-message/tree/9.3.3"
             },
             "time": "2020-09-14T13:40:36+00:00"
         },
@@ -3531,16 +3531,16 @@
         },
         {
             "name": "drush/drush",
-            "version": "10.6.0",
+            "version": "10.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "c86d327359baddb0a2f51bb458703826469a0445"
+                "reference": "0a570a16ec63259eb71195aba5feab532318b337"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/c86d327359baddb0a2f51bb458703826469a0445",
-                "reference": "c86d327359baddb0a2f51bb458703826469a0445",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/0a570a16ec63259eb71195aba5feab532318b337",
+                "reference": "0a570a16ec63259eb71195aba5feab532318b337",
                 "shasum": ""
             },
             "require": {
@@ -3548,17 +3548,17 @@
                 "composer/semver": "^1.4 || ^3",
                 "consolidation/config": "^1.2",
                 "consolidation/filter-via-dot-access-data": "^1",
-                "consolidation/robo": "^1.4.11 || ^2",
+                "consolidation/robo": "^1.4.11 || ^2 || ^3",
                 "consolidation/site-alias": "^3.0.0@stable",
                 "consolidation/site-process": "^2.1 || ^4",
                 "enlightn/security-checker": "^1",
                 "ext-dom": "*",
                 "grasmash/yaml-expander": "^1.1.1",
                 "guzzlehttp/guzzle": "^6.3 || ^7.0",
-                "league/container": "~2",
+                "league/container": "^2.5 || ^3.4",
                 "php": ">=7.1.3",
                 "psr/log": "~1.0",
-                "psy/psysh": "~0.6",
+                "psy/psysh": ">=0.6 <0.11",
                 "symfony/event-dispatcher": "^3.4 || ^4.0",
                 "symfony/finder": "^3.4 || ^4.0 || ^5",
                 "symfony/var-dumper": "^3.4 || ^4.0 || ^5.0",
@@ -3664,7 +3664,7 @@
                 "irc": "irc://irc.freenode.org/drush",
                 "issues": "https://github.com/drush-ops/drush/issues",
                 "slack": "https://drupal.slack.com/messages/C62H9CWQM",
-                "source": "https://github.com/drush-ops/drush/tree/10.6.0"
+                "source": "https://github.com/drush-ops/drush/tree/10.6.2"
             },
             "funding": [
                 {
@@ -3672,7 +3672,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-08-13T10:40:40+00:00"
+            "time": "2021-12-15T17:09:54+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -9283,16 +9283,16 @@
         },
         {
             "name": "mglaman/phpstan-drupal",
-            "version": "0.12.13",
+            "version": "0.12.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mglaman/phpstan-drupal.git",
-                "reference": "c149cae44eeb1edddac72fe9c1c11449abab782e"
+                "reference": "1d65da838f3f5136e30e7a7023c235775f30c53e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mglaman/phpstan-drupal/zipball/c149cae44eeb1edddac72fe9c1c11449abab782e",
-                "reference": "c149cae44eeb1edddac72fe9c1c11449abab782e",
+                "url": "https://api.github.com/repos/mglaman/phpstan-drupal/zipball/1d65da838f3f5136e30e7a7023c235775f30c53e",
+                "reference": "1d65da838f3f5136e30e7a7023c235775f30c53e",
                 "shasum": ""
             },
             "require": {
@@ -9364,7 +9364,7 @@
             "description": "Drupal extension and rules for PHPStan",
             "support": {
                 "issues": "https://github.com/mglaman/phpstan-drupal/issues",
-                "source": "https://github.com/mglaman/phpstan-drupal/tree/0.12.13"
+                "source": "https://github.com/mglaman/phpstan-drupal/tree/0.12.15"
             },
             "funding": [
                 {
@@ -9380,7 +9380,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-08-27T13:48:19+00:00"
+            "time": "2021-10-06T20:17:36+00:00"
         },
         {
             "name": "nette/finder",
@@ -10171,27 +10171,27 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v5.3.7",
+            "version": "v5.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
-                "reference": "2a1ff6e5a4521be1350bfce75784938e590d6342"
+                "reference": "216b07b05644607c81afd89a208e52641c1ce6b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/2a1ff6e5a4521be1350bfce75784938e590d6342",
-                "reference": "2a1ff6e5a4521be1350bfce75784938e590d6342",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/216b07b05644607c81afd89a208e52641c1ce6b8",
+                "reference": "216b07b05644607c81afd89a208e52641c1ce6b8",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1.3",
-                "symfony/deprecation-contracts": "^2.1"
+                "symfony/deprecation-contracts": "^2.1|^3"
             },
             "conflict": {
                 "phpunit/phpunit": "<7.5|9.1.2"
             },
             "require-dev": {
-                "symfony/error-handler": "^4.4|^5.0"
+                "symfony/error-handler": "^4.4|^5.0|^6.0"
             },
             "suggest": {
                 "symfony/error-handler": "For tracking deprecated interfaces usages at runtime with DebugClassLoader"
@@ -10234,7 +10234,7 @@
             "description": "Provides utilities for PHPUnit, especially user deprecation notices management",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/phpunit-bridge/tree/v5.3.7"
+                "source": "https://github.com/symfony/phpunit-bridge/tree/v5.4.3"
             },
             "funding": [
                 {
@@ -10250,7 +10250,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-08-26T13:36:50+00:00"
+            "time": "2022-01-26T16:28:35+00:00"
         },
         {
             "name": "symfony/polyfill-php81",

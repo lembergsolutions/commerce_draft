@@ -22,6 +22,7 @@ content:
     region: content
 hidden:
   billing_countries: true
+  created: true
   default_currency: true
   is_default: true
   langcode: true
