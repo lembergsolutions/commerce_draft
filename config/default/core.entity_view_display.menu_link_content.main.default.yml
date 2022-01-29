@@ -1,0 +1,28 @@
+uuid: 36e53fa2-7716-4819-afb5-b3040cdb9685
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.main.field_country
+    - system.menu.main
+  module:
+    - address
+id: menu_link_content.main.default
+targetEntityType: menu_link_content
+bundle: main
+mode: default
+content:
+  children:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_country:
+    type: address_country_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  langcode: true

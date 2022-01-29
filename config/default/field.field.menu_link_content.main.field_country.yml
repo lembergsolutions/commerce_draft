@@ -1,0 +1,22 @@
+uuid: 279c0590-b96c-4717-ab17-1fb5a5e63ea6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.menu_link_content.field_country
+    - system.menu.main
+  module:
+    - address
+id: menu_link_content.main.field_country
+field_name: field_country
+entity_type: menu_link_content
+bundle: main
+label: Country
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+field_type: address_country

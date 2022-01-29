@@ -15,7 +15,7 @@ plugin: commerce_cart
 settings:
   id: commerce_cart
   label: Cart
-  provider: commerce_cart
   label_display: '0'
+  provider: commerce_cart
   dropdown: false
 visibility: {  }

@@ -26,7 +26,11 @@
         "drupal/commerce_shipping": "^2.0@RC",
         "drupal/core-composer-scaffold": "^9.1",
         "drupal/core-project-message": "^9.1",
-        "drupal/core-recommended": "^9.2",
+        "drupal/core-recommended": "^9.3",
+        "drupal/layout_builder_browser": "^1.4",
+        "drupal/layout_builder_modal": "^1.1",
+        "drupal/layout_builder_restrictions": "^2.12",
+        "drupal/menu_item_extras": "^2.16",
         "drupal/price_difference_formatter": "^1.2",
         "drush/drush": "^10.2"
     },
@@ -74,6 +78,13 @@
         "discard-changes": true,
         "platform": {
             "php": "7.4"
+        },
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "lemberg/draft-environment": true
         }
     },
     "autoload": {

@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
   address: 0
   admin_toolbar: 0
@@ -22,6 +24,7 @@ module:
   commerce_price: 0
   commerce_product: 0
   commerce_promotion: 0
+  commerce_shipping: 0
   commerce_store: 0
   commerce_tax: 0
   config: 0
@@ -46,6 +49,7 @@ module:
   link: 0
   media: 0
   media_library: 0
+  menu_item_extras: 0
   menu_link_content: 0
   menu_ui: 0
   node: 0
@@ -53,6 +57,7 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  physical: 0
   profile: 0
   quickedit: 0
   rdf: 0
@@ -78,5 +83,3 @@ theme:
   claro: 0
   olivero: 0
 profile: standard
-_core:
-  default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

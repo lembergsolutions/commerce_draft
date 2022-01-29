@@ -21,26 +21,26 @@ content:
   body:
     type: text_textarea_with_summary
     weight: 3
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 5
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_image:
     type: media_library_widget
     weight: 2
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    region: content
   langcode:
     type: language_select
     weight: 2
@@ -51,9 +51,9 @@ content:
   path:
     type: path
     weight: 6
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   status:
     type: boolean_checkbox
     weight: 7
@@ -64,30 +64,30 @@ content:
   stores:
     type: commerce_entity_select
     weight: 0
+    region: content
     settings:
       hide_single_entity: true
       autocomplete_threshold: 7
       autocomplete_size: 60
       autocomplete_placeholder: ''
     third_party_settings: {  }
-    region: content
   title:
     type: string_textfield
     weight: 1
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 4
+    region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
 hidden:
   variations: true

@@ -2,12 +2,12 @@ uuid: e18fdc5d-fab2-4c59-8e0a-69de0a091f01
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - commerce_order
   module:
     - commerce_order
     - entity
+  enforced:
+    module:
+      - commerce_order
 _core:
   default_config_hash: Wfu6EDwNNNV0FZiMAndYyWpKCyCZ2TfdZ2QkPUFOINY
 id: commerce_order_delete_action

@@ -2,11 +2,11 @@ uuid: 22cb1c65-58ef-46e3-a9ce-3089ea4dd243
 langcode: en
 status: true
 dependencies:
+  module:
+    - profile
   enforced:
     module:
       - profile
-  module:
-    - profile
 _core:
   default_config_hash: eoobeznDDPWSXzEXh6a3AT21rMluXtseCPjsguEgHKs
 id: profile_delete_action

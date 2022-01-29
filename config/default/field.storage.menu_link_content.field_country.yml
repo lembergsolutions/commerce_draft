@@ -1,0 +1,19 @@
+uuid: 1834aef5-9e64-441b-85b3-cf48b662c3d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - address
+    - menu_link_content
+id: menu_link_content.field_country
+field_name: field_country
+entity_type: menu_link_content
+type: address_country
+settings: {  }
+module: address
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

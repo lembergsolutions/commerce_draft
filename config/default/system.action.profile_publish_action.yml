@@ -2,11 +2,11 @@ uuid: 35fd273d-9237-44c2-98f4-f9a18157337e
 langcode: en
 status: true
 dependencies:
+  module:
+    - profile
   enforced:
     module:
       - profile
-  module:
-    - profile
 _core:
   default_config_hash: jjClImKlBhvh__KZnX6YkW_Kc1yZvqXODbUHt30A8z4
 id: profile_publish_action

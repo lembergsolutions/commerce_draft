@@ -5,11 +5,12 @@ dependencies:
   config:
     - commerce_product.commerce_product_variation_type.default
     - core.entity_view_mode.commerce_product_variation.summary
+    - field.field.commerce_product_variation.default.weight
+  module:
+    - commerce_price
   enforced:
     module:
       - commerce_checkout
-  module:
-    - commerce_price
 _core:
   default_config_hash: jmDRQILFIWJUS3jS-qLF10aGc1IXnvFEBizwJl94FfU
 id: commerce_product_variation.default.summary
@@ -18,24 +19,25 @@ bundle: default
 mode: summary
 content:
   list_price:
-    label: above
     type: commerce_price_default
-    weight: 1
-    region: content
+    label: above
     settings:
       strip_trailing_zeroes: false
       currency_display: symbol
     third_party_settings: {  }
+    weight: 1
+    region: content
   title:
-    label: hidden
     type: string
-    weight: 0
+    label: hidden
     settings:
       link_to_entity: true
     third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
   langcode: true
   price: true
   product_id: true
   sku: true
+  weight: true
