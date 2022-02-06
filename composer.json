@@ -10,7 +10,7 @@
         "drupal/drupal-extension": "^4",
         "drupal/stage_file_proxy": "^1.0@beta",
         "eiriksm/site-schema": "dev-master",
-        "lemberg/draft-environment": "^3.3.0",
+        "lemberg/draft-environment": "^3.5.0",
         "mglaman/phpstan-drupal": "^0.12",
         "phpstan/phpstan-deprecation-rules": "^0.12",
         "phpstan/phpstan-phpunit": "^0.12",
@@ -77,14 +77,15 @@
         "sort-packages": true,
         "discard-changes": true,
         "platform": {
-            "php": "7.4"
+            "php": "8.0"
         },
         "allow-plugins": {
             "composer/installers": true,
             "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
-            "lemberg/draft-environment": true
+            "lemberg/draft-environment": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
         }
     },
     "autoload": {
