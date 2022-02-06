@@ -5,35 +5,38 @@
 # If there is a need to override any value, create file vm-settings.local.yml
 # and put it there. Local settings should not be committed to the repository.
 
+# DO NOT MODIFY THESE SETTINGS MANUALLY.
+draft:
+  last_applied_update: 0
+
 # Vagrant configuration.
 vagrant:
   # Box to use. At the moment Debian-based distributions are supported only.
   # Do not change this value, unless absolutely necessary. Valid use case is
   # 32-bit host machine and no support for virtualization of 64-bit guest
   # machine.
-  # Defaults to 'Official Ubuntu Server 16.04 LTS (Xenial Xerus)'.
-  # Change this parameter in the local settings file.
-  box: ubuntu/xenial64
+  # Defaults to 'Official Ubuntu Server 20.04 LTS (Focal Fossa)'.
+  box: ubuntu/focal64
   # Box version.
   box_version: '>= 0'
+  # Disable automatic update checking be setting this option to false.
+  # See https://www.vagrantup.com/docs/boxes/versioning.html#automatic-update-checking
+  box_check_update: false
   # Host name. This setting is required. Usually host name matches project name.
   hostname: commerce-draft
   # Host aliases. Will be added to hosts file alongside <hostname>.test.
   host_aliases: []
+  # Source directory. No trailing slash!
+  source_directory: '.'
+  # Destination directory. No trailing slash!
+  destination_directory: /var/www/draft
   # Synced folder options. Refer to https://www.vagrantup.com/docs/synced-folders/
   # for possible options and their values. Please note that each synced fodler
   # type could have extra options, look at NFS or RSync for examples.
   synced_folder_options:
+    id: default
     type: nfs
     create: true
-    id: default
-  # Disable automatic update checking be setting this option to false.
-  # See https://www.vagrantup.com/docs/boxes/versioning.html#automatic-update-checking
-  box_check_update: false
-  # Source directory. No trailing slash!
-  source_directory: .
-  # Destination directory. No trailing slash!
-  destination_directory: /var/www/draft
 
 # VirtualBox configuration.
 #
@@ -69,7 +72,7 @@ virtualbox:
   cpuexecutioncap: 100
   # VirtualBox disk size (added by vagrant-disksize plugin).
   # See https://github.com/sprotheroe/vagrant-disksize
-  disk_size: 10GB
+  disk_size: 40GB
 
 # Ansible local configuration.
 ansible:
@@ -80,8 +83,8 @@ ansible:
   #     installs the latest available Ansible version within the given range
   #     constraint. This is the default option.
   #
-  # This project has been successfully tested with Ansible 2.9.
-  version: '2.9.*'
+  # This project has been successfully tested with Ansible 4.0.
+  version: '4.*'
 
 # List of features to install. Some roles depend on each other, be careful.
 draft_features:
@@ -105,7 +108,7 @@ draft_features:
 
 ssh_default_directory: '{{ vagrant.destination_directory }}'
 
-# Role: oefenweb.swapfile @ v2.0.28
+# Role: oefenweb.swapfile @ v2.0.34
 
 # Set swap file size.
 swapfile_size: 2GB
@@ -129,7 +132,7 @@ apache2_document_root: docroot
 # Log level to use
 apache2_log_level: error
 
-# Role: geerlingguy.mysql @ 3.3.0
+# Role: geerlingguy.mysql @ 3.3.2
 
 # Set this to the user ansible is logging in as - should have root
 # or sudo access
@@ -173,7 +176,7 @@ mysql_port: '3306'
 mysql_bind_address: 0.0.0.0
 mysql_skip_name_resolve: false
 mysql_datadir: /var/lib/mysql
-mysql_sql_mode: ''
+mysql_sql_mode: ~
 mysql_pid_file: /var/run/mysqld/mysqld.pid
 mysql_socket: /var/run/mysqld/mysqld.sock
 
@@ -260,7 +263,7 @@ mysql_replication_master: ''
 # Same keys as `mysql_users` above.
 mysql_replication_user: []
 
-# Role: t2l.php @ 1.4.0
+# Role: t2l.php @ 1.5.0
 
 # PHP version to install. Possible values: 5.6, 7.0 - 7.4, and 8.0
 php_version: '8.0'
@@ -273,19 +276,19 @@ php_configuration:
     display_errors: 'On'
     display_startup_errors: 'On'
     memory_limit: 256M
+    max_execution_time: 300
     output_buffering: 'Off'
     upload_max_filesize: 64M
     post_max_size: 512M
     # Requires MailHog.
     sendmail_path: '{{ mailhog_install_dir }}/mhsendmail'
-    max_execution_time: 300
 
 # Configure PHP CLI.
 php_cli_configuration:
   PHP:
-    memory_limit: -1
     error_reporting: E_ALL
     error_log: /var/log/draft/php_error.log
+    memory_limit: -1
     max_execution_time: 0
     output_buffering: 'Off'
     # Requires MailHog.
@@ -295,7 +298,6 @@ php_cli_configuration:
 php_extensions:
   - curl
   - gd
-  - json
   - mbstring
   - mysql
   - sqlite3
@@ -310,7 +312,7 @@ php_extensions_configuration:
     opcache.error_log: /var/log/draft/php_opcache_error.log
   xdebug:
     xdebug.mode: debug
-    xdebug.discover_client_host: true
+    xdebug.discover_client_host: 'true'
     xdebug.remote_log: /var/log/draft/php_xdebug_remote.log
 
 # Web server daemon to restart (defaults to Apache 2).
@@ -319,7 +321,7 @@ php_web_server_daemon: apache2
 # Boolean indicating whether to restart web server or not.
 php_restart_web_server: true
 
-# Role: t2l.composer @ 2.0.3
+# Role: t2l.composer @ 2.0.5
 
 # Composer installation directory.
 composer_install_dir: /usr/local/bin
@@ -328,7 +330,7 @@ composer_install_dir: /usr/local/bin
 composer_filename: composer
 
 # Composer version.
-composer_version: ''
+composer_version:
 
 # Keep Composer up-to-date.
 composer_keep_updated: true
@@ -336,7 +338,7 @@ composer_keep_updated: true
 # PHP executable name.
 composer_php_executable: php
 
-# Role: t2l.java @ 1.3.2
+# Role: t2l.java @ 1.3.3
 
 # Open JDK version(s) and package type (jre or jdk).
 # Currently supported versions are 6-13 (however not every Java version is
@@ -363,7 +365,7 @@ solr_user: solr
 solr_group: '{{ solr_user }}'
 
 # Solr version to install. Minimum supported version is 5.0.0.
-solr_version: 7.7.2
+solr_version: 7.7.3
 
 # Port Solr should bind to.
 solr_port: 8983
