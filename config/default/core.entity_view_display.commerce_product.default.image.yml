@@ -1,0 +1,36 @@
+uuid: 9921e7d3-e790-4a2d-9944-4679a1b60515
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.default
+    - core.entity_view_mode.commerce_product.image
+    - field.field.commerce_product.default.body
+    - field.field.commerce_product.default.field_image
+    - image.style.thumbnail
+  module:
+    - media
+_core:
+  default_config_hash: 10qgl6V_HwkrJufzsNCV75OpqOeMzzKDJb3BhaogmzQ
+id: commerce_product.default.image
+targetEntityType: commerce_product
+bundle: default
+mode: image
+content:
+  field_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: content
+      image_style: thumbnail
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  created: true
+  langcode: true
+  stores: true
+  title: true
+  uid: true
+  variations: true

@@ -10,5 +10,5 @@ traits: {  }
 locked: false
 description: ''
 variationType: default
-multipleVariations: true
-injectVariationFields: true
+multipleVariations: false
+injectVariationFields: false

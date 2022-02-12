@@ -7,7 +7,6 @@ dependencies:
     - field.field.commerce_product_variation.default.weight
   module:
     - commerce_price
-    - physical
 _core:
   default_config_hash: dDLA40Axom_QFA79EWUpe_bWXWE8I_7MijzPkslbVfA
 id: commerce_product_variation.default.default
@@ -17,46 +16,33 @@ mode: default
 content:
   langcode:
     type: language_select
-    weight: 2
+    weight: 3
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   list_price:
     type: commerce_list_price
-    weight: -1
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
   price:
     type: commerce_price_default
-    weight: 0
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   sku:
     type: string_textfield
-    weight: -4
+    weight: 0
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  status:
-    type: boolean_checkbox
-    weight: 10
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
-  weight:
-    type: physical_measurement_default
-    weight: 91
-    region: content
-    settings:
-      default_unit: ''
-      allow_unit_change: true
-    third_party_settings: {  }
 hidden:
   created: true
+  status: true
   uid: true
+  weight: true

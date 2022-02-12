@@ -9,7 +9,6 @@
         "drupal/coder": "^8.3",
         "drupal/drupal-extension": "^4",
         "drupal/stage_file_proxy": "^1.0@beta",
-        "eiriksm/site-schema": "dev-master",
         "lemberg/draft-environment": "^3.5.0",
         "mglaman/phpstan-drupal": "^0.12",
         "phpstan/phpstan-deprecation-rules": "^0.12",
@@ -27,6 +26,7 @@
         "drupal/core-composer-scaffold": "^9.1",
         "drupal/core-project-message": "^9.1",
         "drupal/core-recommended": "^9.3",
+        "drupal/field_group": "^3.2",
         "drupal/layout_builder_browser": "^1.4",
         "drupal/layout_builder_modal": "^1.1",
         "drupal/layout_builder_restrictions": "^2.12",
@@ -68,7 +68,9 @@
             "drush cr",
             "drush cim -y",
             "drush cr",
-            "drush upwd admin admin"
+            "drush upwd admin admin",
+            "drush en draft_content",
+            "drush pmu draft_content"
         ]
     },
     "config": {

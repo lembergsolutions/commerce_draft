@@ -6,6 +6,7 @@ dependencies:
     - commerce_order.commerce_order_item_type.default
   module:
     - commerce_order
+    - commerce_product
   enforced:
     module:
       - commerce_product
@@ -17,14 +18,13 @@ bundle: default
 mode: default
 content:
   purchased_entity:
-    type: entity_reference_autocomplete
+    type: commerce_product_variation_title
     weight: 0
     region: content
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      label_display: true
+      label_text: 'Please select'
+      hide_single: true
     third_party_settings: {  }
   quantity:
     type: commerce_quantity

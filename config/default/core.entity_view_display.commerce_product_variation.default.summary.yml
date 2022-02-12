@@ -7,7 +7,7 @@ dependencies:
     - core.entity_view_mode.commerce_product_variation.summary
     - field.field.commerce_product_variation.default.weight
   module:
-    - commerce_price
+    - commerce_order
   enforced:
     module:
       - commerce_checkout
@@ -18,26 +18,20 @@ targetEntityType: commerce_product_variation
 bundle: default
 mode: summary
 content:
-  list_price:
-    type: commerce_price_default
-    label: above
+  price:
+    type: commerce_price_calculated
+    label: hidden
     settings:
       strip_trailing_zeroes: false
       currency_display: symbol
-    third_party_settings: {  }
-    weight: 1
-    region: content
-  title:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: true
+      adjustment_types: {  }
     third_party_settings: {  }
     weight: 0
     region: content
 hidden:
   langcode: true
-  price: true
+  list_price: true
   product_id: true
   sku: true
+  title: true
   weight: true

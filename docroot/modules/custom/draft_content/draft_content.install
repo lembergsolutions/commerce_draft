@@ -5,6 +5,14 @@
  * Install and updates hooks.
  */
 
+use Drupal\commerce_price\Price;
+use Drupal\commerce_product\Entity\Product;
+use Drupal\commerce_product\Entity\ProductVariation;
+use Drupal\commerce_shipping\Entity\ShippingMethod;
+use Drupal\Core\File\FileSystemInterface;
+use Drupal\file\FileInterface;
+use Drupal\media\Entity\Media;
+
 /**
  * Implements hook_install().
  */
@@ -28,4 +36,99 @@ function draft_content_install() {
     ->getStorage('commerce_store')
     ->create($store_values);
   $default_store->save();
+
+  $medias = _create_medias();
+  _create_products($medias);
+  _create_shipping_methods();
+}
+
+function _create_medias(): array {
+  $medias = [];
+  $files = [
+    '01.png' => 'Polo',
+    '02.png' => 'Headphones',
+    '03.png' => 'Joypad',
+  ];
+  /** @var \Drupal\file\FileRepositoryInterface $fileRepository */
+  $fileRepository = \Drupal::service('file.repository');
+  $module_path = \Drupal::moduleHandler()->getModule('draft_content')->getPath();
+  $assets = $module_path . '/assets';
+  $destination = 'public://media';
+  \Drupal::service('file_system')->prepareDirectory($destination, FileSystemInterface::CREATE_DIRECTORY);
+  foreach ($files as $filename => $title) {
+    $file_data = file_get_contents($assets . '/' . $filename);
+    $file = $fileRepository->writeData($file_data, "$destination/$filename", FileSystemInterface::EXISTS_REPLACE);
+    if ($file instanceof FileInterface) {
+      $media = Media::create(
+        [
+          'name' => $title,
+          'uid' => \Drupal::currentUser()->id(),
+          'bundle' => 'image',
+          'field_media_image' => [
+            [
+              'target_id' => $file->id(),
+              'alt' => 'default alt',
+              'title' => 'default title',
+            ],
+          ],
+        ]
+      );
+      $media->setPublished();
+      $media->save();
+      $medias[$media->id()] = $media;
+    }
+  }
+
+  return $medias;
+}
+
+function _create_products(array $medias): array {
+  $products = [];
+  /** @var \Drupal\media\MediaInterface $media */
+  foreach ($medias as $media) {
+    $product = Product::create([
+      'type' => 'default',
+      'title' => $media->label(),
+      'stores' => [1]
+    ]);
+    $product->set('field_image', $media);
+    $product->set('body', $media->label() . ' ' . "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.");
+    $product->save();
+    $variation = ProductVariation::create([
+      'type' => 'default',
+      'sku' => random_int(1000, 9999),
+      'title' => $media->label(),
+      'status' => 1,
+      'price' => new Price(random_int(100, 999), 'USD'),
+    ]);
+    $variation->save();
+    $product->addVariation($variation);
+    $product->save();
+    $products[] = $product;
+  }
+
+  return $products;
+}
+
+function _create_shipping_methods(): array {
+  $methods = [];
+  foreach (['UPS', 'Free'] as $method_name) {
+    $shipping_method = ShippingMethod::create([
+      'name' => $method_name,
+      'plugin' => [
+        'target_plugin_id' => 'flat_rate',
+        'target_plugin_configuration' => [
+          'rate_label' => $method_name . ' flat rate',
+          'rate_amount' => [
+            'number' => random_int(10, 100),
+            'currency_code' => 'USD',
+          ],
+        ],
+      ],
+      'status' => 1,
+      'stores' => 1,
+    ]);
+    $shipping_method->save();
+  }
+  return $methods;
 }
