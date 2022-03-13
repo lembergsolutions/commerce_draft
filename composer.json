@@ -32,7 +32,7 @@
         "drupal/layout_builder_restrictions": "^2.12",
         "drupal/menu_item_extras": "^2.16",
         "drupal/price_difference_formatter": "^1.2",
-        "drush/drush": "^10.2"
+        "drush/drush": "^11.0"
     },
     "repositories": [
         {
