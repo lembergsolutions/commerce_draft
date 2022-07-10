@@ -1,0 +1,157 @@
+# This file describes an application. You can have multiple applications
+# in the same project.
+#
+# See https://docs.platform.sh/user_guide/reference/platform-app-yaml.html
+
+# The name of this app. Must be unique within a project.
+name: 'app'
+
+# The runtime the application uses.
+type: 'php:8.1'
+
+# The relationships of the application with services or other applications.
+#
+# The left-hand side is the name of the relationship as it will be exposed
+# to the application in the PLATFORM_RELATIONSHIPS variable. The right-hand
+# side is in the form `<service name>:<endpoint name>`.
+relationships:
+    database: 'mysqldb:mysql'
+    redis: 'rediscache:redis'
+
+# The size of the persistent disk of the application (in MB).
+disk: 4096
+
+# The 'mounts' describe writable, persistent filesystem mounts in the application.
+mounts:
+    '/docroot/sites/default/files':
+        source: local
+        source_path: 'files'
+    '/tmp':
+        source: local
+        source_path: 'tmp'
+    '/private':
+        source: local
+        source_path: 'private'
+    '/.drush':
+        source: local
+        source_path: 'drush'
+    '/drush-backups':
+        source: local
+        source_path: 'drush-backups'
+    '/.console':
+        source: local
+        source_path: 'console'
+
+# Configuration of the build of this application.
+build:
+    flavor: composer
+
+dependencies:
+    php:
+        composer/composer: '^2'
+    ruby:
+        'wkhtmltopdf-binary': '0.12.5.4'
+
+# The hooks executed at various points in the lifecycle of the application.
+hooks:
+    # The build hook runs after Composer to finish preparing up your code.
+    build: |
+        set -e
+        bash install-redis.sh 5.3.1
+        curl -sS https://platform.sh/cli/installer | php
+        # This is needed because of the way the ruby gem works. The first time
+        # it runs, it unpacks the correct binary into your /app folder. And
+        # since we have a read-only files system by design, this can only be
+        # done in the build hook.
+        wkhtmltopdf -V
+    # The deploy hook runs after your application has been deployed and started.
+    deploy: |
+        set -e
+        cd docroot
+        drush -y cache:rebuild
+        drush -y updatedb
+        drush -y config:import
+# The configuration of app when it is exposed to the web.
+web:
+    # Specific parameters for different URL prefixes.
+    locations:
+        '/':
+            # The folder from which to serve static assets, for this location.
+            #
+            # This is a filesystem path, relative to the application root.
+            root: 'docroot'
+
+            # How long to allow static assets from this location to be cached.
+            #
+            # Can be a time in seconds, or -1 for no caching. Times can be
+            # suffixed with "s" (seconds), "m" (minutes), "h" (hours), "d"
+            # (days), "w" (weeks), "M" (months, as 30 days) or "y" (years, as
+            # 365 days).
+            expires: 1h
+
+            # Whether to forward disallowed and missing resources from this
+            # location to the application.
+            #
+            # Can be true, false or a URI path string.
+            passthru: '/index.php'
+
+            # Deny access to static files in this location.
+            allow: false
+
+            # Rules for specific URI patterns.
+            rules:
+                # Allow access to common static files.
+                '\.(jpe?g|png|gif|mp4|svgz?|css|js|map|ico|bmp|eot|woff2?|otf|ttf)$':
+                    allow: true
+                    expires: 1w
+                '^/robots\.txt$':
+                    allow: true
+                '^/sitemap\.xml$':
+                    allow: true
+
+                # Deny direct access to configuration files.
+                '^/sites/sites\.php$':
+                    scripts: false
+                '^/sites/[^/]+/settings.*?\.php$':
+                    scripts: false
+
+        '/sites/default/files':
+            # Allow access to all files in the public files directory.
+            allow: true
+            expires: 1w
+            passthru: '/index.php'
+            root: 'docroot/sites/default/files'
+
+            # Do not execute PHP scripts.
+            scripts: false
+
+            rules:
+                # Provide a longer TTL (2 weeks) for aggregated CSS and JS files.
+                '^/sites/default/files/(css|js)':
+                    expires: 2w
+
+# The configuration of scheduled execution.
+crons:
+    drupal:
+        spec: '*/20 * * * *'
+        cmd: 'cd docroot ; drush core:cron'
+    snapshot:
+        # Take a snapshot automatically every night at 2:48 am (UTC).
+        spec: '48 2 * * *'
+        cmd: |
+            if [ "$PLATFORM_BRANCH" = main ]; then
+                platform snapshot:create --yes --no-wait
+            fi
+    renewcert:
+        # Force a redeploy at 3:35 am (UTC) on the 5th and 19th of every month.
+        spec: '35 3 5,19 * *'
+        cmd: |
+            if [ "$PLATFORM_BRANCH" = main ]; then
+                platform redeploy --yes --no-wait
+            fi
+
+
+# Set PHP memory limit.
+variables:
+  php:
+    memory_limit: "256M"
