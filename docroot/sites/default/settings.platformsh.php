@@ -25,20 +25,7 @@ if ($platformsh->hasRelationship('database')) {
 // Enable verbose error messages on development branches, but not on the production branch.
 // You may add more debug-centric settings here if desired to have them automatically enable
 // on development but not production.
-if (isset($platformsh->branch)) {
-  // Production type environment.
-  if ($platformsh->branch == 'main' || $platformsh->onDedicated()) {
-    $config['system.logging']['error_level'] = 'hide';
-  } // Development type environment.
-  else {
-    $config['system.logging']['error_level'] = 'verbose';
-    // Pipedrive mode.
-    $settings['lemberg_pipedrive'] = [
-      'mode' => 'test',
-      'status' => TRUE,
-    ];
-  }
-}
+$config['system.logging']['error_level'] = 'verbose';
 
 // Enable Redis caching.
 if ($platformsh->hasRelationship('redis') && !InstallerKernel::installationAttempted() && extension_loaded('redis') && class_exists('Drupal\redis\ClientFactory')) {
