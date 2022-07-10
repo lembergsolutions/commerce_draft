@@ -134,21 +134,6 @@ crons:
     drupal:
         spec: '*/20 * * * *'
         cmd: 'cd docroot ; drush core:cron'
-    snapshot:
-        # Take a snapshot automatically every night at 2:48 am (UTC).
-        spec: '48 2 * * *'
-        cmd: |
-            if [ "$PLATFORM_BRANCH" = main ]; then
-                platform snapshot:create --yes --no-wait
-            fi
-    renewcert:
-        # Force a redeploy at 3:35 am (UTC) on the 5th and 19th of every month.
-        spec: '35 3 5,19 * *'
-        cmd: |
-            if [ "$PLATFORM_BRANCH" = main ]; then
-                platform redeploy --yes --no-wait
-            fi
-
 
 # Set PHP memory limit.
 variables:
