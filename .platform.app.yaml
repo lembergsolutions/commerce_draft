@@ -56,7 +56,6 @@ hooks:
     # The build hook runs after Composer to finish preparing up your code.
     build: |
         set -e
-        bash install-redis.sh 5.3.1
         curl -sS https://platform.sh/cli/installer | php
         # This is needed because of the way the ruby gem works. The first time
         # it runs, it unpacks the correct binary into your /app folder. And
