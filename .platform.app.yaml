@@ -79,10 +79,10 @@ hooks:
   deploy: |
     set -e
     cd docroot
-    drush -y cache-rebuild
-    drush -y updatedb
-    drush -y config-import
-    drush -y cache-rebuild
+    drush cr
+    drush updb -y
+    drush cim -y
+    drush cr
 
 # The configuration of app when it is exposed to the web.
 web:
