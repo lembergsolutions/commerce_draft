@@ -78,14 +78,21 @@ hooks:
   # fast.
   deploy: |
     set -e
+    php ./drush/platformsh_generate_drush_yml.php
     cd docroot
     drush cr
     drush updb -y
     drush cim -y
     drush cr
-
 # The configuration of app when it is exposed to the web.
 web:
+  upstream:
+    socket_family: tcp
+    protocol: http
+
+  commands:
+    # If you change the build output in the build hook above, update this line as well.
+    start: ./bin/app
   locations:
     # All requests not otherwise specified follow these rules.
     '/':
@@ -153,3 +160,9 @@ variables:
     memory_limit: 256M
     post_max_size: 100M
     upload_max_filesize: 100M
+
+source:
+  operations:
+    auto-update:
+      command: |
+        curl -fsS https://raw.githubusercontent.com/platformsh/source-operations/main/setup.sh | { bash /dev/fd/3 sop-autoupdate; } 3<&0
