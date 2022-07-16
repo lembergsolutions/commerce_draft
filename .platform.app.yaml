@@ -17,6 +17,9 @@ runtime:
   # Enable the redis extension so Drupal can communicate with the Redis cache.
   extensions:
     - redis
+    - sodium
+    - apcu
+    - blackfire
 
 # The relationships of the application with services or other applications.
 #
@@ -28,7 +31,7 @@ relationships:
   redis: 'cache:redis'
 
 # The size of the persistent disk of the application (in MB).
-disk: 3168
+disk: 2048
 
 # The 'mounts' describe writable, persistent filesystem mounts in the application.
 mounts:
@@ -63,7 +66,6 @@ mounts:
 
 # Configuration of the build of this application.
 build:
-  # Automatically run `composer install` on every build.
   flavor: composer
 
 # The hooks executed at various points in the lifecycle of the application.
@@ -83,16 +85,9 @@ hooks:
     drush cr
     drush updb -y
     drush cim -y
-    drush cr
+
 # The configuration of app when it is exposed to the web.
 web:
-  upstream:
-    socket_family: tcp
-    protocol: http
-
-  commands:
-    # If you change the build output in the build hook above, update this line as well.
-    start: ./bin/app
   locations:
     # All requests not otherwise specified follow these rules.
     '/':
@@ -130,10 +125,7 @@ web:
           scripts: false
         '^/sites/[^/]+/settings.*?\.php$':
           scripts: false
-        '^/google16b765492fe15a04\.html$':
-          allow: true
-        '^/baidu_verify_Uc60IdPqvM\.html$':
-          allow: true
+
     # The files directory has its own special configuration rules.
     '/sites/default/files':
       # Allow access to all files in the public files directory.
@@ -149,17 +141,12 @@ web:
         # Provide a longer TTL (2 weeks) for aggregated CSS and JS files.
         '^/sites/default/files/(css|js)':
           expires: 2w
-crons:
-  # Run Drupal's cron tasks every 15 minutes.
-  drupal:
-    spec: '*/15 * * * *'
-    cmd: 'cd docroot ; drush core:cron'
 
-variables:
-  php:
-    memory_limit: 256M
-    post_max_size: 100M
-    upload_max_filesize: 100M
+crons:
+  # Run Drupal's cron tasks every 19 minutes.
+  drupal:
+    spec: '*/19 * * * *'
+    cmd: 'cd web ; drush core-cron'
 
 source:
   operations:
