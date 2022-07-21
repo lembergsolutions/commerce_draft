@@ -41,6 +41,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  gin_toolbar: 0
   help: 0
   history: 0
   image: 0
@@ -83,4 +84,5 @@ theme:
   seven: 0
   claro: 0
   olivero: 0
+  gin: 0
 profile: minimal
