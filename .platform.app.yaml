@@ -80,7 +80,6 @@ hooks:
   # fast.
   deploy: |
     set -e
-    php ./drush/platformsh_generate_drush_yml.php
     cd docroot
     drush cr
     drush updb -y
