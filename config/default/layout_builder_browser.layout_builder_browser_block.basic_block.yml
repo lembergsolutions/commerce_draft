@@ -1,0 +1,11 @@
+uuid: 928ed895-be40-4e53-9386-11661d44eded
+langcode: en
+status: true
+dependencies: {  }
+id: basic_block
+block_id: 'inline_block:basic'
+category: content
+label: 'Basic block'
+image_path: ''
+image_alt: ''
+weight: -100

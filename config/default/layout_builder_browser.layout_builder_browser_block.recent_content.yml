@@ -1,0 +1,11 @@
+uuid: d92c26e8-4dc8-489e-962f-6cb7cf7d6e83
+langcode: en
+status: true
+dependencies: {  }
+id: recent_content
+block_id: 'views_block:content_recent-block_1'
+category: listings
+label: 'Recent content'
+image_path: ''
+image_alt: ''
+weight: -100

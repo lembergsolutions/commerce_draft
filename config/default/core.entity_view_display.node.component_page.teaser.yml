@@ -1,0 +1,33 @@
+uuid: 631ea798-94fb-4cba-bea8-3479dd8771f1
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.component_page.body
+    - field.field.node.component_page.layout_builder__layout
+    - node.type.component_page
+  module:
+    - text
+    - user
+id: node.component_page.teaser
+targetEntityType: node
+bundle: component_page
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  layout_builder__layout: true
