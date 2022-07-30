@@ -278,7 +278,7 @@ mysql_replication_master: ''
 # Same keys as `mysql_users` above.
 mysql_replication_user: []
 
-# Role: t2l.php @ 1.6.1
+# Role: t2l.php @ 1.6.2
 
 # PHP version to install. Possible values: 5.6, 7.0 - 7.4, and 8.0 - 8.1
 php_version: '8.1'
