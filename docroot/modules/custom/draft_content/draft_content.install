@@ -108,7 +108,7 @@ function _create_products(array $medias): array {
       'sku' => random_int(1000, 9999),
       'title' => $media->label(),
       'status' => 1,
-      'price' => new Price(random_int(100, 999), 'USD'),
+      'price' => new Price((string) random_int(100, 999), 'USD'),
     ]);
     $variation->save();
     $product->addVariation($variation);
