@@ -31,7 +31,7 @@ relationships:
   redis: 'cache:redis'
 
 # The size of the persistent disk of the application (in MB).
-disk: 2048
+disk: 4096
 
 # The 'mounts' describe writable, persistent filesystem mounts in the application.
 mounts:
