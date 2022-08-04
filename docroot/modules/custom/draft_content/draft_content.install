@@ -89,7 +89,7 @@ function _create_medias(): array {
  * Implements function _create_products().
  *
  * @param array $medias
- *   Array of medias
+ *   Array of medias.
  */
 function _create_products(array $medias): array {
   $products = [];
@@ -122,8 +122,8 @@ function _create_products(array $medias): array {
 /**
  * Implements function _create_shipping_methods().
  *
- * @return
- *   An associative array with shipping methods
+ * @return array
+ *   An associative array with shipping methods.
  */
 function _create_shipping_methods(): array {
   $methods = [];
