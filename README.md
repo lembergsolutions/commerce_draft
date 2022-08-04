@@ -1,5 +1,7 @@
 # Drupal 9 Commerce starterkit project.
 
+Demo site - https://main-bvxea6i-aqafnkqgwmwaq.uk-1.platformsh.site/
+
 ## Get Started
 
 ```
@@ -12,7 +14,7 @@ When composer finished
 $ vagrant up
 ```
 
-Site install
+### Site install
 1. Create `settings.local.php` from `settings.draft.php` in the `sites/default/` folder
 2. `vagrant ssh`
 2. Run `composer site-install` from the vagrant machine
