@@ -1,0 +1,23 @@
+uuid: 34ada420-f68e-4a10-a62a-aa3308395083
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.products_solr
+  module:
+    - views
+  theme:
+    - olivero
+id: exposedformproducts_solrpage_1
+theme: olivero
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:products_solr-page_1'
+settings:
+  id: 'views_exposed_filter_block:products_solr-page_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+visibility: {  }
