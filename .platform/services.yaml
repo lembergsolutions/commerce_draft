@@ -15,7 +15,8 @@ searchsolr:
   disk: 1024
   configuration:
     cores:
-      maincore: {}
+      maincore:
+        conf_dir: !archive "solr_8.x_config/"
     endpoints:
       main:
         core: maincore
