@@ -224,7 +224,7 @@ display:
           preserve_facet_query_args: false
           query_tags: {  }
       relationships: {  }
-      use_ajax: true
+      use_ajax: false
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -244,7 +244,7 @@ display:
     display_options:
       exposed_block: true
       display_extenders: {  }
-      path: products-solr
+      path: search
     cache_metadata:
       max-age: -1
       contexts:

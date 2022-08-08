@@ -1,4 +1,4 @@
-uuid: 34ada420-f68e-4a10-a62a-aa3308395083
+uuid: ff9fb12a-f411-462f-9d65-e59e49f3a2e7
 langcode: en
 status: true
 dependencies:
@@ -8,10 +8,10 @@ dependencies:
     - views
   theme:
     - olivero
-id: exposedformproducts_solrpage_1
+id: solr_search_form_narrow
 theme: olivero
 region: primary_menu
-weight: 0
+weight: -7
 provider: null
 plugin: 'views_exposed_filter_block:products_solr-page_1'
 settings:
