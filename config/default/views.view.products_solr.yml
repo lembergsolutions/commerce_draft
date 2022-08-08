@@ -20,7 +20,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: ''
+      title: 'Search results'
       fields:
         search_api_solr_score_debugging:
           id: search_api_solr_score_debugging
