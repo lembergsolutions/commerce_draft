@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\block\BlockInterface;
 
 /**
  * Implements hook_preprocess_HOOK().
@@ -46,7 +47,7 @@ function draft_core_preprocess_block(&$variables) {
     $block = \Drupal::entityTypeManager()
       ->getStorage('block')
       ->load($variables['elements']['#id']);
-    if ($block) {
+    if ($block instanceof BlockInterface) {
       $region = $block->getRegion();
 
       if ($variables['base_plugin_id'] === 'views_exposed_filter_block') {
