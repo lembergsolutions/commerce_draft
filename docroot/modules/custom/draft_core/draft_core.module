@@ -81,14 +81,10 @@ function draft_core_form_alter(&$form, FormStateInterface $form_state, $form_id)
     $form['actions']['submit']['#attributes']['class'][] = 'button--primary';
   }
 
-  switch ($form_id) {
-    case 'views_exposed_form':
-      // Add placeholder text to keys input.
-      $form['filter']['#attributes']['placeholder'] = t('Search by keyword or phrase.');
-      $form['filter']['#type'] = "search";
-
-      // Add classes to the search form submit input.
-      $form['actions']['submit']['#attributes']['class'][] = 'search-form__submit';
-      break;
+  if ($form_id == 'views_exposed_form' ) {
+    $form['filter']['#attributes']['placeholder'] = t('Search by keyword or phrase.');
+    $form['filter']['#type'] = 'search';
+    $form['actions']['submit']['#attributes']['class'][] = 'search-form__submit';
+    $form['#attached']['library'][] = 'olivero/navigation-primary';
   }
 }
