@@ -11,7 +11,7 @@ dependencies:
 id: solr_search_form_narrow
 theme: olivero
 region: primary_menu
-weight: -7
+weight: -8
 provider: null
 plugin: 'views_exposed_filter_block:products_solr-page_1'
 settings:
