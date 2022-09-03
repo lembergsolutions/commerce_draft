@@ -31,6 +31,7 @@
         "drupal/field_group": "^3.2",
         "drupal/gin": "^3.0@beta",
         "drupal/gin_toolbar": "^1.0@beta",
+        "drupal/jquery_ui_accordion": "^1.1",
         "drupal/layout_builder_browser": "^1.4",
         "drupal/layout_builder_modal": "^1.1",
         "drupal/layout_builder_restrictions": "^2.12",
