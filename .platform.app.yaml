@@ -85,6 +85,7 @@ hooks:
     drush cr
     drush updb -y
     drush cim -y
+    drush cr
 
 # The configuration of app when it is exposed to the web.
 web:
