@@ -11,7 +11,6 @@ dependencies:
     - contact
     - filter
     - media
-    - search
     - system
 _core:
   default_config_hash: pq_mEIu_B4widZN7Ap81iCJSjShFFdcL0jEiCi8VrDk
@@ -24,7 +23,6 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
-  - 'search content'
   - 'use text format restricted_html'
   - 'view commerce_product'
   - 'view media'

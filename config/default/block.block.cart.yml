@@ -8,8 +8,8 @@ dependencies:
     - olivero
 id: cart
 theme: olivero
-region: primary_menu
-weight: -8
+region: secondary_menu
+weight: -5
 provider: null
 plugin: commerce_cart
 settings:

@@ -37,6 +37,7 @@ module:
   editor: 0
   entity: 0
   entity_reference_revisions: 0
+  fences: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -47,6 +48,8 @@ module:
   history: 0
   image: 0
   inline_entity_form: 0
+  jquery_ui: 0
+  jquery_ui_accordion: 0
   language: 0
   layout_builder: 0
   layout_builder_browser: 0
@@ -70,7 +73,6 @@ module:
   profile: 0
   quickedit: 0
   rdf: 0
-  search: 0
   search_api: 0
   search_api_solr: 0
   serialization: 0
