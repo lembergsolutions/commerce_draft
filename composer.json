@@ -28,6 +28,7 @@
         "drupal/core-composer-scaffold": "^9.4",
         "drupal/core-project-message": "^9.4",
         "drupal/core-recommended": "^9.4",
+        "drupal/elasticsearch_connector": "^7.0@alpha",
         "drupal/fences": "^3.0",
         "drupal/field_group": "^3.2",
         "drupal/gin": "^3.0@beta",
@@ -38,6 +39,7 @@
         "drupal/layout_builder_restrictions": "^2.12",
         "drupal/menu_item_extras": "^2.16",
         "drupal/price_difference_formatter": "^1.2",
+        "drupal/search_api": "^1.26",
         "drupal/search_api_solr": "^4.2",
         "drush/drush": "^11.0",
         "platformsh/config-reader": "^2.4"
