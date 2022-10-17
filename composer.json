@@ -28,6 +28,7 @@
         "drupal/core-composer-scaffold": "^9.4",
         "drupal/core-project-message": "^9.4",
         "drupal/core-recommended": "^9.4",
+        "drupal/document_preview": "^0.0.1",
         "drupal/elasticsearch_connector": "^7.0@alpha",
         "drupal/fences": "^3.0",
         "drupal/field_group": "^3.2",
