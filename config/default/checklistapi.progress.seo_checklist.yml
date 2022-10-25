@@ -1,0 +1,95 @@
+progress:
+  '#changed': 1666695876
+  '#changed_by': '1'
+  '#completed_items': 30
+  '#items':
+    install_and_enable_seo_checklist_module:
+      '#completed': 1666349608
+      '#uid': '1'
+    install_and_enable_coffee_module:
+      '#completed': 1666597559
+      '#uid': '1'
+    configure_coffee_module:
+      '#completed': 1666597559
+      '#uid': '1'
+    install_and_enable_admin_toolbar_module:
+      '#completed': 1666349608
+      '#uid': '1'
+    install_composer_command_line_tool:
+      '#completed': 1666597022
+      '#uid': '1'
+    install_drush_command_line_tool:
+      '#completed': 1666597022
+      '#uid': '1'
+    show_cli_commands:
+      '#completed': 1666597022
+      '#uid': '1'
+    install_and_enable_redirect_module:
+      '#completed': 1666362740
+      '#uid': '1'
+    configure_the_redirect_module:
+      '#completed': 1666363052
+      '#uid': '1'
+    install_and_enable_pathauto_module:
+      '#completed': 1666362740
+      '#uid': '1'
+    configure_pathauto_module:
+      '#completed': 1666363052
+      '#uid': '1'
+    create_pathauto_patterns:
+      '#completed': 1666363052
+      '#uid': '1'
+    install_and_enable_metatag_module:
+      '#completed': 1666362740
+      '#uid': '1'
+    set_metatags_for_your_site:
+      '#completed': 1666685788
+      '#uid': '1'
+    install_and_enable_alternate_hreflang_module:
+      '#completed': 1666685788
+      '#uid': '1'
+    install_and_enable_xml_sitemap_module:
+      '#completed': 1666362740
+      '#uid': '1'
+    configure_xml_sitemap_module:
+      '#completed': 1666686404
+      '#uid': '1'
+    install_and_enable_robotstxt_module:
+      '#completed': 1666688172
+      '#uid': '1'
+    add_xml_sitemap_to_your_robotstxt_file:
+      '#completed': 1666688172
+      '#uid': '1'
+    set_up_cron:
+      '#completed': 1666686404
+      '#uid': '1'
+    install_and_enable_sitemap_module:
+      '#completed': 1666362746
+      '#uid': '1'
+    configure_sitemap_module:
+      '#completed': 1666362740
+      '#uid': '1'
+    install_and_enable_yoast_seo_module:
+      '#completed': 1666694643
+      '#uid': '1'
+    configure_yoast_seo_module:
+      '#completed': 1666694643
+      '#uid': '1'
+    run_a_speed_test_for_your_site:
+      '#completed': 1666695808
+      '#uid': '1'
+    install_and_enable_advanced_css_js_aggregation_module:
+      '#completed': 1666695808
+      '#uid': '1'
+    configure_advanced_cssjs_aggregation_module:
+      '#completed': 1666695808
+      '#uid': '1'
+    secure_your_website_with_https:
+      '#completed': 1666695808
+      '#uid': '1'
+    move_to_fast_hosting:
+      '#completed': 1666695808
+      '#uid': '1'
+    sign_up_for_a_drupal_org_account_if_you_dont_already_have_one:
+      '#completed': 1666695876
+      '#uid': '1'

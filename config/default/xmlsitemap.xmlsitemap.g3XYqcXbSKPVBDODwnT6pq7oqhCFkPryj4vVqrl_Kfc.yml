@@ -1,0 +1,8 @@
+uuid: a7966bde-de7e-480e-87f0-9768f094f047
+langcode: en
+status: true
+dependencies: {  }
+id: g3XYqcXbSKPVBDODwnT6pq7oqhCFkPryj4vVqrl_Kfc
+label: 'Commerce Draft'
+context:
+  language: en
