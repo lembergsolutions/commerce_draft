@@ -37,6 +37,7 @@
         "drupal/gin": "^3.0@beta",
         "drupal/gin_toolbar": "^1.0@beta",
         "drupal/google_analytics": "^4.0",
+        "drupal/google_tag": "^1.5",
         "drupal/hreflang": "^1.9",
         "drupal/jquery_ui_accordion": "^1.1",
         "drupal/layout_builder_browser": "^1.4",
