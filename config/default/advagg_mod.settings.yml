@@ -1,0 +1,20 @@
+_core:
+  default_config_hash: DIsgflQr3uh-j0GWnPgGhZn0yCXGdImu4-u1m2Uv9IY
+css_adjust_sort_browsers: true
+css_adjust_sort_external: true
+css_defer: 0
+css_defer_admin: false
+css_defer_external: false
+css_defer_js_code: 0
+css_preprocess: false
+css_translate: null
+js_adjust_sort_external: true
+js_adjust_sort_browsers: true
+js_async: false
+js_async_in_header: false
+js_defer: 2
+js_footer: null
+js_preprocess: false
+js_remove_console_log: false
+prefetch: null
+unified_multisite_dir: null

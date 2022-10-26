@@ -12,6 +12,7 @@ dependencies:
     - commerce_product
     - contact
     - filter
+    - google_analytics
     - media
     - shortcut
     - system
@@ -28,6 +29,7 @@ permissions:
   - 'access shortcuts'
   - 'access site-wide contact form'
   - 'manage own commerce_payment_method'
+  - 'opt-in or out of google analytics tracking'
   - 'post comments'
   - 'skip comment approval'
   - 'use text format basic_html'

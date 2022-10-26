@@ -6,11 +6,20 @@ module:
   admin_toolbar_links_access_filter: 0
   admin_toolbar_search: 0
   admin_toolbar_tools: 0
+  advagg: 0
+  advagg_bundler: 0
+  advagg_cdn: 0
+  advagg_css_minify: 0
+  advagg_js_minify: 0
+  advagg_mod: 0
+  advagg_old_ie_compatibility: 0
+  advagg_validator: 0
   automated_cron: 0
   big_pipe: 0
   block: 0
   block_content: 0
   breakpoint: 0
+  checklistapi: 0
   ckeditor: 0
   color: 0
   comment: 0
@@ -30,6 +39,7 @@ module:
   config: 0
   contact: 0
   contextual: 0
+  ctools: 0
   datetime: 0
   dblog: 0
   draft_core: 0
@@ -44,8 +54,11 @@ module:
   file: 0
   filter: 0
   gin_toolbar: 0
+  google_analytics: 0
+  google_tag: 0
   help: 0
   history: 0
+  hreflang: 0
   image: 0
   inline_entity_form: 0
   jquery_ui: 0
@@ -63,6 +76,9 @@ module:
   menu_item_extras: 0
   menu_link_content: 0
   menu_ui: 0
+  metatag: 0
+  metatag_views: 0
+  module_filter: 0
   mysql: 0
   node: 0
   options: 0
@@ -73,10 +89,17 @@ module:
   profile: 0
   quickedit: 0
   rdf: 0
+  redirect: 0
+  redirect_404: 0
+  robotstxt: 0
   search_api: 0
   search_api_solr: 0
+  seo_checklist: 0
   serialization: 0
   shortcut: 0
+  simple_sitemap: 0
+  simple_sitemap_engines: 0
+  simple_sitemap_views: 0
   state_machine: 0
   syslog: 0
   system: 0
@@ -88,6 +111,11 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  xmlsitemap_custom: 0
+  xmlsitemap_engines: 0
+  yoast_seo: 0
+  pathauto: 1
+  xmlsitemap: 1
   views: 10
   minimal: 1000
 theme:
