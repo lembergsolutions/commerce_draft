@@ -32,7 +32,6 @@ module:
   contextual: 0
   datetime: 0
   dblog: 0
-  document_preview: 0
   draft_core: 0
   dynamic_page_cache: 0
   editor: 0
