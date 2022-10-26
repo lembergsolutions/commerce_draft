@@ -46,3 +46,4 @@
 *.DS_Store
 /.editorconfig
 /.gitattributes
+/.docksal/

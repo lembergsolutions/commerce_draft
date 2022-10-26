@@ -7,6 +7,7 @@ dependencies:
     - core.entity_view_mode.commerce_product.teaser
     - field.field.commerce_product.default.body
     - field.field.commerce_product.default.field_image
+    - field.field.commerce_product.default.field_metatags
     - image.style.medium
   module:
     - media
@@ -46,6 +47,8 @@ content:
 hidden:
   body: true
   created: true
+  field_metatags: true
   langcode: true
+  search_api_excerpt: true
   stores: true
   uid: true

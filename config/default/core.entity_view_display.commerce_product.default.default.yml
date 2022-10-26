@@ -6,10 +6,12 @@ dependencies:
     - commerce_product.commerce_product_type.default
     - field.field.commerce_product.default.body
     - field.field.commerce_product.default.field_image
+    - field.field.commerce_product.default.field_metatags
     - image.style.medium
   module:
     - commerce_product
     - media
+    - metatag
     - text
 _core:
   default_config_hash: 10qgl6V_HwkrJufzsNCV75OpqOeMzzKDJb3BhaogmzQ
@@ -34,6 +36,13 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_metatags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
   title:
     type: string
     label: hidden
@@ -53,5 +62,6 @@ content:
 hidden:
   created: true
   langcode: true
+  search_api_excerpt: true
   stores: true
   uid: true

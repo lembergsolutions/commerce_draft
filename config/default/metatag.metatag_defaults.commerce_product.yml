@@ -1,0 +1,10 @@
+uuid: 4a045c3e-1ea5-4c3b-85c6-236d37e66a81
+langcode: en
+status: true
+dependencies: {  }
+id: commerce_product
+label: Product
+tags:
+  description: '[node:summary]'
+  keywords: 'commerce-draft, commerce, draft, products, product, drupal, drupal9'
+  title: '[current-page:title] | [site:name]'
