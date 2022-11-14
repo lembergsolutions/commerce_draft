@@ -20,3 +20,7 @@ searchsolr:
     endpoints:
       main:
         core: maincore
+
+elasticsearch:
+  type: elasticsearch:6.5
+  disk: 512

@@ -1,0 +1,19 @@
+uuid: 0ef2b78c-62fc-4a5d-91f1-7c8ed4629e36
+langcode: en
+status: '1'
+dependencies: {  }
+cluster_id: test_clustr
+name: 'Test clustr'
+url: 'http://commerce-draft.docksal:9200'
+options:
+  multiple_nodes_connection: false
+  use_authentication: 0
+  authentication_type: Basic
+  username: ''
+  password: ''
+  timeout: '3'
+  rewrite:
+    rewrite_index: 0
+    index:
+      prefix: ''
+      suffix: ''

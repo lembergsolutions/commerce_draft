@@ -171,3 +171,16 @@ if ($platformsh->hasRelationship($relationship_name)) {
   // Set the connector configuration to the appropriate value, as defined by the formatter above.
   $config['search_api.server.' . $solr_server_name]['backend_config']['connector_config'] = $platformsh->formattedCredentials($relationship_name, 'drupal-solr');
 }
+
+// Update these values to the relationship name (from .platform.app.yaml)
+// and the machine name of the server from your Drupal configuration.
+$relationship_name = 'elasticsearch';
+$es_cluster_name = 'test_clustr';
+if ($platformsh->hasRelationship($relationship_name)) {
+  $platformsh->registerFormatter('drupal-elastic', function($creds) {
+    return sprintf('http://%s:%s', $creds['host'], $creds['port']);
+  });
+
+  // Set the connector configuration to the appropriate value, as defined by the formatter above.
+  $config['elasticsearch_connector.cluster.' . $es_cluster_name]['url'] = $platformsh->formattedCredentials($relationship_name, 'drupal-elastic');
+}
