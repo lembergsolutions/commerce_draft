@@ -33,6 +33,7 @@ hidden:
   items: true
   original_amount: true
   package_type: true
+  search_api_excerpt: true
   shipping_profile: true
   shipping_service: true
   state: true

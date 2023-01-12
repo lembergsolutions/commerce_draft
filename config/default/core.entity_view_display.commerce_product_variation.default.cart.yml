@@ -24,6 +24,7 @@ hidden:
   langcode: true
   list_price: true
   price: true
+  search_api_excerpt: true
   sku: true
   title: true
   weight: true

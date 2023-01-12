@@ -86,6 +86,7 @@ hidden:
   balance: true
   changed: true
   ip_address: true
+  search_api_excerpt: true
   shipments: true
   store_id: true
   total_paid: true

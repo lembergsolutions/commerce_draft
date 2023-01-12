@@ -83,4 +83,5 @@ content:
     region: content
 hidden:
   original_amount: true
+  search_api_excerpt: true
   weight: true
