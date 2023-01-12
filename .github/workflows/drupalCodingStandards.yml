@@ -6,7 +6,7 @@ jobs:
     name: Drupal code standards check
     runs-on: ubuntu-latest
     env:
-      PHP_VERSION: '7.4'
+      PHP_VERSION: '8.1'
       COMPOSER_VERSION: 2
     steps:
       - name: Checkout
