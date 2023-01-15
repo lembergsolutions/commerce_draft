@@ -38,28 +38,4 @@ status_toggle: 'exclude listed'
 status_list: |-
   403
   404
-conditions:
-  'entity_bundle:commerce_product':
-    id: 'entity_bundle:commerce_product'
-    negate: false
-    context_mapping:
-      commerce_product: '@commerce_product.product_route_context:commerce_product'
-    bundles: {  }
-  'entity_bundle:commerce_product_variation':
-    id: 'entity_bundle:commerce_product_variation'
-    negate: false
-    context_mapping:
-      commerce_product_variation: '@commerce_product.product_variation_route_context:commerce_product_variation'
-    bundles: {  }
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
-    bundles: {  }
-  'entity_bundle:taxonomy_term':
-    id: 'entity_bundle:taxonomy_term'
-    negate: false
-    context_mapping:
-      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
-    bundles: {  }
+conditions: {  }
