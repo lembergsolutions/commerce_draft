@@ -8,11 +8,9 @@ module:
   admin_toolbar_tools: 0
   advagg: 0
   advagg_bundler: 0
-  advagg_cdn: 0
   advagg_css_minify: 0
   advagg_js_minify: 0
   advagg_mod: 0
-  advagg_old_ie_compatibility: 0
   advagg_validator: 0
   automated_cron: 0
   big_pipe: 0
