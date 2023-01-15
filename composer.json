@@ -46,6 +46,7 @@
         "drupal/module_filter": "^4.0",
         "drupal/pathauto": "^1.11",
         "drupal/price_difference_formatter": "^1.2",
+        "drupal/rdf": "^2.1",
         "drupal/redirect": "^1.8",
         "drupal/robotstxt": "^1.4",
         "drupal/search_api": "^1.26",
