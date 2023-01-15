@@ -7,7 +7,7 @@
     "prefer-stable": true,
     "require-dev": {
         "drupal/coder": "^8.3",
-        "drupal/drupal-extension": "^4",
+        "drupal/drupal-extension": "^5",
         "drupal/stage_file_proxy": "^2.0",
         "lemberg/draft-environment": "^3.5.0",
         "mglaman/phpstan-drupal": "^1.1",
@@ -26,7 +26,7 @@
         "drupal/commerce": "^2.21",
         "drupal/commerce_paypal": "^1.0@RC",
         "drupal/commerce_pricelist": "^2.1",
-        "drupal/commerce_shipping": "^2.0@RC",
+        "drupal/commerce_shipping": "^2.x-dev",
         "drupal/core-composer-scaffold": "^9.5",
         "drupal/core-project-message": "^9.5",
         "drupal/core-recommended": "^9.5",
