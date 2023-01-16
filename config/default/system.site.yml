@@ -2,7 +2,7 @@ _core:
   default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
 langcode: en
 uuid: 902d1300-7276-46f1-8608-7fc30b57e39a
-name: 'Drupal 9.4'
+name: 'Drupal 10'
 mail: admin@example.com
 slogan: Commerce
 page:
