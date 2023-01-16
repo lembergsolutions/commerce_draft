@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b1d9e08be5f0829d63b0950da7929114",
+    "content-hash": "c7d3d0a2e4ce167e8ecba22df57cf0c4",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2124,7 +2124,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/commerce_shipping.git",
-                "reference": "d0e2e70e953f570fd0b4bb0d14526150a71380d5"
+                "reference": "f81f7da7147064f5b01907755fbc6273a07552ec"
             },
             "require": {
                 "drupal/commerce": "^2.29",
@@ -2139,8 +2139,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.4+11-dev",
-                    "datestamp": "1673858348",
+                    "version": "8.x-2.4+15-dev",
+                    "datestamp": "1673886477",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -2653,17 +2653,11 @@
         },
         {
             "name": "drupal/elasticsearch_connector",
-            "version": "7.0.0-alpha4",
+            "version": "dev-7.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/elasticsearch_connector.git",
-                "reference": "8.x-7.0-alpha4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/elasticsearch_connector-8.x-7.0-alpha4.zip",
-                "reference": "8.x-7.0-alpha4",
-                "shasum": "2e0922d831a781555970a787c9ec98dc9891f565"
+                "reference": "899f6098538cabb96222eb9630c59173c5cce054"
             },
             "require": {
                 "drupal/core": "^9.2 || ^10",
@@ -2682,9 +2676,12 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-7.x": "7.x-dev"
+                },
                 "drupal": {
-                    "version": "8.x-7.0-alpha4",
-                    "datestamp": "1673006177",
+                    "version": "8.x-7.0-alpha3+19-dev",
+                    "datestamp": "1673004487",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -14889,7 +14886,7 @@
     "stability-flags": {
         "drupal/commerce_paypal": 5,
         "drupal/commerce_shipping": 20,
-        "drupal/elasticsearch_connector": 15,
+        "drupal/elasticsearch_connector": 20,
         "drupal/gin": 10,
         "drupal/gin_toolbar": 10
     },

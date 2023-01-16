@@ -57,10 +57,10 @@ if (empty($settings['config_sync_directory'])) {
 
 // Override drupal/symfony_mailer default config to use Mailhog
 $config['symfony_mailer.mailer_transport.sendmail']['plugin'] = 'smtp';
-$config['symfony_mailer.mailer_transport.sendmail']['configuration']['user']='';
-$config['symfony_mailer.mailer_transport.sendmail']['configuration']['pass']='';
-$config['symfony_mailer.mailer_transport.sendmail']['configuration']['host']='localhost';
-$config['symfony_mailer.mailer_transport.sendmail']['configuration']['port']='1025';
+$config['symfony_mailer.mailer_transport.sendmail']['configuration']['user'] = '';
+$config['symfony_mailer.mailer_transport.sendmail']['configuration']['pass'] = '';
+$config['symfony_mailer.mailer_transport.sendmail']['configuration']['host'] = 'localhost';
+$config['symfony_mailer.mailer_transport.sendmail']['configuration']['port'] = '1025';
 
 // Override drupal/swiftmailer default config to use Mailhog
 $config['swiftmailer.transport']['transport'] = 'smtp';
@@ -80,3 +80,8 @@ $config['system.performance']['js']['preprocess'] = FALSE;
 
 // Update access.
 $settings['update_free_access'] = TRUE;
+
+// Rewrite Solr host.
+$solr_server_name = 'solr_server';
+$config['search_api.server.' . $solr_server_name]['backend_config']['connector_config']['host'] = 'solr';
+
