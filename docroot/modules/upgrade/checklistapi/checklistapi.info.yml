@@ -1,0 +1,5 @@
+name: Checklist API
+type: module
+description: Stub module to uninstall broken package
+package: Upgrade
+core_version_requirement: ^9.3 || ^10
