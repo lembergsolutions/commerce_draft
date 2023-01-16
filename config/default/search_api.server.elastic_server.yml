@@ -9,6 +9,7 @@ name: 'Elastic Server'
 description: ''
 backend: elasticsearch
 backend_config:
+  server_description: ''
   cluster_settings:
-    cluster: test_clustr
+    cluster: draft
   fuzziness: auto

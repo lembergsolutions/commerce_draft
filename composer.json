@@ -163,7 +163,7 @@
                 "docroot/themes/custom/*/composer.json"
             ]
         },
-        "patches": {},
+        "patches-file": "composer.patches.json",
         "composer-exit-on-patch-failure": true,
         "enable-patching": true
     }
