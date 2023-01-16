@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/4.1/phpunit.xsd"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd"
          backupGlobals="false"
          colors="true"
          bootstrap="docroot/core/tests/bootstrap.php"
          verbose="true"
 >
+  <coverage>
+    <include>
+      <directory>docroot/modules/custom</directory>
+    </include>
+  </coverage>
   <php>
     <env name="SIMPLETEST_DB" value="sqlite://localhost//tmp/test.sqlite"/>
   </php>
@@ -16,9 +20,4 @@
       <directory>./docroot/modules/custom/**/tests</directory>
     </testsuite>
   </testsuites>
-  <filter>
-    <whitelist>
-      <directory>docroot/modules/custom</directory>
-    </whitelist>
-  </filter>
 </phpunit>
