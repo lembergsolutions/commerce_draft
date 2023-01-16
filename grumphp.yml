@@ -1,0 +1,31 @@
+grumphp:
+  ascii:
+    failed: vendor/phpro/grumphp/resources/ascii/failed.txt
+    succeeded: vendor/phpro/grumphp/resources/ascii/succeeded.txt
+  process_timeout: null
+  tasks:
+    composer: ~
+    phpcs:
+      standard:
+        - vendor/drupal/coder/coder_sniffer/Drupal
+        - vendor/phpcompatibility/php-compatibility/PHPCompatibility
+      whitelist_patterns:
+        - /^docroot\/(modules|themes)\/custom\/(.*)/
+      triggered_by: ['php', 'theme', 'module', 'inc', 'install', 'yml']
+    phpstan:
+      configuration: phpstan.neon
+      force_patterns:
+        - /^docroot\/(modules|themes)\/custom\/(.*)/
+      triggered_by: ['php', 'module', 'theme', 'inc', 'install']
+    phplint:
+      exclude:
+        - config
+        - vendor
+        - drush
+        - tests
+        - docroot/core
+        - docroot/modules/contrib
+        - docroot/themes/contrib
+        - docroot/libraries
+        - docroot/sites
+      triggered_by: ['php', 'module', 'theme', 'inc', 'install']
