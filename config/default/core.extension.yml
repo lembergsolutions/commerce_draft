@@ -8,11 +8,9 @@ module:
   admin_toolbar_tools: 0
   advagg: 0
   advagg_bundler: 0
-  advagg_cdn: 0
   advagg_css_minify: 0
   advagg_js_minify: 0
   advagg_mod: 0
-  advagg_old_ie_compatibility: 0
   advagg_validator: 0
   automated_cron: 0
   big_pipe: 0
@@ -20,8 +18,7 @@ module:
   block_content: 0
   breakpoint: 0
   checklistapi: 0
-  ckeditor: 0
-  color: 0
+  ckeditor5: 0
   comment: 0
   commerce: 0
   commerce_cart: 0
@@ -64,6 +61,8 @@ module:
   inline_entity_form: 0
   jquery_ui: 0
   jquery_ui_accordion: 0
+  jquery_ui_autocomplete: 0
+  jquery_ui_menu: 0
   language: 0
   layout_builder: 0
   layout_builder_modal: 0
@@ -87,7 +86,6 @@ module:
   path_alias: 0
   physical: 0
   profile: 0
-  quickedit: 0
   rdf: 0
   redirect: 0
   redirect_404: 0
@@ -118,8 +116,6 @@ module:
   views: 10
   minimal: 1000
 theme:
-  bartik: 0
-  seven: 0
   claro: 0
   olivero: 0
   gin: 0
