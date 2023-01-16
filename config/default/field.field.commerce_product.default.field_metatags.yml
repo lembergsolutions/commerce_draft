@@ -12,7 +12,7 @@ field_name: field_metatags
 entity_type: commerce_product
 bundle: default
 label: 'Meta tags'
-description: 'Here you can edit this node''s metatag information.'
+description: "Here you can edit this node's metatag information."
 required: false
 translatable: false
 default_value: {  }

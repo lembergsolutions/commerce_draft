@@ -1,6 +1,9 @@
 # Ignore binaries.
 /bin
 
+# PHPInit results.
+.phpunit.result.cache
+
 # Ignore non-custom parts of Drupal.
 /docroot/core
 /docroot/modules/contrib
