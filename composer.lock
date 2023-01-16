@@ -2183,7 +2183,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/commerce_shipping.git",
-                "reference": "941bb3c86c2771cb5905b2968088b804661ba23e"
+                "reference": "d0e2e70e953f570fd0b4bb0d14526150a71380d5"
             },
             "require": {
                 "drupal/commerce": "^2.29",
@@ -2198,8 +2198,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.4+7-dev",
-                    "datestamp": "1672992185",
+                    "version": "8.x-2.4+11-dev",
+                    "datestamp": "1673858348",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
