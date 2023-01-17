@@ -22,10 +22,11 @@ if ($platformsh->hasRelationship('database')) {
   ];
 }
 
-$config['system.logging']['error_level'] = 'verbose';
-error_reporting(E_ALL);
-ini_set('display_errors', TRUE);
-ini_set('display_startup_errors', TRUE);
+// Reporting level.
+error_reporting(0);
+ini_set('display_errors', 0);
+ini_set('display_startup_errors', 0);
+$config['system.logging']['error_level'] = 'hide';
 
 // Enable Redis caching.
 if ($platformsh->hasRelationship('redis') && !InstallerKernel::installationAttempted() && extension_loaded('redis') && class_exists('Drupal\redis\ClientFactory')) {
