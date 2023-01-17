@@ -1,8 +1,8 @@
 grumphp:
   git_hook_variables:
-    EXEC_GRUMPHP_COMMAND: exec
-# EXEC_GRUMPHP_COMMAND: ddev exec
-# You can change start command to run pre-commit check inside container.
+    EXEC_GRUMPHP_COMMAND: ddev exec php
+#    EXEC_GRUMPHP_COMMAND: exec
+# You can change execution command to run pre-commit check outside container or change virtualization provider.
 # @see https://github.com/phpro/grumphp/blob/master/doc/parameters.md
   ascii:
     failed: vendor/phpro/grumphp/resources/ascii/failed.txt
@@ -24,16 +24,4 @@ grumphp:
       configuration: phpstan.neon
       force_patterns:
         - /^docroot\/(modules|themes)\/custom\/(.*)/
-      triggered_by: ['php', 'module', 'theme', 'inc', 'install']
-    phplint:
-      exclude:
-        - config
-        - vendor
-        - drush
-        - tests
-        - docroot/core
-        - docroot/modules/contrib
-        - docroot/themes/contrib
-        - docroot/libraries
-        - docroot/sites
       triggered_by: ['php', 'module', 'theme', 'inc', 'install']
