@@ -1,17 +1,25 @@
 grumphp:
+  git_hook_variables:
+    EXEC_GRUMPHP_COMMAND: exec
+# EXEC_GRUMPHP_COMMAND: ddev exec
+# You can change start command to run pre-commit check inside container.
+# @see https://github.com/phpro/grumphp/blob/master/doc/parameters.md
   ascii:
     failed: vendor/phpro/grumphp/resources/ascii/failed.txt
     succeeded: vendor/phpro/grumphp/resources/ascii/succeeded.txt
   process_timeout: null
+  parallel:
+    enabled: true
+    max_workers: 32
   tasks:
     composer: ~
     phpcs:
       standard:
         - vendor/drupal/coder/coder_sniffer/Drupal
-        - vendor/phpcompatibility/php-compatibility/PHPCompatibility
+        - vendor/drupal/coder/coder_sniffer/DrupalPractice
       whitelist_patterns:
         - /^docroot\/(modules|themes)\/custom\/(.*)/
-      triggered_by: ['php', 'theme', 'module', 'inc', 'install', 'yml']
+      triggered_by: ['php', 'module', 'theme', 'inc', 'install', 'yml']
     phpstan:
       configuration: phpstan.neon
       force_patterns:
