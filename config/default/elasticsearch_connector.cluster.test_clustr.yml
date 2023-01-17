@@ -4,7 +4,7 @@ status: '1'
 dependencies: {  }
 cluster_id: test_clustr
 name: 'Test clustr'
-url: 'http://commerce-draft.docksal:9200'
+url: 'http://elasticsearch:9200'
 options:
   multiple_nodes_connection: false
   use_authentication: false
