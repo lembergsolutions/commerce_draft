@@ -4,11 +4,14 @@ Demo site - https://main-bvxea6i-aqafnkqgwmwaq.uk-1.platformsh.site/
 
 ---
 ## Git flow:
+> By default, we use **develop** branch for development. **main** branch is used as stable branch.
 #### Current development branch(main):
 1. Developer creates feature branch ```git checkout -b [TASK_ID]-[TASK_TITLE]``` from current development branch.
 2. After finishing task developer commits changes ```git commit -m "#[TASK_ID] : Commit message"```, pushes
-   feature branch and creates pull request to source branch. If all checks are passed developer chooses at least one reviewer in pull request.
+   feature branch and creates pull request to source branch.
+   If all checks are passed developer chooses at least one reviewer in pull request.
 3. After review code can be pulled to source branch.
+> We recommend pushing intermediate code every evening. Uncompleted PR should be marked as **Draft** according to the used VCS provider.
 
 #### Drupal standards:
 [Coding standards](https://www.drupal.org/docs/develop/standards)
@@ -53,8 +56,14 @@ section of composer.patches.json:
 ```json
 {
     "patches": {
-        "drupal/foobar": {
-          "Patch description": "Local path to patch"
+        "drupal/ckeditor_layouts": {
+            "#3225376: CKEditor behavior buggy inside layout": "https://www.drupal.org/files/issues/2022-03-07/element_in_layout.patch"
+        },
+        "drupal/gin": {
+            "Fix back to site button": "patches/gin/fix_breadcrumbs_order_page.patch"
+        },
+        "mdm-ecom/lib.sap": {
+            "Use correct contect for Token request in OrderTransfer": "patches/lib_sap/order_transfer_token_context.patch",
         }
     }
 }
