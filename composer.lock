@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b326c41aa6eb7a493ac2488a5869317e",
+    "content-hash": "e1b345c891a8189a07cac54d5417a789",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2124,7 +2124,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/commerce_shipping.git",
-                "reference": "d0e2e70e953f570fd0b4bb0d14526150a71380d5"
+                "reference": "f81f7da7147064f5b01907755fbc6273a07552ec"
             },
             "require": {
                 "drupal/commerce": "^2.29",
@@ -2139,8 +2139,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.4+11-dev",
-                    "datestamp": "1673858348",
+                    "version": "8.x-2.4+15-dev",
+                    "datestamp": "1673886477",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -2653,17 +2653,11 @@
         },
         {
             "name": "drupal/elasticsearch_connector",
-            "version": "7.0.0-alpha4",
+            "version": "dev-7.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/elasticsearch_connector.git",
-                "reference": "8.x-7.0-alpha4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/elasticsearch_connector-8.x-7.0-alpha4.zip",
-                "reference": "8.x-7.0-alpha4",
-                "shasum": "2e0922d831a781555970a787c9ec98dc9891f565"
+                "reference": "899f6098538cabb96222eb9630c59173c5cce054"
             },
             "require": {
                 "drupal/core": "^9.2 || ^10",
@@ -2682,9 +2676,12 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-7.x": "7.x-dev"
+                },
                 "drupal": {
-                    "version": "8.x-7.0-alpha4",
-                    "datestamp": "1673006177",
+                    "version": "8.x-7.0-alpha3+19-dev",
+                    "datestamp": "1673004487",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -6339,16 +6336,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.15.2",
+            "version": "v4.15.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "f59bbe44bf7d96f24f3e2b4ddc21cd52c1d2adbc"
+                "reference": "570e980a201d8ed0236b0a62ddf2c9cbb2034039"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/f59bbe44bf7d96f24f3e2b4ddc21cd52c1d2adbc",
-                "reference": "f59bbe44bf7d96f24f3e2b4ddc21cd52c1d2adbc",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/570e980a201d8ed0236b0a62ddf2c9cbb2034039",
+                "reference": "570e980a201d8ed0236b0a62ddf2c9cbb2034039",
                 "shasum": ""
             },
             "require": {
@@ -6389,9 +6386,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v4.15.2"
+                "source": "https://github.com/nikic/PHP-Parser/tree/v4.15.3"
             },
-            "time": "2022-11-12T15:38:23+00:00"
+            "time": "2023-01-16T22:05:37+00:00"
         },
         {
             "name": "nodespark/des-connector",
@@ -16196,7 +16193,7 @@
     "stability-flags": {
         "drupal/commerce_paypal": 5,
         "drupal/commerce_shipping": 20,
-        "drupal/elasticsearch_connector": 15,
+        "drupal/elasticsearch_connector": 20,
         "drupal/gin": 10,
         "drupal/gin_toolbar": 10
     },

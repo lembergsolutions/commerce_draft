@@ -12,3 +12,4 @@ backend_config:
   cluster_settings:
     cluster: test_clustr
   fuzziness: auto
+  server_description: ''

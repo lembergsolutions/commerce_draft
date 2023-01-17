@@ -22,5 +22,5 @@ searchsolr:
         core: maincore
 
 elasticsearch:
-  type: elasticsearch:6.5
+  type: elasticsearch:7.10
   disk: 512

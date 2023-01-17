@@ -31,7 +31,7 @@
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-project-message": "^10.0",
         "drupal/core-recommended": "^10.0",
-        "drupal/elasticsearch_connector": "^7.0@alpha",
+        "drupal/elasticsearch_connector": "^7.x-dev",
         "drupal/fences": "^3.0",
         "drupal/field_group": "^3.2",
         "drupal/gin": "^3.0@beta",
@@ -167,7 +167,7 @@
                 "docroot/themes/custom/*/composer.json"
             ]
         },
-        "patches": {},
+        "patches-file": "composer.patches.json",
         "composer-exit-on-patch-failure": true,
         "enable-patching": true
     }
