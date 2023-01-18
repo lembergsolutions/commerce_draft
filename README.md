@@ -13,13 +13,20 @@ Demo site - https://main-bvxea6i-aqafnkqgwmwaq.uk-1.platformsh.site/
 3. After review code can be pulled to source branch.
 > We recommend pushing intermediate code every evening. Uncompleted PR should be marked as **Draft** according to the used VCS provider.
 
-#### Drupal standards:
-[Coding standards](https://www.drupal.org/docs/develop/standards)
-#### PHPStan (project configured on level 5)
-[PHPStan rule rules](https://phpstan.org/user-guide/rule-levels)
+---
+## Code style:
+We 💜 clean code and follow best practices. You can read more information about rules and standards below:
+* [Drupal standard's](https://www.drupal.org/docs/develop/standards)
+* [PHPStan (project configured on level 5](https://phpstan.org/user-guide/rule-levels)
+
+All code is automatically checked for compliance with standards:
+* Locally on pre-commit using grumphp (see grumphp.yml for more information).
+* Remotely using the tools provided by the VCS provider.
 
 ---
 # Local environment installation.
+
+---
 ## DDEV based installation:
 ### Requirements:
 
@@ -63,7 +70,7 @@ section of composer.patches.json:
             "Fix back to site button": "patches/gin/fix_breadcrumbs_order_page.patch"
         },
         "mdm-ecom/lib.sap": {
-            "Use correct contect for Token request in OrderTransfer": "patches/lib_sap/order_transfer_token_context.patch",
+            "Use correct contect for Token request in OrderTransfer": "patches/lib_sap/order_transfer_token_context.patch"
         }
     }
 }
@@ -94,6 +101,6 @@ $ vagrant up
 ### Site install
 1. Create `settings.local.php` from `settings.draft.php` in the `sites/default/` folder
 2. `vagrant ssh`
-2. Run `composer site-install` from the vagrant machine
-3. Admin user: `admin` pass: `admin`
-4. Site URL: https://commerce-draft.test
+3. Run `composer site-install` from the vagrant machine
+4. Admin user: `admin` pass: `admin`
+5. Site URL: https://commerce-draft.test

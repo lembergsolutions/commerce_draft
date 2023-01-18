@@ -1,0 +1,27 @@
+grumphp:
+  git_hook_variables:
+    EXEC_GRUMPHP_COMMAND: ddev exec php
+#    EXEC_GRUMPHP_COMMAND: exec
+# You can change execution command to run pre-commit check outside container or change virtualization provider.
+# @see https://github.com/phpro/grumphp/blob/master/doc/parameters.md
+  ascii:
+    failed: vendor/phpro/grumphp/resources/ascii/failed.txt
+    succeeded: vendor/phpro/grumphp/resources/ascii/succeeded.txt
+  process_timeout: null
+  parallel:
+    enabled: true
+    max_workers: 32
+  tasks:
+    composer: ~
+    phpcs:
+      standard:
+        - vendor/drupal/coder/coder_sniffer/Drupal
+        - vendor/drupal/coder/coder_sniffer/DrupalPractice
+      whitelist_patterns:
+        - /^docroot\/(modules|themes)\/custom\/(.*)/
+      triggered_by: ['php', 'module', 'theme', 'inc', 'install', 'yml']
+    phpstan:
+      configuration: phpstan.neon
+      force_patterns:
+        - /^docroot\/(modules|themes)\/custom\/(.*)/
+      triggered_by: ['php', 'module', 'theme', 'inc', 'install']
