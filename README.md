@@ -7,7 +7,7 @@ Demo site - https://main-bvxea6i-aqafnkqgwmwaq.uk-1.platformsh.site/
 > By default, we use **develop** branch for development. **main** branch is used as stable branch.
 #### Current development branch(main):
 1. Developer creates feature branch ```git checkout -b [TASK_ID]-[TASK_TITLE]``` from current development branch.
-2. After finishing task developer commits changes ```git commit -m "#[TASK_ID] : Commit message"```, pushes
+2. After finishing task developer commits changes ```git commit -m "[PROJECT-ABBREVIATION]-[TASK_ID] : Commit message"```, pushes
    feature branch and creates pull request to source branch.
    If all checks are passed developer chooses at least one reviewer in pull request.
 3. After review code can be pulled to source branch.
