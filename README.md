@@ -24,6 +24,13 @@ All code is automatically checked for compliance with standards:
 * Remotely using the tools provided by the VCS provider.
 
 ---
+
+# Additional configurations.
+## Environment indicator:
+We recommend using the Environment indicator module to mark your Environments. This module will help you to keep sane while working on your different environments by adding a configurable color bar to each one of your environments.
+You can read more information about standards of marking [here](https://www.drupal.org/node/1992848#name).
+
+---
 # Local environment installation.
 
 ---

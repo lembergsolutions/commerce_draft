@@ -1,12 +1,14 @@
 <?php
 
-use Drupal\Component\Serialization\Yaml;
+// phpcs:ignoreFile
 
 /**
  * @file
  * Draft VM overrides. Injected into settings.local.php by DrupalProject
  * composer script.
  */
+
+use Drupal\Component\Serialization\Yaml;
 
 // Set up default database.
 $databases['default']['default'] = [
@@ -85,3 +87,8 @@ $config['system.performance']['js']['preprocess'] = FALSE;
 $settings['cache']['bins']['render'] = 'cache.backend.null';
 $settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
 $settings['cache']['bins']['page'] = 'cache.backend.null';
+
+// Environment indicator settings.
+$config['environment_indicator.indicator']['name'] = 'Virtual Machine Vagrant';
+$config['environment_indicator.indicator']['bg_color'] = '#006600';
+$config['environment_indicator.indicator']['fg_color'] = '#ffffff';
