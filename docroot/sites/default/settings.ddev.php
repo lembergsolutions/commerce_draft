@@ -85,3 +85,7 @@ $settings['update_free_access'] = TRUE;
 $solr_server_name = 'solr_server';
 $config['search_api.server.' . $solr_server_name]['backend_config']['connector_config']['host'] = 'solr';
 
+// Environment indicator settings.
+$config['environment_indicator.indicator']['name'] = 'Virtual Machine DDEV';
+$config['environment_indicator.indicator']['bg_color'] = '#006600';
+$config['environment_indicator.indicator']['fg_color'] = '#ffffff';

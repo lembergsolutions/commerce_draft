@@ -1,4 +1,7 @@
 <?php
+
+// phpcs:ignoreFile
+
 /**
  * @file
  * Platform.sh settings.
@@ -185,3 +188,8 @@ if ($platformsh->hasRelationship($relationship_name)) {
   // Set the connector configuration to the appropriate value, as defined by the formatter above.
   $config['elasticsearch_connector.cluster.' . $es_cluster_name]['url'] = $platformsh->formattedCredentials($relationship_name, 'drupal-elastic');
 }
+
+// Environment indicator settings.
+$config['environment_indicator.indicator']['name'] = ucfirst($platformsh->branch);
+$config['environment_indicator.indicator']['bg_color'] = '#ef5350';
+$config['environment_indicator.indicator']['fg_color'] = '#000000';
