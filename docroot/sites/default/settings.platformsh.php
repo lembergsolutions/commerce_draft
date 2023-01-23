@@ -190,6 +190,6 @@ if ($platformsh->hasRelationship($relationship_name)) {
 }
 
 // Environment indicator settings.
-$config['environment_indicator.indicator']['name'] = 'Live';
+$config['environment_indicator.indicator']['name'] = ucfirst($platformsh->branch);
 $config['environment_indicator.indicator']['bg_color'] = '#ef5350';
 $config['environment_indicator.indicator']['fg_color'] = '#000000';
