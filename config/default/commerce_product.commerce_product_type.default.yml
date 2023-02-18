@@ -5,11 +5,12 @@ dependencies: {  }
 _core:
   default_config_hash: igdv1CXBTq9vh-ONhQ2SFkVhr3bdfRC6nP1Uubdx-L0
 id: default
-label: Default
+label: 'Commerce Product'
 traits: {  }
 locked: false
 description: ''
 variationType: default
-variationTypes: {  }
+variationTypes:
+  - default
 multipleVariations: false
 injectVariationFields: false

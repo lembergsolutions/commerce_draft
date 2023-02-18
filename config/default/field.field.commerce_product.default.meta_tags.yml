@@ -1,18 +1,18 @@
-uuid: d798b5e1-6a1d-44cc-9137-aaf1fa7bbda6
+uuid: 688af1f9-971b-47be-bfec-e9b5f4a61d55
 langcode: en
 status: true
 dependencies:
   config:
     - commerce_product.commerce_product_type.default
-    - field.storage.commerce_product.field_metatags
+    - field.storage.commerce_product.meta_tags
   module:
     - metatag
-id: commerce_product.default.field_metatags
-field_name: field_metatags
+id: commerce_product.default.meta_tags
+field_name: meta_tags
 entity_type: commerce_product
 bundle: default
 label: 'Meta tags'
-description: "Here you can edit this node's metatag information."
+description: ''
 required: false
 translatable: false
 default_value: {  }

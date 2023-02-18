@@ -1,20 +1,20 @@
-uuid: e4fc4c56-e975-45cc-8c94-25904aa7b28f
+uuid: 2a624627-b8f3-41d2-b200-3eee7af257ac
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_meta_tags
-    - node.type.page
+    - field.storage.node.meta_tags
+    - node.type.component_page
   module:
     - metatag
-id: node.page.field_meta_tags
-field_name: field_meta_tags
+id: node.component_page.meta_tags
+field_name: meta_tags
 entity_type: node
-bundle: page
+bundle: component_page
 label: 'Meta tags'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

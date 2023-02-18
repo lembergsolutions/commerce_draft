@@ -1,0 +1,19 @@
+uuid: 996b6f50-5835-4358-bd49-fa23c42f9407
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.related_products
+field_name: related_products
+entity_type: commerce_product
+type: entity_reference
+settings:
+  target_type: commerce_product
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

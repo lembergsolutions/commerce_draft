@@ -38,7 +38,9 @@ module:
   ctools: 0
   datetime: 0
   dblog: 0
+  draft_cart: 0
   draft_core: 0
+  draft_search: 0
   dynamic_page_cache: 0
   editor: 0
   elasticsearch_connector: 0

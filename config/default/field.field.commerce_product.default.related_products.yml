@@ -1,0 +1,28 @@
+uuid: b9eb5b2c-0e89-4b1f-8b71-a249a44444a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.default
+    - field.storage.commerce_product.related_products
+id: commerce_product.default.related_products
+field_name: related_products
+entity_type: commerce_product
+bundle: default
+label: 'Related Products'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_product'
+  handler_settings:
+    target_bundles:
+      default: default
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,12 +1,12 @@
-uuid: 0efed16e-c1aa-402a-86b9-a3405bf5e436
+uuid: 35796aab-35aa-4615-947c-2da4fd1e675f
 langcode: en
 status: true
 dependencies:
   module:
     - commerce_product
     - metatag
-id: commerce_product.field_metatags
-field_name: field_metatags
+id: commerce_product.meta_tags
+field_name: meta_tags
 entity_type: commerce_product
 type: metatag
 settings: {  }

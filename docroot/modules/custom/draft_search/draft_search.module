@@ -2,46 +2,39 @@
 
 /**
  * @file
- * Module hooks.
+ * Primary module hooks for Draft Search module.
  */
 
-use Drupal\Core\Form\FormStateInterface;
 use Drupal\block\BlockInterface;
-
-/**
- * Implements hook_preprocess_HOOK().
- */
-function draft_core_preprocess_commerce_cart_block(&$variables) {
-  $variables['icon']['#uri'] = 'modules/contrib/commerce/icons/5181c6/cart.svg';
-}
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_theme().
  */
-function draft_core_theme($existing, $type, $theme, $path) {
+function draft_search_theme($existing, $type, $theme, $path) {
   return [
     'block__primary_menu__id__solr_search_form_narrow' => [
       'render element' => 'elements',
       'template' => 'block--primary-menu--id--solr-search-form-narrow',
-      'base hook' => 'block'
+      'base hook' => 'block',
     ],
     'block__secondary_menu__id__solr_search_form_wide' => [
       'render element' => 'elements',
       'template' => 'block--secondary-menu--id--solr-search-form-wide',
-      'base hook' => 'block'
+      'base hook' => 'block',
     ],
     'form__search_block_form' => [
       'render element' => 'elements',
       'template' => 'form--search-block-form',
-      'base hook' => 'form'
+      'base hook' => 'form',
     ],
   ];
 }
 
 /**
- * Implements hook_preprocess_HOOK()
+ * Implements hook_preprocess_HOOK().
  */
-function draft_core_preprocess_block(&$variables) {
+function draft_search_preprocess_block(&$variables) {
   if (!empty($variables['elements']['#id'])) {
     /** @var \Drupal\block\BlockInterface $block */
     $block = \Drupal::entityTypeManager()
@@ -66,18 +59,9 @@ function draft_core_preprocess_block(&$variables) {
 }
 
 /**
- * Implements hook_theme_suggestions_HOOK_alter() for form templates.
- */
-function draft_core_theme_suggestions_form_alter(array &$suggestions, array $variables) {
-  if ($variables['element']['#form_id'] === 'views_exposed_form') {
-    $suggestions[] = 'form__search_block_form';
-  }
-}
-
-/**
  * Implements hook_form_alter() for adding classes and placeholder text to the search forms.
  */
-function draft_core_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+function draft_search_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if (isset($form['actions']['submit']) && (count($form['actions'])) <= 2) {
     $form['actions']['submit']['#attributes']['class'][] = 'button--primary';
   }
@@ -93,8 +77,17 @@ function draft_core_form_alter(&$form, FormStateInterface $form_state, $form_id)
 /**
  * Implements hook_preprocess_form_element().
  */
-function draft_core_preprocess_form_element(&$variables) {
+function draft_search_preprocess_form_element(&$variables) {
   if ($variables['type'] == 'search') {
     $variables['attributes']['class'][] = 'form-item-keys';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for form templates.
+ */
+function draft_search_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+  if ($variables['element']['#form_id'] === 'views_exposed_form') {
+    $suggestions[] = 'form__search_block_form';
   }
 }

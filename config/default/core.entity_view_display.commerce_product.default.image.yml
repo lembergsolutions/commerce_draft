@@ -6,8 +6,11 @@ dependencies:
     - commerce_product.commerce_product_type.default
     - core.entity_view_mode.commerce_product.image
     - field.field.commerce_product.default.body
+    - field.field.commerce_product.default.categories
     - field.field.commerce_product.default.field_image
-    - field.field.commerce_product.default.field_metatags
+    - field.field.commerce_product.default.meta_tags
+    - field.field.commerce_product.default.related_products
+    - field.field.commerce_product.default.tags
     - image.style.thumbnail
   module:
     - media
@@ -29,11 +32,14 @@ content:
     region: content
 hidden:
   body: true
+  categories: true
   created: true
-  field_metatags: true
   langcode: true
+  meta_tags: true
+  related_products: true
   search_api_excerpt: true
   stores: true
+  tags: true
   title: true
   uid: true
   variations: true

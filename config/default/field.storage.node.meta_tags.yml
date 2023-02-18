@@ -1,16 +1,16 @@
-uuid: 2a277573-e3c5-4799-96a6-c517df442f8f
+uuid: f4223737-ed35-45dd-87d2-456ffa71ba8a
 langcode: en
 status: true
 dependencies:
   module:
+    - metatag
     - node
-    - yoast_seo
-id: node.field_yoast_seo
-field_name: field_yoast_seo
+id: node.meta_tags
+field_name: meta_tags
 entity_type: node
-type: yoast_seo
+type: metatag
 settings: {  }
-module: yoast_seo
+module: metatag
 locked: false
 cardinality: 1
 translatable: true

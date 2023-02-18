@@ -5,8 +5,11 @@ dependencies:
   config:
     - commerce_product.commerce_product_type.default
     - field.field.commerce_product.default.body
+    - field.field.commerce_product.default.categories
     - field.field.commerce_product.default.field_image
-    - field.field.commerce_product.default.field_metatags
+    - field.field.commerce_product.default.meta_tags
+    - field.field.commerce_product.default.related_products
+    - field.field.commerce_product.default.tags
     - image.style.medium
   module:
     - commerce_product
@@ -27,21 +30,47 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
+  categories:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
   field_image:
     type: media_thumbnail
     label: hidden
     settings:
       image_link: ''
       image_style: medium
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 0
     region: content
-  field_metatags:
+  meta_tags:
     type: metatag_empty_formatter
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 4
+    region: content
+  related_products:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  tags:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
     region: content
   title:
     type: string
