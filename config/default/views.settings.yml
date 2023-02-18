@@ -9,10 +9,11 @@ ui:
   show:
     additional_queries: false
     advanced_column: false
+    default_display: false
     performance_statistics: false
     preview_information: true
     sql_query:
-      enabled: false
+      enabled: true
       where: above
     display_embed: false
     master_display: false

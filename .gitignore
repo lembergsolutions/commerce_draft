@@ -7,6 +7,7 @@
 # Ignore non-custom parts of Drupal.
 /docroot/core
 /docroot/modules/contrib
+/docroot/libraries
 /docroot/profiles/contrib
 /docroot/themes/contrib
 /docroot/sites/default/files

@@ -1,0 +1,28 @@
+uuid: be1c6c3d-21c9-4bc5-8168-f658fc8161cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.products_solr
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: exposedformproducts_solrresults
+theme: olivero
+region: content
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:products_solr-results'
+settings:
+  id: 'views_exposed_filter_block:products_solr-results'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /search

@@ -7,8 +7,10 @@ dependencies:
     - core.entity_view_mode.commerce_product.teaser
     - field.field.commerce_product.default.body
     - field.field.commerce_product.default.categories
+    - field.field.commerce_product.default.featured
     - field.field.commerce_product.default.field_image
     - field.field.commerce_product.default.meta_tags
+    - field.field.commerce_product.default.popular
     - field.field.commerce_product.default.related_products
     - field.field.commerce_product.default.tags
     - image.style.medium
@@ -70,8 +72,10 @@ content:
 hidden:
   body: true
   created: true
+  featured: true
   langcode: true
   meta_tags: true
+  popular: true
   related_products: true
   search_api_excerpt: true
   stores: true

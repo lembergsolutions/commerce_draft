@@ -1,0 +1,33 @@
+uuid: fc8015f9-cfe8-44d3-810e-d1db520249b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.products
+  module:
+    - commerce_product
+    - views
+  theme:
+    - olivero
+id: views_block__products_related
+theme: olivero
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:products-related'
+settings:
+  id: 'views_block:products-related'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:commerce_product':
+    id: 'entity_bundle:commerce_product'
+    negate: false
+    context_mapping:
+      commerce_product: '@commerce_product.product_route_context:commerce_product'
+    bundles:
+      default: default

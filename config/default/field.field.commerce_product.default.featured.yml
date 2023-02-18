@@ -1,0 +1,23 @@
+uuid: 9d35b8b8-1a10-4656-b899-5d820d73000e
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.default
+    - field.storage.commerce_product.featured
+id: commerce_product.default.featured
+field_name: featured
+entity_type: commerce_product
+bundle: default
+label: Featured
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

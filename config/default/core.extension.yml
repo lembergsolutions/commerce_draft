@@ -13,6 +13,7 @@ module:
   advagg_mod: 0
   advagg_validator: 0
   automated_cron: 0
+  better_exposed_filters: 0
   big_pipe: 0
   block: 0
   block_content: 0
@@ -39,7 +40,6 @@ module:
   datetime: 0
   dblog: 0
   draft_cart: 0
-  draft_core: 0
   draft_search: 0
   dynamic_page_cache: 0
   editor: 0
@@ -64,7 +64,10 @@ module:
   jquery_ui: 0
   jquery_ui_accordion: 0
   jquery_ui_autocomplete: 0
+  jquery_ui_datepicker: 0
   jquery_ui_menu: 0
+  jquery_ui_slider: 0
+  jquery_ui_touch_punch: 0
   language: 0
   layout_builder: 0
   layout_builder_modal: 0

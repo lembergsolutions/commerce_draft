@@ -6,8 +6,10 @@ dependencies:
     - commerce_product.commerce_product_type.default
     - field.field.commerce_product.default.body
     - field.field.commerce_product.default.categories
+    - field.field.commerce_product.default.featured
     - field.field.commerce_product.default.field_image
     - field.field.commerce_product.default.meta_tags
+    - field.field.commerce_product.default.popular
     - field.field.commerce_product.default.related_products
     - field.field.commerce_product.default.tags
   module:
@@ -24,6 +26,8 @@ third_party_settings:
       children:
         - group_main
         - group_categories_tags
+        - group_text
+        - group_media
         - group_related_products
         - group_variation
       label: Tabs
@@ -40,8 +44,8 @@ third_party_settings:
     group_main:
       children:
         - title
-        - field_image
-        - body
+        - featured
+        - popular
       label: Main
       region: content
       parent_name: group_tabs
@@ -60,7 +64,7 @@ third_party_settings:
       label: Variation
       region: content
       parent_name: group_tabs
-      weight: 14
+      weight: 16
       format_type: tab
       format_settings:
         classes: ''
@@ -91,7 +95,37 @@ third_party_settings:
       label: 'Related Products'
       region: content
       parent_name: group_tabs
+      weight: 15
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_text:
+      children:
+        - body
+      label: Text
+      region: content
+      parent_name: group_tabs
       weight: 13
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_media:
+      children:
+        - field_image
+      label: Media
+      region: content
+      parent_name: group_tabs
+      weight: 14
       format_type: tab
       format_settings:
         classes: ''
@@ -109,7 +143,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 3
+    weight: 5
     region: content
     settings:
       rows: 9
@@ -129,20 +163,27 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 5
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
+  featured:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_image:
     type: media_library_widget
-    weight: 2
+    weight: 4
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 3
+    weight: 4
     region: content
     settings:
       include_locked: true
@@ -157,13 +198,20 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 6
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
+  popular:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   related_products:
     type: entity_reference_autocomplete
-    weight: 8
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS
@@ -173,7 +221,7 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 8
+    weight: 9
     region: content
     settings:
       display_label: true
@@ -208,7 +256,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 6
     region: content
     settings:
       match_operator: CONTAINS

@@ -23,6 +23,7 @@
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.0",
         "drupal/advagg": "^6.0",
+        "drupal/better_exposed_filters": "^6.0",
         "drupal/commerce": "^2.21",
         "drupal/commerce_paypal": "^1.0@RC",
         "drupal/commerce_pricelist": "^2.1",

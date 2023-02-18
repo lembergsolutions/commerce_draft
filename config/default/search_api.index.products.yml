@@ -3,6 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.commerce_product.categories
+    - field.storage.commerce_product.featured
+    - field.storage.commerce_product.popular
+    - field.storage.commerce_product.tags
     - search_api.server.solr_server
   module:
     - search_api_solr
@@ -58,6 +62,30 @@ name: Products
 description: ''
 read_only: false
 field_settings:
+  categories:
+    label: Categories
+    datasource_id: 'entity:commerce_product'
+    property_path: categories
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.categories
+  featured:
+    label: Featured
+    datasource_id: 'entity:commerce_product'
+    property_path: featured
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.commerce_product.featured
+  popular:
+    label: Popular
+    datasource_id: 'entity:commerce_product'
+    property_path: popular
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.commerce_product.popular
   status:
     label: Published
     datasource_id: 'entity:commerce_product'
@@ -66,6 +94,14 @@ field_settings:
     dependencies:
       module:
         - commerce_product
+  tags:
+    label: Tags
+    datasource_id: 'entity:commerce_product'
+    property_path: tags
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.tags
   title:
     label: 'Title for search'
     datasource_id: 'entity:commerce_product'
