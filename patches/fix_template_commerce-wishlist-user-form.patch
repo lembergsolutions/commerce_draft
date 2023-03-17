@@ -1,0 +1,38 @@
+diff --git a/docroot/modules/contrib/commerce_wishlist/templates/commerce-wishlist-user-form.html.twig b/docroot/modules/contrib/commerce_wishlist/templates/commerce-wishlist-user-form.html.twig
+index 4056899..b9ccb6c 100644
+--- a/docroot/modules/contrib/commerce_wishlist/templates/commerce-wishlist-user-form.html.twig
++++ b/docroot/modules/contrib/commerce_wishlist/templates/commerce-wishlist-user-form.html.twig
+@@ -12,19 +12,21 @@
+ <div class="wishlist-user-form clearfix">
+   {{ form.header }}
+   <div class="wishlist-items">
+-    {% for key, item in form.items if key|first != '#' %}
+-      <div class="wishlist-item">
+-        <div class="wishlist-item__entity">
+-          {{ item.entity }}
++    {% for key, item in form.items %}
++      {% if key|first != '#' %}
++        <div class="wishlist-item">
++          <div class="wishlist-item__entity">
++            {{ item.entity }}
++          </div>
++          <div class="wishlist-item__details">
++            {{ item.details }}
++            {{ item.details_edit }}
++          </div>
++          <div class="wishlist-item__actions">
++            {{ item.actions }}
++          </div>
+         </div>
+-        <div class="wishlist-item__details">
+-          {{ item.details }}
+-          {{ item.details_edit }}
+-        </div>
+-        <div class="wishlist-item__actions">
+-          {{ item.actions }}
+-        </div>
+-      </div>
++      {% endif %}
+     {% endfor %}
+   </div>
+   {{ form|without('header', 'items') }}
