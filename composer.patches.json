@@ -1,7 +1,5 @@
 {
   "patches": {
-    "drupal/commerce_wishlist": {
-      "Fix template commerce-wishlist-user-form.html.twig": "patches/fix_template_commerce-wishlist-user-form.patch"
-    }
+
   }
 }
