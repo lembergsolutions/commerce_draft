@@ -10,6 +10,7 @@ dependencies:
     - commerce_order
     - commerce_payment
     - commerce_product
+    - commerce_wishlist
     - contact
     - filter
     - google_analytics
@@ -36,3 +37,4 @@ permissions:
   - 'view commerce_product'
   - 'view media'
   - 'view own commerce_order'
+  - 'access wishlist'

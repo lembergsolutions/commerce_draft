@@ -6,4 +6,4 @@ _core:
   default_config_hash: cHDXesbGIruR8gM42K02dHrxi9Y9OTOxTdHVYuBlKtU
 label: Default
 id: default
-allowAnonymous: false
+allowAnonymous: true
