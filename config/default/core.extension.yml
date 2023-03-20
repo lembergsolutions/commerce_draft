@@ -39,9 +39,11 @@ module:
   ctools: 0
   datetime: 0
   dblog: 0
+  draft_breadcrumbs: 0
   draft_cart: 0
   draft_search: 0
   dynamic_page_cache: 0
+  easy_breadcrumb: 0
   editor: 0
   elasticsearch_connector: 0
   entity: 0
