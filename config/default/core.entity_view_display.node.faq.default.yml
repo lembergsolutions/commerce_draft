@@ -1,0 +1,37 @@
+uuid: 23e753f4-30ab-4ca3-9915-e4b64a562364
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.faq.faq
+    - node.type.faq
+  module:
+    - faqfield
+    - user
+id: node.faq.default
+targetEntityType: node
+bundle: faq
+mode: default
+content:
+  faq:
+    type: faqfield_accordion
+    label: above
+    settings:
+      active: 0
+      heightStyle: auto
+      collapsible: false
+      event: click
+      animate:
+        easing: linear
+        duration: 200
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

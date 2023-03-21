@@ -47,6 +47,7 @@ module:
   entity: 0
   entity_reference_revisions: 0
   environment_indicator: 0
+  faqfield: 0
   fences: 0
   field: 0
   field_group: 0
