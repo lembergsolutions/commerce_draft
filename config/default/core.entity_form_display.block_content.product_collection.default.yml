@@ -1,0 +1,38 @@
+uuid: 5d8177ee-a374-4e35-a91b-2190e3f45c53
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.product_collection
+    - field.field.block_content.product_collection.products
+id: block_content.product_collection.default
+targetEntityType: block_content
+bundle: product_collection
+mode: default
+content:
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  products:
+    type: entity_reference_autocomplete
+    weight: 26
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
