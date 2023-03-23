@@ -120,6 +120,7 @@ module:
   xmlsitemap: 1
   views: 10
   minimal: 1000
+  eu_cookie_compliance: 1001
 theme:
   claro: 0
   olivero: 0
