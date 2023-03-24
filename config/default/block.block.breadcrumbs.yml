@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - commerce_product
     - system
   theme:
     - olivero
@@ -17,4 +18,11 @@ settings:
   label: Breadcrumbs
   label_display: '0'
   provider: system
-visibility: {  }
+visibility:
+  'entity_bundle:commerce_product':
+    id: 'entity_bundle:commerce_product'
+    negate: false
+    context_mapping:
+      commerce_product: '@commerce_product.product_route_context:commerce_product'
+    bundles:
+      default: default
