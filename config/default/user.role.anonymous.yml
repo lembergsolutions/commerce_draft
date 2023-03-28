@@ -9,6 +9,7 @@ dependencies:
     - commerce_checkout
     - commerce_product
     - contact
+    - eu_cookie_compliance
     - filter
     - media
     - system
@@ -26,3 +27,4 @@ permissions:
   - 'use text format restricted_html'
   - 'view commerce_product'
   - 'view media'
+  - 'display eu cookie compliance popup'
