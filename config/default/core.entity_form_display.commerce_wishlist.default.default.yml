@@ -13,32 +13,32 @@ mode: default
 content:
   is_public:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 19
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   keep_purchased_items:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 20
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   name:
     type: string_textfield
     weight: 0
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   shipping_profile:
     type: options_select
     weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   created: true
   is_default: true

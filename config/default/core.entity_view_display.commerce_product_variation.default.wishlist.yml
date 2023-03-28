@@ -8,6 +8,7 @@ dependencies:
     - field.field.commerce_product_variation.default.weight
   module:
     - commerce_price
+    - fences
   enforced:
     module:
       - commerce_product
@@ -29,11 +30,21 @@ content:
     weight: -1
     region: content
   product_id:
-    type: entity_reference_label
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      link: true
-    third_party_settings: {  }
+      view_mode: teaser
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
     weight: 0
     region: content
 hidden:

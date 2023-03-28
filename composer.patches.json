@@ -1,5 +1,7 @@
 {
   "patches": {
-
+    "drupal/recently_read": {
+      "makes all node pages unpredictable errors": "https://www.drupal.org/files/issues/2023-03-15/3342420-5.patch"
+    }
   }
 }

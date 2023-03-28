@@ -1,0 +1,29 @@
+uuid: 767e0191-3735-4cdb-ab5f-45dc1dea0a2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.products
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: views_block__products_best_sellers
+theme: olivero
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:products-best_sellers'
+settings:
+  id: 'views_block:products-best_sellers'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

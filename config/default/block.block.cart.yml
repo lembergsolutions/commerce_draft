@@ -9,7 +9,7 @@ dependencies:
 id: cart
 theme: olivero
 region: secondary_menu
-weight: -5
+weight: -7
 provider: null
 plugin: commerce_cart
 settings:
