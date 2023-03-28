@@ -33,6 +33,7 @@ module:
   commerce_shipping: 0
   commerce_store: 0
   commerce_tax: 0
+  commerce_wishlist: 0
   config: 0
   contact: 0
   contextual: 0
@@ -41,6 +42,7 @@ module:
   dblog: 0
   draft_cart: 0
   draft_search: 0
+  draft_wishlist: 0
   dynamic_page_cache: 0
   editor: 0
   elasticsearch_connector: 0

@@ -1,0 +1,7 @@
+name: Draft Wishlist
+type: module
+description: Provides custom fixes for wishlist module.
+package: Custom
+core_version_requirement: ^9 || ^10
+dependencies:
+  - commerce:commerce_wishlist

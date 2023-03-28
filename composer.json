@@ -28,6 +28,7 @@
         "drupal/commerce_paypal": "^1.0@RC",
         "drupal/commerce_pricelist": "^2.1",
         "drupal/commerce_shipping": "^2.x-dev",
+        "drupal/commerce_wishlist": "^3.0@beta",
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-project-message": "^10.0",
         "drupal/core-recommended": "^10.0",

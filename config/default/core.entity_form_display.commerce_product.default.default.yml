@@ -61,6 +61,7 @@ third_party_settings:
     group_variation:
       children:
         - variations
+        - add_to_wishlist
       label: Variation
       region: content
       parent_name: group_tabs
