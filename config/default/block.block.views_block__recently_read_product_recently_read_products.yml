@@ -1,0 +1,33 @@
+uuid: fb91f0b9-cff5-4645-a053-9c5115c3da14
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.recently_read_product
+  module:
+    - commerce_product
+    - views
+  theme:
+    - olivero
+id: views_block__recently_read_product_recently_read_products
+theme: olivero
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:recently_read_product-recently_read_products'
+settings:
+  id: 'views_block:recently_read_product-recently_read_products'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:commerce_product':
+    id: 'entity_bundle:commerce_product'
+    negate: false
+    context_mapping:
+      commerce_product: '@commerce_product.product_route_context:commerce_product'
+    bundles:
+      default: default
