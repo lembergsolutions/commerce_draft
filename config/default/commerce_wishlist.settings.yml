@@ -1,0 +1,6 @@
+_core:
+  default_config_hash: mIj7SNqEnPV7YhIvPDAuKJeW20y8xMw9zhC2ovF9YKs
+allow_multiple: true
+default_type: default
+view_modes:
+  commerce_product_variation: wishlist

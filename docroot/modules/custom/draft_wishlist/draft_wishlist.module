@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Draft Wishlist module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form().
+ */
+function draft_wishlist_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'commerce_wishlist_default_user_form') {
+    $form['#theme'] = 'draft_wishlist_user_form';
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function draft_wishlist_theme() {
+  return [
+    'draft_wishlist_user_form' => [
+      'render element' => 'form',
+      'template' => 'draft-wishlist-user-form',
+    ],
+  ];
+}

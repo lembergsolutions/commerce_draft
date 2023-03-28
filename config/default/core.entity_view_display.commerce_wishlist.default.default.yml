@@ -1,0 +1,35 @@
+uuid: 0ef4a1b3-1cf0-4b29-8c04-7ad885c42b16
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_wishlist.commerce_wishlist_type.default
+  module:
+    - user
+_core:
+  default_config_hash: k0scr8eB2zeYsjx07iHj8cTLzKjLxF4r_qSxPtdYUpw
+id: commerce_wishlist.default.default
+targetEntityType: commerce_wishlist
+bundle: default
+mode: default
+content:
+  uid:
+    type: author
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  wishlist_items:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  name: true
+  search_api_excerpt: true
+  shipping_profile: true
