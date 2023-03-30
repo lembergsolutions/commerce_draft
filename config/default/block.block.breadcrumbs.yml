@@ -9,8 +9,8 @@ dependencies:
     - olivero
 id: breadcrumbs
 theme: olivero
-region: header
-weight: -7
+region: breadcrumb
+weight: -8
 provider: null
 plugin: system_breadcrumb_block
 settings:
