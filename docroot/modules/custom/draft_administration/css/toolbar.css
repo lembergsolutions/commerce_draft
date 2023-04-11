@@ -1,0 +1,4 @@
+.toolbar .toolbar-bar .menu-item .toolbar-icon-draft-administration-draft:before {
+  -webkit-mask-image: url("../icons/draft.svg");
+  mask-image: url("../icons/draft.svg");
+}

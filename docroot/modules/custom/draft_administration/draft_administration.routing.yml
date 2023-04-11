@@ -1,0 +1,7 @@
+draft_administration.draft:
+  path: '/admin/draft'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Draft'
+  requirements:
+    _permission: 'access content'

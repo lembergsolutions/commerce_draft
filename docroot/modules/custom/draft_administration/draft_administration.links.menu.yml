@@ -1,0 +1,18 @@
+draft_administration.draft:
+  title: 'Draft'
+  description: 'Draft menu link'
+  parent: 'system.admin'
+  route_name: draft_administration.draft
+  weight: -10
+
+draft_administration.commerce_product.collection:
+  title: 'Products'
+  route_name: 'entity.commerce_product.collection'
+  parent: 'draft_administration.draft'
+  description: 'Manage your products.'
+
+draft_administration.collection:
+  title: 'Orders'
+  route_name: 'entity.commerce_order.collection'
+  parent: 'draft_administration.draft'
+  description: 'Manage your orders.'
