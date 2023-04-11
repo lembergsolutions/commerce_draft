@@ -40,6 +40,7 @@ module:
   ctools: 0
   datetime: 0
   dblog: 0
+  draft_administration: 0
   draft_cart: 0
   draft_search: 0
   draft_wishlist: 0

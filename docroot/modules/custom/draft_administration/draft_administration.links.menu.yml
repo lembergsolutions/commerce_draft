@@ -1,18 +1,35 @@
-draft_administration.draft:
-  title: 'Draft'
-  description: 'Draft menu link'
+draft_administration.catalogue:
+  title: 'Catalogue'
+  description: 'Catalogue menu link'
   parent: 'system.admin'
-  route_name: draft_administration.draft
-  weight: -10
+  route_name: draft_administration.catalogue
+  weight: -8
 
 draft_administration.commerce_product.collection:
   title: 'Products'
   route_name: 'entity.commerce_product.collection'
-  parent: 'draft_administration.draft'
+  parent: 'draft_administration.catalogue'
   description: 'Manage your products.'
+  weight: 1
 
-draft_administration.collection:
+draft_administration.commerce_orders.collection:
   title: 'Orders'
   route_name: 'entity.commerce_order.collection'
-  parent: 'draft_administration.draft'
+  parent: 'draft_administration.catalogue'
   description: 'Manage your orders.'
+  weight: 2
+
+draft_administration.taxonomy_vocabulary.overview-form:
+  title: 'Categories'
+  parent: 'draft_administration.catalogue'
+  description: 'Manage tagging, categorization, and classification of your content.'
+  route_name: entity.taxonomy_vocabulary.overview_form
+  route_parameters: { taxonomy_vocabulary: 'categories' }
+  weight: 3
+
+draft_administration.shop_settings:
+  title: 'Shop settings'
+  description: 'Shop settings menu link'
+  parent: 'system.admin'
+  route_name: draft_administration.shop_settings
+  weight: -8
