@@ -1,0 +1,8 @@
+.toolbar .toolbar-bar .menu-item .toolbar-icon-draft-administration-catalogue:before {
+  -webkit-mask-image: url("../icons/catalogue.svg");
+  mask-image: url("../icons/catalogue.svg");
+}
+.toolbar .toolbar-bar .menu-item .toolbar-icon-draft-administration-shop-settings:before {
+  -webkit-mask-image: url("../icons/settings.svg");
+  mask-image: url("../icons/settings.svg");
+}

@@ -1,4 +1,0 @@
-name: Draft core
-type: module
-description: 'Draft core features'
-core_version_requirement: ^9 || ^10
