@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Draft Menu Links module.
+ */
+
+/**
+ * Implements hook_toolbar_alter().
+ */
+function draft_administration_toolbar_alter(&$items) {
+  $items['administration']['#attached']['library'][] = 'draft_administration/toolbar';
+}
