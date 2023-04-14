@@ -41,6 +41,7 @@ module:
   custom_breadcrumbs: 0
   datetime: 0
   dblog: 0
+  draft_breadcrumb: 0
   draft_administration: 0
   draft_cart: 0
   draft_search: 0
@@ -97,7 +98,6 @@ module:
   physical: 0
   profile: 0
   rdf: 0
-  recently_read: 0
   redirect: 0
   redirect_404: 0
   robotstxt: 0
@@ -126,7 +126,6 @@ module:
   xmlsitemap: 1
   views: 10
   minimal: 1000
-  eu_cookie_compliance: 1001
 theme:
   claro: 0
   olivero: 0
