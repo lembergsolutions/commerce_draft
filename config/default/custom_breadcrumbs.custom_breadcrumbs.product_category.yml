@@ -1,0 +1,15 @@
+uuid: 6ee0c88d-a34c-4a65-9829-2bd02249d117
+langcode: en
+status: true
+dependencies: {  }
+id: product_category
+label: 'Product category'
+description: ''
+entityType: commerce_product
+entityBundle: default
+language: und
+breadcrumbPaths: '[site:product_url_category]'
+breadcrumbTitles: '[site:product_category]'
+type: '1'
+pathPattern: ''
+extraCacheContexts: ''

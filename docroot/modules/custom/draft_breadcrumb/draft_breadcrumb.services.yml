@@ -1,5 +1,0 @@
-services:
-  draft_breadcrumb.breadcrumb:
-    class: Drupal\draft_breadcrumb\Breadcrumb\DraftBreadcrumbBuilder
-    tags:
-      - { name: breadcrumb_builder, priority: 100 }
