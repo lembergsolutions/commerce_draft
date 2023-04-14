@@ -6,3 +6,8 @@
   -webkit-mask-image: url("../icons/settings.svg");
   mask-image: url("../icons/settings.svg");
 }
+
+.toolbar .toolbar-bar .menu-item .toolbar-icon-draft-administration-sales:before {
+  -webkit-mask-image: url("../icons/sales.svg");
+  mask-image: url("../icons/sales.svg");
+}

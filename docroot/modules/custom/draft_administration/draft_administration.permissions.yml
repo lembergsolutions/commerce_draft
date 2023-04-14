@@ -1,0 +1,11 @@
+manage catalogue:
+  title: 'Access the Catalogue'
+  description: 'Access to the Products and the Categories in the menu.'
+
+manage shop settings:
+  title: 'Access the Shop settings'
+  description: 'Access the Shop settings menu link.'
+
+manage sales:
+  title: 'Access the Sales'
+  description: 'Access to the Sales menu link.'
