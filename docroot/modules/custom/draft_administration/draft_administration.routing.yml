@@ -1,0 +1,15 @@
+draft_administration.catalogue:
+  path: '/admin/catalogue'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Catalogue'
+  requirements:
+    _permission: 'access content'
+
+draft_administration.shop_settings:
+  path: '/admin/shop_settings'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Shop settings'
+  requirements:
+    _permission: 'access content'

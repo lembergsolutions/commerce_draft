@@ -15,6 +15,8 @@ dependencies:
     - image.style.medium
   module:
     - commerce_product
+    - commerce_wishlist
+    - fences
     - media
     - metatag
     - text
@@ -88,7 +90,20 @@ content:
     label: hidden
     settings:
       combine: true
-    third_party_settings: {  }
+    third_party_settings:
+      commerce_wishlist:
+        show_wishlist: true
+        weight_wishlist: 99
+        label_wishlist: ''
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
     weight: 4
     region: content
 hidden:

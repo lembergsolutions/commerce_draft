@@ -10,7 +10,9 @@ dependencies:
     - commerce_order
     - commerce_payment
     - commerce_product
+    - commerce_wishlist
     - contact
+    - eu_cookie_compliance
     - filter
     - google_analytics
     - media
@@ -36,3 +38,5 @@ permissions:
   - 'view commerce_product'
   - 'view media'
   - 'view own commerce_order'
+  - 'access wishlist'
+  - 'display eu cookie compliance popup'
