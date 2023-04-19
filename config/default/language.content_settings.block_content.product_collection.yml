@@ -1,0 +1,11 @@
+uuid: ebad9872-c297-4755-b90f-42f3efb61d76
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.product_collection
+id: block_content.product_collection
+target_entity_type_id: block_content
+target_bundle: product_collection
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,35 @@
+uuid: 7c1495a7-9cbb-4b0c-99b7-d1d0de75dc64
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.product_collection
+    - field.field.block_content.product_collection.products
+  module:
+    - fences
+id: block_content.product_collection.default
+targetEntityType: block_content
+bundle: product_collection
+mode: default
+content:
+  products:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

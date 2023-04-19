@@ -1,0 +1,20 @@
+uuid: 14b5e71d-7d71-4089-90da-898c9c509942
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - commerce_product
+id: block_content.products
+field_name: products
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: commerce_product
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

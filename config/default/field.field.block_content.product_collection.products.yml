@@ -1,0 +1,29 @@
+uuid: 80c65739-dd28-43c4-8bb7-d2571364ce96
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.product_collection
+    - commerce_product.commerce_product_type.default
+    - field.storage.block_content.products
+id: block_content.product_collection.products
+field_name: products
+entity_type: block_content
+bundle: product_collection
+label: Products
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_product'
+  handler_settings:
+    target_bundles:
+      default: default
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

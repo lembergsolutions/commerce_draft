@@ -1,0 +1,8 @@
+uuid: 21c176de-bb8c-481d-b079-f79b6f414daa
+langcode: en
+status: true
+dependencies: {  }
+id: product_collection
+label: 'Product collection'
+revision: 0
+description: ''
