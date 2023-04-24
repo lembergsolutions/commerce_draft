@@ -1,0 +1,96 @@
+uuid: 0a9c0ff6-1c73-4c36-a0ef-68081fd3255c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.component_page
+    - taxonomy.vocabulary.categories
+  module:
+    - admin_toolbar_search
+    - block
+    - commerce_order
+    - commerce_product
+    - commerce_store
+    - draft_administration
+    - node
+    - system
+    - taxonomy
+    - toolbar
+id: manager
+label: Manager
+weight: 3
+is_admin: null
+permissions:
+  - 'access commerce_order overview'
+  - 'access commerce_product overview'
+  - 'access commerce_product_attribute overview'
+  - 'access commerce_store overview'
+  - 'access content overview'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'add commerce_log commerce_order admin comment'
+  - 'administer account settings'
+  - 'administer blocks'
+  - 'administer commerce_order'
+  - 'administer commerce_order_type'
+  - 'administer commerce_product'
+  - 'administer commerce_product_attribute'
+  - 'administer commerce_product_type'
+  - 'administer commerce_store'
+  - 'administer commerce_store_type'
+  - 'administer content types'
+  - 'administer nodes'
+  - 'administer users'
+  - 'bypass node access'
+  - 'cancel account'
+  - 'change own username'
+  - 'create commerce_product_attribute'
+  - 'create component_page content'
+  - 'create default commerce_order'
+  - 'create default commerce_product'
+  - 'create online commerce_store'
+  - 'create terms in categories'
+  - 'delete all revisions'
+  - 'delete any component_page content'
+  - 'delete any default commerce_product'
+  - 'delete any online commerce_store'
+  - 'delete commerce_product_attribute'
+  - 'delete component_page revisions'
+  - 'delete default commerce_order'
+  - 'delete own component_page content'
+  - 'delete own default commerce_product'
+  - 'delete own online commerce_store'
+  - 'delete terms in categories'
+  - 'duplicate any online commerce_store'
+  - 'duplicate own online commerce_store'
+  - 'edit any component_page content'
+  - 'edit own component_page content'
+  - 'edit terms in categories'
+  - 'manage catalogue'
+  - 'manage default commerce_order_item'
+  - 'manage default commerce_product_variation'
+  - 'manage sales'
+  - 'manage shop settings'
+  - 'revert all revisions'
+  - 'revert component_page revisions'
+  - 'select account cancellation method'
+  - 'update any default commerce_product'
+  - 'update any online commerce_store'
+  - 'update commerce_product_attribute'
+  - 'update default commerce_order'
+  - 'update own default commerce_product'
+  - 'update own online commerce_store'
+  - 'use admin toolbar search'
+  - 'view all revisions'
+  - 'view commerce_order'
+  - 'view commerce_product_attribute'
+  - 'view commerce_store'
+  - 'view component_page revisions'
+  - 'view default commerce_order'
+  - 'view default commerce_product'
+  - 'view online commerce_store'
+  - 'view own unpublished commerce_product'
+  - 'view own unpublished content'
+  - 'view the administration theme'
+  - 'view user email addresses'

@@ -12,10 +12,17 @@ draft_administration.commerce_product.collection:
   description: 'Manage your products.'
   weight: 1
 
+draft_administration.commerce_product.add:
+  title: 'Add product'
+  route_name: entity.commerce_product.add_page
+  parent: 'draft_administration.commerce_product.collection'
+  appears_on:
+    - entity.commerce_product.collection
+
 draft_administration.commerce_orders.collection:
   title: 'Orders'
   route_name: 'entity.commerce_order.collection'
-  parent: 'draft_administration.catalogue'
+  parent: 'draft_administration.sales'
   description: 'Manage your orders.'
   weight: 2
 
@@ -27,9 +34,31 @@ draft_administration.taxonomy_vocabulary.overview-form:
   route_parameters: { taxonomy_vocabulary: 'categories' }
   weight: 3
 
+entity.taxonomy_term.add_form:
+  title: 'Add category'
+  parent: 'draft_administration.taxonomy_vocabulary.overview-form'
+  route_name: entity.taxonomy_term.add_form
+  route_parameters: { taxonomy_vocabulary: 'categories' }
+  appears_on:
+    - entity.taxonomy_vocabulary.overview_form
+
 draft_administration.shop_settings:
   title: 'Shop settings'
   description: 'Shop settings menu link'
   parent: 'system.admin'
   route_name: draft_administration.shop_settings
+  weight: -8
+
+draft_administration.shop_settings.stores:
+  title: 'Stores'
+  description: 'Stores menu link'
+  parent: 'draft_administration.shop_settings'
+  route_name: 'entity.commerce_store.collection'
+  weight: 1
+
+draft_administration.sales:
+  title: 'Sales'
+  description: 'Sales menu link'
+  parent: 'system.admin'
+  route_name: draft_administration.sales
   weight: -8
