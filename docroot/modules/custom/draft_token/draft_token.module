@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * @file
+ * Implementation of custom tokens for custom_breadcrumb module.
+ */
+
+use Drupal\Core\Render\BubbleableMetadata;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_token_info().
+ */
+function draft_token_token_info() {
+
+  $info['tokens']['site']['product_category'] = [
+    'name' => t('Category'),
+    'description' => t('Category of current product'),
+  ];
+
+  $info['tokens']['site']['product_url_category'] = [
+    'name' => t('Category url'),
+    'description' => t('Category url of current product'),
+  ];
+
+  return $info;
+}
+
+/**
+ * Implements hook_tokens().
+ */
+function draft_token_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata) {
+  $replacements = [];
+  if (array_key_exists('commerce_product', $data)) {
+    $category = $data['commerce_product']->get('categories')->first()->entity;
+    $category_id = $category->id();
+    $category_name = $category->label();
+    foreach ($tokens as $name => $original) {
+      switch ($name) {
+        case 'product_category':
+          $replacements[$original] = $category_name;
+          break;
+
+        case 'product_url_category':
+          $replacements[$original] = Url::fromUri('internal:/taxonomy/term/' . $category_id)->toString();
+          break;
+      }
+    }
+  }
+
+  return $replacements;
+}

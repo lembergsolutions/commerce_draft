@@ -1,28 +1,23 @@
-uuid: faed3661-c16e-458b-b37f-384752feb307
+uuid: c1356224-451f-453d-8bbb-9394a4f49f65
 langcode: en
 status: true
 dependencies:
-  config:
-    - views.view.products
   module:
     - commerce_product
-    - views
+    - system
   theme:
     - olivero
-id: views_block__products_same_category
+id: breadcrumbs
 theme: olivero
-region: content
-weight: 0
+region: breadcrumb
+weight: -8
 provider: null
-plugin: 'views_block:products-same_category'
+plugin: system_breadcrumb_block
 settings:
-  id: 'views_block:products-same_category'
-  label: ''
-  label_display: visible
-  provider: views
-  context_mapping: {  }
-  views_label: ''
-  items_per_page: none
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
 visibility:
   'entity_bundle:commerce_product':
     id: 'entity_bundle:commerce_product'
