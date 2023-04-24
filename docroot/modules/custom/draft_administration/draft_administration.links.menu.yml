@@ -3,7 +3,7 @@ draft_administration.catalogue:
   description: 'Catalogue menu link'
   parent: 'system.admin'
   route_name: draft_administration.catalogue
-  weight: -8
+  weight: -90
 
 draft_administration.commerce_product.collection:
   title: 'Products'
@@ -32,4 +32,50 @@ draft_administration.shop_settings:
   description: 'Shop settings menu link'
   parent: 'system.admin'
   route_name: draft_administration.shop_settings
-  weight: -8
+  weight: -80
+
+draft_administration.settings.stores:
+  title: 'Stores'
+  route_name: 'entity.commerce_store.collection'
+  parent: 'draft_administration.shop_settings'
+  description: 'Manage your stores.'
+
+draft_administration.settings.main_menu:
+  title: 'Main navigation'
+  route_name: 'entity.menu.edit_form'
+  route_parameters: { menu: 'main' }
+  parent: 'draft_administration.shop_settings'
+  description: 'Manage your main menu.'
+
+draft_administration.sales:
+  title: 'Sales'
+  route_name: 'draft_administration.sales'
+  parent: 'system.admin'
+  description: 'Manage your sales.'
+  weight: -70
+
+draft_administration.sales.orders:
+  title: 'Orders'
+  route_name: 'entity.commerce_order.collection'
+  parent: 'draft_administration.sales'
+  description: 'Manage your orders.'
+
+
+draft_administration.promotions:
+  title: 'Promotions'
+  route_name: 'entity.commerce_promotion.collection'
+  parent: 'draft_administration.sales'
+  description: 'Manage your promotions.'
+
+# Move system pages to configuration submenu.
+system.themes_page:
+  title: Appearance
+  description: 'Select and configure themes.'
+  route_name: system.themes_page
+  parent: system.admin_config
+
+system.modules_list:
+  title: Extend
+  description: 'Add and enable modules to extend site functionality.'
+  route_name: system.modules_list
+  parent: system.admin_config

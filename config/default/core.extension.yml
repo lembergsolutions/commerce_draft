@@ -40,7 +40,6 @@ module:
   ctools: 0
   datetime: 0
   dblog: 0
-  draft_administration: 0
   draft_cart: 0
   draft_search: 0
   draft_wishlist: 0
@@ -120,6 +119,7 @@ module:
   xmlsitemap_custom: 0
   xmlsitemap_engines: 0
   yoast_seo: 0
+  draft_administration: 1
   pathauto: 1
   xmlsitemap: 1
   views: 10
