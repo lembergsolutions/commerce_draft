@@ -4,3 +4,5 @@ administer shop sales:
   title: 'Administer shop sales'
 administer shop settings:
   title: 'Administer shop settings'
+administer shop customers:
+  title: 'Administer shop customers'
