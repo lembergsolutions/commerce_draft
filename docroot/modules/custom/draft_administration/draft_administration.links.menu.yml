@@ -46,6 +46,13 @@ draft_administration.sales:
   description: 'Manage your sales.'
   weight: -70
 
+draft_administration.customers:
+  title: 'Customers'
+  route_name: 'draft_administration.customers'
+  parent: 'system.admin'
+  description: 'Manage your customers.'
+  weight: -65
+
 entity.commerce_order.collection:
   title: 'Orders'
   route_name: 'entity.commerce_order.collection'

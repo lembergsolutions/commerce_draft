@@ -1,0 +1,134 @@
+uuid: 7a57e943-cca7-4740-bb06-d13366cdd81a
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - node.type.component_page
+    - taxonomy.vocabulary.categories
+    - taxonomy.vocabulary.tags
+  module:
+    - admin_toolbar_search
+    - commerce_order
+    - commerce_product
+    - commerce_promotion
+    - commerce_store
+    - draft_administration
+    - media
+    - node
+    - system
+    - taxonomy
+    - toolbar
+id: shop_manager
+label: 'Shop Manager'
+weight: 3
+is_admin: null
+permissions:
+  - 'access commerce_order overview'
+  - 'access commerce_product overview'
+  - 'access commerce_promotion overview'
+  - 'access commerce_store overview'
+  - 'access content overview'
+  - 'access media overview'
+  - 'access site in maintenance mode'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'administer commerce_promotion'
+  - 'administer menu'
+  - 'administer nodes'
+  - 'administer shop catalogue'
+  - 'administer shop customers'
+  - 'administer shop sales'
+  - 'administer shop settings'
+  - 'administer taxonomy'
+  - 'administer users'
+  - 'bulk generate commerce_promotion_coupon'
+  - 'bypass node access'
+  - 'cancel account'
+  - 'change own username'
+  - 'create audio media'
+  - 'create commerce_product_attribute'
+  - 'create commerce_promotion'
+  - 'create component_page content'
+  - 'create default commerce_order'
+  - 'create default commerce_product'
+  - 'create document media'
+  - 'create image media'
+  - 'create media'
+  - 'create remote_video media'
+  - 'create terms in categories'
+  - 'create terms in tags'
+  - 'create video media'
+  - 'delete all revisions'
+  - 'delete any audio media'
+  - 'delete any commerce_promotion'
+  - 'delete any component_page content'
+  - 'delete any default commerce_product'
+  - 'delete any document media'
+  - 'delete any image media'
+  - 'delete any media'
+  - 'delete any remote_video media'
+  - 'delete any video media'
+  - 'delete commerce_product_attribute'
+  - 'delete component_page revisions'
+  - 'delete default commerce_order'
+  - 'delete media'
+  - 'delete own audio media'
+  - 'delete own commerce_promotion'
+  - 'delete own component_page content'
+  - 'delete own default commerce_product'
+  - 'delete own document media'
+  - 'delete own image media'
+  - 'delete own remote_video media'
+  - 'delete own video media'
+  - 'delete terms in categories'
+  - 'delete terms in tags'
+  - 'duplicate any commerce_promotion'
+  - 'duplicate own commerce_promotion'
+  - 'edit any audio media'
+  - 'edit any component_page content'
+  - 'edit any document media'
+  - 'edit any image media'
+  - 'edit any remote_video media'
+  - 'edit any video media'
+  - 'edit own audio media'
+  - 'edit own component_page content'
+  - 'edit own document media'
+  - 'edit own image media'
+  - 'edit own remote_video media'
+  - 'edit own video media'
+  - 'edit terms in categories'
+  - 'edit terms in tags'
+  - 'manage default commerce_order_item'
+  - 'manage default commerce_product_variation'
+  - 'revert all revisions'
+  - 'revert component_page revisions'
+  - 'update any commerce_promotion'
+  - 'update any default commerce_product'
+  - 'update any media'
+  - 'update any online commerce_store'
+  - 'update commerce_product_attribute'
+  - 'update default commerce_order'
+  - 'update media'
+  - 'update own commerce_promotion'
+  - 'update own default commerce_product'
+  - 'use admin toolbar search'
+  - 'view all media revisions'
+  - 'view all revisions'
+  - 'view commerce_order'
+  - 'view commerce_product_attribute'
+  - 'view commerce_promotion'
+  - 'view commerce_store'
+  - 'view component_page revisions'
+  - 'view default commerce_order'
+  - 'view default commerce_product'
+  - 'view online commerce_store'
+  - 'view own unpublished commerce_product'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view the administration theme'
+  - 'view user email addresses'

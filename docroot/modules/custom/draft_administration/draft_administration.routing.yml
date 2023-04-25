@@ -21,3 +21,11 @@ draft_administration.sales:
     _title: 'Sales'
   requirements:
     _permission: 'administer shop sales'
+
+draft_administration.customers:
+  path: '/admin/shop-customers'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Customers'
+  requirements:
+    _permission: 'administer shop customers'

@@ -1,0 +1,14 @@
+uuid: eb4fa61f-18bf-4f40-b99d-5bee73a4c5ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.shop_manager
+  module:
+    - user
+id: user_remove_role_action.shop_manager
+label: 'Remove the Shop Manager role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: shop_manager

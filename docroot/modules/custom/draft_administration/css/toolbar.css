@@ -10,3 +10,7 @@
   -webkit-mask-image: url("../icons/sales.svg");
   mask-image: url("../icons/sales.svg");
 }
+.toolbar .toolbar-bar .menu-item .toolbar-icon-draft-administration-customers:before {
+  -webkit-mask-image: url("../icons/customers.svg");
+  mask-image: url("../icons/customers.svg");
+}

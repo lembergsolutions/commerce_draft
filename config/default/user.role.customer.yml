@@ -1,0 +1,9 @@
+uuid: b72b6ac1-11d7-4ff3-9fac-107de8c8b4ef
+langcode: en
+status: true
+dependencies: {  }
+id: customer
+label: Customer
+weight: 4
+is_admin: null
+permissions: {  }
