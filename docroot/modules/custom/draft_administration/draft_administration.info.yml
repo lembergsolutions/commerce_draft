@@ -3,3 +3,10 @@ type: module
 description: Provides additional settings for the site.
 package: Custom
 core_version_requirement: ^9 || ^10
+dependencies:
+  - drupal:help
+  - drupal:menu
+  - drupal:taxonomy
+  - drupal:user
+  - commerce:commerce_order
+  - commerce:commerce_product
