@@ -5,19 +5,11 @@ draft_administration.catalogue:
   route_name: draft_administration.catalogue
   weight: -90
 
-draft_administration.commerce_product.collection:
+entity.commerce_product.collection:
   title: 'Products'
   route_name: 'entity.commerce_product.collection'
   parent: 'draft_administration.catalogue'
   description: 'Manage your products.'
-  weight: 1
-
-draft_administration.commerce_orders.collection:
-  title: 'Orders'
-  route_name: 'entity.commerce_order.collection'
-  parent: 'draft_administration.catalogue'
-  description: 'Manage your orders.'
-  weight: 2
 
 draft_administration.taxonomy_vocabulary.overview-form:
   title: 'Categories'
@@ -54,14 +46,13 @@ draft_administration.sales:
   description: 'Manage your sales.'
   weight: -70
 
-draft_administration.sales.orders:
+entity.commerce_order.collection:
   title: 'Orders'
   route_name: 'entity.commerce_order.collection'
   parent: 'draft_administration.sales'
   description: 'Manage your orders.'
 
-
-draft_administration.promotions:
+entity.commerce_promotion.collection:
   title: 'Promotions'
   route_name: 'entity.commerce_promotion.collection'
   parent: 'draft_administration.sales'
@@ -69,13 +60,42 @@ draft_administration.promotions:
 
 # Move system pages to configuration submenu.
 system.themes_page:
-  title: Appearance
+  title: Theme
   description: 'Select and configure themes.'
   route_name: system.themes_page
   parent: system.admin_config
 
 system.modules_list:
-  title: Extend
+  title: Extensions
   description: 'Add and enable modules to extend site functionality.'
   route_name: system.modules_list
   parent: system.admin_config
+
+system.admin_reports:
+  title: Reports
+  route_name: system.admin_reports
+  parent: system.admin_config
+  description: 'View reports, updates, and errors.'
+  weight: 100
+
+help.main:
+  title: Help
+  description: 'Reference for usage, configuration, and modules.'
+  route_name: help.main
+  weight: 9
+  parent: system.admin_config
+
+entity.user.collection:
+  title: Users
+  route_name: entity.user.collection
+  description: 'Manage user accounts, roles, and permissions.'
+  parent: system.admin_config
+  weight: -100
+
+user.admin_index:
+  title: User Settings
+  route_name: user.admin_index
+  parent: system.admin_config
+  description: 'Configure user accounts.'
+  position: left
+  weight: -20

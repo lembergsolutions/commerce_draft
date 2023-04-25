@@ -20,7 +20,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: People
+      title: Users
       fields:
         user_bulk_form:
           id: user_bulk_form
@@ -901,7 +901,11 @@ display:
       defaults:
         show_admin_links: false
       show_admin_links: false
-      display_extenders: {  }
+      display_extenders:
+        simple_sitemap_display_extender: {  }
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
       path: admin/people/list
       menu:
         type: 'default tab'
