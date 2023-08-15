@@ -13,6 +13,7 @@ dependencies:
     - commerce_wishlist
     - contact
     - eu_cookie_compliance
+    - file
     - filter
     - google_analytics
     - media
@@ -31,6 +32,7 @@ permissions:
   - 'access shortcuts'
   - 'access site-wide contact form'
   - 'access wishlist'
+  - 'delete own files'
   - 'display eu cookie compliance popup'
   - 'manage own commerce_payment_method'
   - 'opt-in or out of google analytics tracking'

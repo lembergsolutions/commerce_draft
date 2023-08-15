@@ -79,7 +79,7 @@ $config['system.performance']['css']['preprocess'] = FALSE;
 $config['system.performance']['js']['preprocess'] = FALSE;
 
 // Update access.
-$settings['update_free_access'] = TRUE;
+$settings['update_free_access'] = FALSE;
 
 // Rewrite Solr host.
 $solr_server_name = 'solr_server';
