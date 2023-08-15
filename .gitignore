@@ -39,9 +39,6 @@
 # Ignore Composer-managed dependencies.
 /vendor
 
-# Ignore Vagrant virtual machine data.
-/.vagrant
-
 # Ignore local VM settings overrides.
 /vm-settings.local.yml
 

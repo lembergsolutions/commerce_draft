@@ -9,7 +9,6 @@
         "drupal/coder": "^8.3",
         "drupal/drupal-extension": "^5",
         "drupal/stage_file_proxy": "^2.0",
-        "lemberg/draft-environment": "^3.5.0",
         "mglaman/phpstan-drupal": "^1.1",
         "phpro/grumphp": "*",
         "phpspec/prophecy-phpunit": "^2",
@@ -116,7 +115,6 @@
             "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
-            "lemberg/draft-environment": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "phpro/grumphp": true
         }
