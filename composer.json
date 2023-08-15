@@ -21,6 +21,7 @@
     "require": {
         "composer/installers": "^2.1",
         "cweagans/composer-patches": "^1.7",
+        "drupal/admin_dialogs": "^1.0",
         "drupal/admin_toolbar": "^3.4",
         "drupal/advagg": "^6.0",
         "drupal/better_exposed_filters": "^6.0",
@@ -108,7 +109,7 @@
         "sort-packages": true,
         "discard-changes": true,
         "platform": {
-            "php": "8.1"
+            "php": "8.2"
         },
         "allow-plugins": {
             "composer/installers": true,
