@@ -36,6 +36,7 @@ module:
   commerce_wishlist: 0
   config: 0
   contact: 0
+  content_moderation: 0
   contextual: 0
   ctools: 0
   datetime: 0
@@ -117,6 +118,7 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  workflows: 0
   xmlsitemap_custom: 0
   xmlsitemap_engines: 0
   yoast_seo: 0
