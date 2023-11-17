@@ -1,4 +1,4 @@
-# Drupal 9 Commerce starterkit project.
+# Drupal 10 Commerce starterkit project.
 
 Demo site - https://main-bvxea6i-aqafnkqgwmwaq.uk-1.platformsh.site/
 
