@@ -48,3 +48,5 @@
 /.editorconfig
 /.gitattributes
 /.docksal/
+*.sql
+*.zip
