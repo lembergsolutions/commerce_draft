@@ -3,39 +3,63 @@ langcode: en
 status: true
 dependencies:
   module:
-    - commerce_product
-    - node
-    - taxonomy
+    - system
 id: commerce_draft
 label: 'Commerce Draft'
 weight: 0
-container_id: GTM-TXJTHHQ
-data_layer: dataLayer
-include_classes: false
-whitelist_classes: |-
-  google
-  nonGooglePixels
-  nonGoogleScripts
-  nonGoogleIframes
-blacklist_classes: |-
-  customScripts
-  customPixels
-include_environment: false
-environment_id: ''
-environment_token: ''
-path_toggle: 'exclude listed'
-path_list: |-
-  /admin*
-  /batch*
-  /node/add*
-  /node/*/edit
-  /node/*/delete
-  /user/*/edit*
-  /user/*/cancel*
-role_toggle: 'exclude listed'
-role_list: {  }
-status_toggle: 'exclude listed'
-status_list: |-
-  403
-  404
-conditions: {  }
+tag_container_ids:
+  - GTM-TXJTHHQ
+advanced_settings:
+  gtm:
+    data_layer: dataLayer
+    include_classes: false
+    allowlist_classes: |-
+      google
+      nonGooglePixels
+      nonGoogleScripts
+      nonGoogleIframes
+    blocklist_classes: |-
+      customScripts
+      customPixels
+    include_environment: false
+    environment_id: ''
+    environment_token: ''
+dimensions_metrics: {  }
+conditions:
+  request_path:
+    id: request_path
+    negate: true
+    pages: |-
+      /admin*
+      /batch*
+      /node/add*
+      /node/*/edit
+      /node/*/delete
+      /user/*/edit*
+      /user/*/cancel*
+  response_code:
+    id: response_code
+    negate: true
+    response_codes: |-
+      403
+      404
+events:
+  commerce_refund: {  }
+  commerce_add_to_wishlist: {  }
+  commerce_purchase: {  }
+  commerce_remove_from_cart: {  }
+  commerce_view_item: {  }
+  commerce_add_payment_info: {  }
+  commerce_add_shipping_info: {  }
+  commerce_add_to_cart: {  }
+  commerce_view_item_list: {  }
+  commerce_begin_checkout: {  }
+  generate_lead:
+    value: ''
+    currency: ''
+  search: {  }
+  custom: {  }
+  login:
+    method: CMS
+  sign_up:
+    method: CMS
