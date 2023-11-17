@@ -1,0 +1,32 @@
+uuid: a958a16e-f3ea-4cab-85a7-72fa1a67e3f4
+langcode: en
+status: true
+dependencies: {  }
+id: GTM-MPQ2HJGS.65574bcd5ff8b2.94466736
+label: GTM-MPQ2HJGS
+weight: 0
+tag_container_ids:
+  - GTM-MPQ2HJGS
+advanced_settings: {  }
+dimensions_metrics: {  }
+conditions: {  }
+events:
+  commerce_refund: {  }
+  commerce_add_to_wishlist: {  }
+  commerce_purchase: {  }
+  commerce_remove_from_cart: {  }
+  commerce_view_item: {  }
+  commerce_add_payment_info: {  }
+  commerce_add_shipping_info: {  }
+  commerce_add_to_cart: {  }
+  commerce_view_item_list: {  }
+  commerce_begin_checkout: {  }
+  generate_lead:
+    value: ''
+    currency: ''
+  search: {  }
+  custom: {  }
+  login:
+    method: CMS
+  sign_up:
+    method: CMS
