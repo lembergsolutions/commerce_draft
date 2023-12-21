@@ -19,7 +19,6 @@ module:
   block_content: 0
   breakpoint: 0
   ckeditor5: 0
-  comment: 0
   commerce: 0
   commerce_cart: 0
   commerce_checkout: 0
@@ -118,6 +117,8 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  webform: 0
+  webform_ui: 0
   workflows: 0
   xmlsitemap_custom: 0
   xmlsitemap_engines: 0

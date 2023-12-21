@@ -5,7 +5,6 @@ dependencies:
   config:
     - filter.format.restricted_html
   module:
-    - comment
     - commerce_checkout
     - commerce_product
     - commerce_wishlist
@@ -22,7 +21,6 @@ weight: 0
 is_admin: false
 permissions:
   - 'access checkout'
-  - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
   - 'access wishlist'

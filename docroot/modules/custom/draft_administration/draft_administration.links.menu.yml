@@ -19,6 +19,14 @@ draft_administration.taxonomy_vocabulary.overview-form:
   route_parameters: { taxonomy_vocabulary: 'categories' }
   weight: 3
 
+draft_administration.catalogue.newsletter:
+  title: 'Newsletter recipients'
+  route_name: 'entity.webform.results_submissions'
+  route_parameters: { webform: 'newsletter' }
+  parent: 'draft_administration.catalogue'
+  description: 'Newsletter submisisons.'
+  weight: 4
+
 draft_administration.shop_settings:
   title: 'Shop settings'
   description: 'Shop settings menu link'
@@ -104,5 +112,21 @@ user.admin_index:
   route_name: user.admin_index
   parent: system.admin_config
   description: 'Configure user accounts.'
+  position: left
+  weight: -20
+
+system.admin_structure:
+  title: Structure
+  route_name: system.admin_structure
+  parent: system.admin_config
+  description: 'Configure content types.'
+  position: left
+  weight: -30
+
+commerce.admin_commerce:
+  title: Commerce
+  route_name: commerce.admin_commerce
+  parent: system.admin_config
+  description: 'Configure commerce.'
   position: left
   weight: -20
