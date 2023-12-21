@@ -9,3 +9,4 @@ dependencies:
   - drupal:user
   - commerce:commerce_order
   - commerce:commerce_product
+  - webform:webform

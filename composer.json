@@ -8,7 +8,6 @@
     "require-dev": {
         "drupal/coder": "^8.3",
         "drupal/drupal-extension": "^5",
-        "drupal/stage_file_proxy": "^2.0",
         "mglaman/phpstan-drupal": "^1.1",
         "phpro/grumphp": "*",
         "phpspec/prophecy-phpunit": "^2",
@@ -61,6 +60,7 @@
         "drupal/search_api_solr": "^4.2",
         "drupal/simple_sitemap": "^4.1",
         "drupal/state_machine": "^1.8",
+        "drupal/webform": "^6.2",
         "drupal/xmlsitemap": "^1.4",
         "drupal/yoast_seo": "^1.7",
         "drush/drush": "^11.0",

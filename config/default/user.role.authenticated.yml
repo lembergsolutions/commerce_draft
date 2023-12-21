@@ -4,8 +4,8 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - filter.format.webform_default
   module:
-    - comment
     - commerce_checkout
     - commerce_order
     - commerce_payment
@@ -27,7 +27,6 @@ weight: 1
 is_admin: false
 permissions:
   - 'access checkout'
-  - 'access comments'
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
@@ -36,9 +35,8 @@ permissions:
   - 'display eu cookie compliance popup'
   - 'manage own commerce_payment_method'
   - 'opt-in or out of google analytics tracking'
-  - 'post comments'
-  - 'skip comment approval'
   - 'use text format basic_html'
+  - 'use text format webform_default'
   - 'view commerce_product'
   - 'view media'
   - 'view own commerce_order'
