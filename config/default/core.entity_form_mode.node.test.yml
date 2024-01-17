@@ -6,5 +6,6 @@ dependencies:
     - node
 id: node.test
 label: test
+description: ''
 targetEntityType: node
 cache: true

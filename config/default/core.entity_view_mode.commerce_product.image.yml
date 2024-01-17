@@ -6,5 +6,6 @@ dependencies:
     - commerce_product
 id: commerce_product.image
 label: Image
+description: ''
 targetEntityType: commerce_product
 cache: true

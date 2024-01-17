@@ -22,7 +22,9 @@ default_value_callback: ''
 settings:
   available_countries: {  }
   langcode_override: ''
-  field_overrides: {  }
+  field_overrides:
+    addressLine3:
+      override: hidden
   fields:
     administrativeArea: administrativeArea
     locality: locality
