@@ -13,10 +13,12 @@ dependencies:
     - taxonomy.vocabulary.tags
   module:
     - admin_toolbar_search
+    - commerce
     - commerce_order
     - commerce_product
     - commerce_promotion
     - commerce_store
+    - commerce_wishlist
     - draft_administration
     - file
     - media
@@ -30,17 +32,25 @@ label: 'Shop Manager'
 weight: 3
 is_admin: null
 permissions:
+  - 'access commerce administration pages'
   - 'access commerce_order overview'
   - 'access commerce_product overview'
+  - 'access commerce_product_attribute overview'
   - 'access commerce_promotion overview'
   - 'access commerce_store overview'
+  - 'access commerce_wishlist overview'
   - 'access content overview'
   - 'access media overview'
   - 'access site in maintenance mode'
   - 'access toolbar'
   - 'access user profiles'
   - 'access webform submission user'
+  - 'access wishlist'
+  - 'add commerce_log commerce_order admin comment'
+  - 'administer commerce_order'
+  - 'administer commerce_product'
   - 'administer commerce_promotion'
+  - 'administer commerce_wishlist'
   - 'administer menu'
   - 'administer nodes'
   - 'administer shop catalogue'
@@ -128,8 +138,10 @@ permissions:
   - 'use admin toolbar search'
   - 'view all media revisions'
   - 'view all revisions'
+  - 'view any commerce_wishlist'
   - 'view any webform submission'
   - 'view commerce_order'
+  - 'view commerce_product'
   - 'view commerce_product_attribute'
   - 'view commerce_promotion'
   - 'view commerce_store'
@@ -137,6 +149,8 @@ permissions:
   - 'view default commerce_order'
   - 'view default commerce_product'
   - 'view online commerce_store'
+  - 'view own commerce_order'
+  - 'view own commerce_wishlist'
   - 'view own unpublished commerce_product'
   - 'view own unpublished content'
   - 'view own unpublished media'
