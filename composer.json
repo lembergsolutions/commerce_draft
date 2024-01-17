@@ -30,8 +30,8 @@
         "drupal/commerce_shipping": "^2.x-dev",
         "drupal/commerce_wishlist": "^3.0@beta",
         "drupal/core-composer-scaffold": "^10.0",
-        "drupal/core-project-message": "^10.0",
-        "drupal/core-recommended": "^10.0",
+        "drupal/core-project-message": "^10.2.1",
+        "drupal/core-recommended": "^10.2.1",
         "drupal/elasticsearch_connector": "^7.x-dev",
         "drupal/environment_indicator": "^4.0",
         "drupal/eu_cookie_compliance": "^1.24",
@@ -63,7 +63,7 @@
         "drupal/webform": "^6.2",
         "drupal/xmlsitemap": "^1.4",
         "drupal/yoast_seo": "^1.7",
-        "drush/drush": "^11.0",
+        "drush/drush": "^12.4.3",
         "platformsh/config-reader": "^2.4"
     },
     "repositories": [

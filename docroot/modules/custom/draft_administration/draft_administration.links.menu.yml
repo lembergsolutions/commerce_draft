@@ -49,7 +49,7 @@ draft_administration.settings.main_menu:
 
 draft_administration.sales:
   title: 'Sales'
-  route_name: 'draft_administration.sales'
+  route_name: 'commerce.admin_commerce'
   parent: 'system.admin'
   description: 'Manage your sales.'
   weight: -70

@@ -18,7 +18,8 @@ content:
     type: address_default
     weight: 4
     region: content
-    settings: {  }
+    settings:
+      wrapper_type: details
     third_party_settings: {  }
   billing_countries:
     type: options_select
