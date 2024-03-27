@@ -7,7 +7,14 @@ label: GTM-MPQ2HJGS
 weight: 0
 tag_container_ids:
   - GTM-MPQ2HJGS
-advanced_settings: {  }
+advanced_settings:
+  gtm:
+    GTM-TXJTHHQ:
+      data_layer: dataLayer
+      include_environment: false
+    GTM-MPQ2HJGS:
+      data_layer: dataLayer
+      include_environment: false
 dimensions_metrics: {  }
 conditions: {  }
 events:

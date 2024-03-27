@@ -11,19 +11,9 @@ tag_container_ids:
   - GTM-TXJTHHQ
 advanced_settings:
   gtm:
-    data_layer: dataLayer
-    include_classes: false
-    allowlist_classes: |-
-      google
-      nonGooglePixels
-      nonGoogleScripts
-      nonGoogleIframes
-    blocklist_classes: |-
-      customScripts
-      customPixels
-    include_environment: false
-    environment_id: ''
-    environment_token: ''
+    GTM-TXJTHHQ:
+      data_layer: dataLayer
+      include_environment: false
 dimensions_metrics: {  }
 conditions:
   request_path:
